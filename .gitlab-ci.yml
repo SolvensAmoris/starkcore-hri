@@ -7,10 +7,10 @@ ca002_firewall:
   image: alpine/git
   script:
         - chmod +x ca002-check.sh
+        - echo "StarkCore Firewall - Validando E ≡ H"
         - |
-      echo "StarkCore Firewall - Validando E ≡ H"
       for TAG in $(git tag -l); do
-        echo "---"
+        echo "--- Auditando $TAG"
         ./ca002-check.sh $TAG || exit 1
       done
   rules:
