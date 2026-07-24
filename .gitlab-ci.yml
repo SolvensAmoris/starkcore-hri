@@ -6,17 +6,24 @@ ca002_firewall:
   stage: audit
   image: alpine/git
   script:
-        - chmod +x ca002-check.sh
-        - echo "StarkCore Firewall - Validando E = H"
+        - echo "StarkCore Firewall - Tag $CI_COMMIT_TAG"
         - git fetch --tags
-        - ./ca002-check.sh $CI_COMMIT_TAG
+        - TAG_TYPE=$(git cat-file -t $CI_COMMIT_TAG)
+        - echo "Tipo: $TAG_TYPE"
+        - |
+      if [ "$TAG_TYPE" != "tag" ]; then
+        echo "🚨 CA-002 BLOQUEADO: Tag ligero $CI_COMMIT_TAG es mutable E==H"
+        exit 1
+      fi
+        - echo "✅ OK: Tag anotado inmutable E->H"
+        - git cat-file -p $CI_COMMIT_TAG
   rules:
         - if: $CI_COMMIT_TAG
 
 deploy:
   stage: deploy
   script:
-        - echo "Deploy solo si paso el firewall"
+        - echo "✅ Deploy solo si paso firewall"
   rules:
         - if: $CI_COMMIT_TAG
   needs:
