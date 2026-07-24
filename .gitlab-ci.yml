@@ -1,2 +1,2 @@
 ca002-firewall:
-  script: "TYPE=$(git cat-file -t $CI_COMMIT_TAG); echo STARKCORE CA-002 TYPE $TYPE; if [ \"$TYPE\" = \"commit\" ]; then echo BLOCKED; exit 1; else echo PASSED; fi"
+  script: "TYPE=$(git cat-file -t $CI_COMMIT_TAG 2>/dev/null || echo notag); echo STARKCORE CA-002 TYPE $TYPE; if [ \"$TYPE\" = \"commit\" ]; then echo BLOCKED E==H; exit 1; else echo PASSED E!=H; exit 0; fi"
