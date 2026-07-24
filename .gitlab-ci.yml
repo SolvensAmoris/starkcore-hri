@@ -12,14 +12,5 @@ ca002_firewall:
         - git cat-file -t $CI_COMMIT_TAG
         - git cat-file -t $CI_COMMIT_TAG | grep -q tag
         - echo "CA-002 OK E!=H"
-        - git cat-file -p $CI_COMMIT_TAG | head -5
-  rules:
-        - if: $CI_COMMIT_TAG
-
-deploy_release:
-  stage: deploy
-  needs: [ca002_firewall]
-  script:
-        - echo "Deploy $CI_COMMIT_TAG validado"
   rules:
         - if: $CI_COMMIT_TAG
