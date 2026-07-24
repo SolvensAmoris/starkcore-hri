@@ -11,6 +11,6 @@ ca002_firewall:
         - git fetch --tags
         - git cat-file -t $CI_COMMIT_TAG
         - git cat-file -t $CI_COMMIT_TAG | grep -q tag
-        - echo "CA-002 OK E!=H"
+        - echo "CA-002 OK E!=H RFC-0007"
   rules:
         - if: $CI_COMMIT_TAG
