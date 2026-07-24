@@ -1,26 +1,25 @@
 stages:
-  - audit
-  - deploy
+    - audit
+    - deploy
 
 ca002_firewall:
   stage: audit
   image:
-    name: alpine/git:latest
+    name: alpine/git
     entrypoint: [""]
   script:
-    - git fetch --tags --force
-    - TYPE=$(git cat-file -t $CI_COMMIT_TAG)
-    - echo "Tipo: $TYPE"
-    - if [ "$TYPE" != "tag" ]; then echo "CA-002 DETECTADO E==H"; exit 1; fi
-    - echo "CA-002 OK E!=H"
-    - git cat-file -p $CI_COMMIT_TAG | head -5
+        - git fetch --tags
+        - git cat-file -t $CI_COMMIT_TAG
+        - git cat-file -t $CI_COMMIT_TAG | grep -q tag
+        - echo "CA-002 OK E!=H"
+        - git cat-file -p $CI_COMMIT_TAG | head -5
   rules:
-    - if: $CI_COMMIT_TAG
+        - if: $CI_COMMIT_TAG
 
 deploy_release:
   stage: deploy
   needs: [ca002_firewall]
   script:
-    - echo "Deploy $CI_COMMIT_TAG validado"
+        - echo "Deploy $CI_COMMIT_TAG validado"
   rules:
-    - if: $CI_COMMIT_TAG
+        - if: $CI_COMMIT_TAG
