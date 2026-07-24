@@ -1,6 +1,6 @@
 
 Informe Editorial: Incidentes CA-002 – Trust Boundary Failure
-*StarkCore RFC-0007 | Autor: Luis | Fecha: Julio 2026 | Status: Público*
+*StarkCore RFC-0007 | Autor: Luis Alberto Burciaga Miker | Fecha: Julio 2026 | Status: Público*
 
 📌 Resumen Ejecutivo
 CA-002 es una anomalía sistémica en Git y ecosistemas derivados: *los tags mutables permiten ataques de cadena de suministro al romper la equivalencia entre Etiqueta (E) y Huella (H).*
@@ -61,4 +61,3 @@ El timeline demuestra que CA-002 es un patrón repetido en GitHub, GitLab y Comp
 
 cd /tmp/ca002-gitlab-test
 cat > WHITEPAPER.md <<'ENDOFFILE'
-pega aquí el contenido de arriba
