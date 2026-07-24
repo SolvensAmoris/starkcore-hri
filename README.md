@@ -15,3 +15,9 @@ ca002_firewall:
   script:
     - git cat-file -t $CI_COMMIT_TAG | grep -q tag
 
+[![PASSED #2703508639](https://gitlab.com/luis.albm77/ca002-gitlab-test/badges/main/pipeline.svg?job=firewall-pass)]()
+[![BLOCKED #2703507877](https://gitlab.com/luis.albm77/ca002-gitlab-test/badges/main/pipeline.svg?job=firewall-block)]()
+
+### CA-002 Firewall - Evidence
+- #2703508639 PASSED - RFC-0007 compliant
+- #2703507877 BLOCKED - CA-002 tamper detected
