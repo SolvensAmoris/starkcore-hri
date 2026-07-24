@@ -15,6 +15,3 @@ ca002_firewall:
   script:
     - git cat-file -t $CI_COMMIT_TAG | grep -q tag
 
-Después de eso tu repo ya se ve profesional con badges MIT y la foto que te hice la subes a la descripción.
-
-¿Le damos push al README?
