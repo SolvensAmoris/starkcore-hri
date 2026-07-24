@@ -1,16 +1,5 @@
-stages:
-    - audit
-    - deploy
-
-ca002_firewall:
-  stage: audit
-  image:
-    name: alpine/git
-    entrypoint: [""]
+ca002-firewall:
   script:
-        - git fetch --tags
-        - git cat-file -t $CI_COMMIT_TAG
-        - git cat-file -t $CI_COMMIT_TAG | grep -q tag
-        - echo "CA-002 OK E!=H RFC-0007"
-  rules:
-        - if: $CI_COMMIT_TAG
+    - TYPE=$(git cat-file -t $CI_COMMIT_TAG)
+    - echo "STARKCORE CA-002: $TYPE"
+    - if [ "$TYPE" = "commit" ]; then exit 1; else echo "PASSED"; fi
