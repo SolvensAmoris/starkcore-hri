@@ -1,0 +1,3 @@
+# CA-003 CVE-2025-30066 E1==H PASS vector 0e58ed86
+
+!! Vista previa OK | Evidencia SHA256 4fd6112a4c84cf5af7699c6366add24975f800118cf5227ca81e62695e4!5b23
