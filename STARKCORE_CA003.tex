@@ -1,0 +1,26 @@
+\documentclass{article}
+\usepackage{longtable}
+\begin{document}
+
+\section*{StarkCore CA-003 - CVE-2025-30066 Mitigation}
+
+\begin{longtable}{|l|l|l|}
+\hline
+\textbf{Tag} & \textbf{Resultado} & \textbf{Tipo} \\
+\hline
+v1.0-ligero & BLOCKED (vulnerable) & commit (mutable) \\
+v1.0-bueno & PASSED (seguro) & tag (SHA inmutable) \\
+v2.0.0-firewall & PASSED (seguro) & tag (SHA inmutable) \\
+v3.0.0-ca003 & PASSED (mitigacion) & tag (SHA inmutable) \\
+\hline
+\end{longtable}
+
+\section*{Hash de Evidencia}
+\begin{verbatim}
+4fd6112a4c84cf5af7699c6366add24975f800118cf5227ca81e62695e4a4b23
+1652240 StarkCore CA-003 mitigation E1==H
+\end{verbatim}
+
+\section*{Defensa}
+Detecta TYPE=commit vs TYPE=tag. BLOCKED E==H en ligeros. PASSED E1==H en anotados SHA inmutable.
+\end{document}
