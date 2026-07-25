@@ -1,6 +1,0 @@
-=== CA-003 CVE-2025-30066 Mutable Tag Poisoning Test ===
-[STARKCORE] CA-003 PASSED test-annotated TYPE=tag E1==H - SHA inmutable
-[STARKCORE] CA-003 BLOCKED test-light TYPE=commit E==H - Vulnerable a CVE-2025-30066 (mutable)
-[STARKCORE] CA-003 PASSED v1.0-bueno TYPE=tag E1==H - SHA inmutable
-[STARKCORE] CA-003 BLOCKED v1.0-ligero TYPE=commit E==H - Vulnerable a CVE-2025-30066 (mutable)
-[STARKCORE] CA-003 PASSED v2.0.0-firewall TYPE=tag E1==H - SHA inmutable
