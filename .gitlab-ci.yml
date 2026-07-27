@@ -18,15 +18,19 @@ omega_self_audit:
   image: python:3.11
   script:
     - python tests/test_omega_self_audit.py
-  needs: [p0_self_audit]
+  needs:
+    - job: p0_self_audit
+      optional: false
   rules:
-    - when: always
+    - when: on_success
 
 omega_chain_audit:
   stage: finalize
   image: python:3.11
   script:
     - python tests/test_omega_chain_audit.py
-  needs: [omega_self_audit]
+  needs:
+    - job: omega_self_audit
+      optional: false
   rules:
-    - when: always
+    - when: on_success
