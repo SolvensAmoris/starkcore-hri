@@ -1,9 +1,25 @@
 stages:
+  - .pre
   - test
+
+p0_self_audit:
+  stage: .pre
+  image: python:3.11-slim
+  script:
+    - python3 tests/test_p0_self_audit.py
+  artifacts:
+    when: always
+    expire_in: never
+    paths:
+      - tests/
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+
 ca003-mutable-test:
   stage: test
   image: ruby:3.1
   script:
-    - echo "CA-003 CVE-2025-30066 0e58ed86 CVSS 8.6 SHA 4fd6112a4c84cf5af7699c6366add24975f800118cf5227ca81e62695e4a4b23 E1==H"
+    - echo "CA-003 CVE-2025-30066"
     - cat docs/CA-003_FINAL.md
     - echo "E1==H VERIFIED"
