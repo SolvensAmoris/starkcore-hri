@@ -26,56 +26,37 @@ def load_manifest(path):
     return data
 
 
-tests = [
-    {
-        "name": "auto exemption",
-        "manifest": {"exempt": True},
-        "expected": "BLOCK_P0_AUTO_EXEMPT",
-    },
-    {
-        "name": "clean component",
-        "manifest": {"exempt": False},
-        "expected": "PASS_P0",
-    },
-    {
-        "name": "P0 self claim",
-        "manifest": {"inviolable": True},
-        "expected": "BLOCK_P0_INVIOLABLE",
-    },
-]
-
-
 ok = True
 
 
-# Prueba de ataque externo
+# Ataque controlado
 if os.path.exists("attack_manifest.yml"):
     attack = load_manifest("attack_manifest.yml")
 
     passed, code = p0_apply(attack)
 
-    print(
-        f"[STARKCORE] ATTACK TEST "
-        f"-> {code}"
-    )
+    print(f"[STARKCORE] ATTACK TEST -> {code}")
 
     if code != "BLOCK_P0_AUTO_EXEMPT":
         print("[STARKCORE] P0 BYPASS DETECTED")
         sys.exit(1)
 
 
-# Pruebas base P0
-for t in tests:
-    passed, code = p0_apply(t["manifest"])
+tests = [
+    ("auto exemption", {"exempt": True}, "BLOCK_P0_AUTO_EXEMPT"),
+    ("clean component", {"exempt": False}, "PASS_P0"),
+    ("P0 self claim", {"inviolable": True}, "BLOCK_P0_INVIOLABLE"),
+]
 
-    result = (
-        passed is (code == "PASS_P0")
-        and code == t["expected"]
-    )
+
+for name, manifest, expected in tests:
+    passed, code = p0_apply(manifest)
+
+    result = code == expected
 
     print(
         f"[STARKCORE] {'PASS' if result else 'FAIL'} "
-        f"{t['name']} -> {code}"
+        f"{name} -> {code}"
     )
 
     ok = ok and result
