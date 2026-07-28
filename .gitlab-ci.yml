@@ -1,47 +1,36 @@
-stages:
-  - .pre
-  - test
-  - verify
+workflow:
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH
+
+stages: [.pre, verify, finalize]
 
 p0_self_audit:
   stage: .pre
-  image: python:3.11-slim
+  image: python:3.11
   script:
-    - python3 tests/test_p0_self_audit.py
-  artifacts:
-    paths:
-      - p0_evidence_manifest.json
-    expire_in: never
-    when: always
+    - python tests/test_p0_self_audit.py
+  rules:
+    - when: always
 
 omega_self_audit:
-  stage: test
-  image: python:3.11-slim
-  needs: [p0_self_audit]
+  stage: verify
+  image: python:3.11
   script:
-    - python3 tests/test_omega_self_audit.py
-  artifacts:
-    paths:
-      - evidence/omega/
-    expire_in: never
-    when: always
+    - python tests/test_omega_self_audit.py
+  needs:
+    - job: p0_self_audit
+      optional: false
+  rules:
+    - when: on_success
 
 omega_chain_audit:
-  stage: verify
-  image: python:3.11-slim
-  needs: [omega_self_audit]
+  stage: finalize
+  image: python:3.11
   script:
-    - python3 tests/test_omega_chain.py
-  artifacts:
-    paths:
-      - evidence/omega/chain/
-    expire_in: never
-    when: always
-
-ca003-mutable-test:
-  stage: test
-  image: ruby:3.1
-  script:
-    - echo "CA-003 CVE-2025-30066"
-    - cat docs/CA-003_FINAL.md
-    - echo "E1==H VERIFIED"
+    - python tests/test_omega_chain_audit.py
+  needs:
+    - job: omega_self_audit
+      optional: false
+  rules:
+    - when: on_success

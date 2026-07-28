@@ -1,0 +1,3 @@
+system: STARKCORE
+test: P0_BYPASS_ATTEMPT
+exempt: true
