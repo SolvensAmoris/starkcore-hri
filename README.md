@@ -1,17 +1,34 @@
-# Cosmos v1 - Computacion Verificable End-to-End
+# Conjecture Evolution - De Falla a Teorema
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE) [![Version: v1.0.0](https://img.shields.io/badge/version-v1.0.0-blue.svg)](https://gitlab.com/luis.albm77/starkcore-hri-public/-/tags/v1.0.0) [![Built: Huawei](https://img.shields.io/badge/built%20on-Huawei%%20%%20UserLAnd-red.svg)]()
+![evolution](cards/evolucion.png)
 
-> No confies. Verifica.
+> Tu conjetura está rota. La hacemos evolucionar frente a tus ojos.
 
-**Autor:** Luis Alberto Burciaga Miker - Luis.albm77@gmail.com
-**License:** MIT © 2026
+**🔴 n² < 2ⁿ Falla {2,3,4} → 🟢 n² < 3ⁿ Falla ∅ → 🔵 Teoremón Holo | Lean: True**
 
+### Qué es
+No es otro prover. Es el **pre-filtro semántico** que Aristotle / Goedel-Prover necesitan antes de quemar GPU.
+
+
+### Demo 30s
+- `n² < 2ⁿ` falla en {2,3,4}
+- Φ: `EXP2->3` | proof: `2ⁿ<3ⁿ => si A<2ⁿ entonces A<3ⁿ` | preserves=implies
+- `n² < 3ⁿ` falla ∅ | Δ=+3.2 | Lean kernel: OK
+
+### Pack que vendemos
+📦 **12 Conjecture Evolution Cards** + Código + Lean Snippets
+→ https://payhip.com/tu-link (Payhip $37)
+
+Incluye:
+- 3 líneas evolutivas completas (Blob, Cubo, N-cuadrado)
+- 1 carta TRAMPA Siniestra `DIV_LEFT_ONLY` (Goodhart bloqueado)
+- 3 Trainer Cards: `LOG_BOTH`, `ADD_BOTH`, `Φ SECRETO`
+- `starkcore_lean_agent.py` con feedback real de `lake env lean`
+- `results/starkcore_results.json` con Lean: True
+
+### Benchmark rápido
+### Uso
 ```bash
-git clone https://gitlab.com/luis.albm77/starkcore-hri-public.git
-cd starkcore-hri-public
-python3 -m starkcore.cosmos "SUN,NODE,ROOT,FLOW -> tarea1 -> tarea2 -> fail_api -> tarea3"
-```
-
-Root: 75e470098078be1dadf051af5597eeb18d07fa480f6a9c67555edfbe258e8f97
-Chain: OK 10 eventos
+python3 starkcore_lean_agent.py
+# genera results/starkcore_results.json + lean/*.lean
+lake env lean lean/Strengthened.lean
