@@ -1,0 +1,11 @@
+[package]
+name = "cosmos_burn_verifier"
+version = "0.1.0"
+edition = "2024_07"
+
+[dependencies]
+alexandria_bytes = { git = "https://github.com/keep-starknet-strange/alexandria", tag = "v0.8.0" }
+alexandria_encoding = { git = "https://github.com/keep-starknet-strange/alexandria", tag = "v0.8.0" }
+
+[lib]
+name = "cosmos_burn_verifier"
