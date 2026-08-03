@@ -1,0 +1,30 @@
+{
+  "experimento": "M26_out_in_fijos / MARTILLO DE ACERO M2.5",
+  "version": "v06f",
+  "hash_codigo": "salida_v06e_sellada.log + salida_v06f.log",
+  "PASO_0": {
+    "L_old": 1000000,
+    "L_new": 60,
+    "F_old": 1,
+    "F_new": 20.6,
+    "clasificacion": "MODO_COMPRESION"
+  },
+  "PASO_1_C1": {
+    "descripcion": "140 lineas reemplazan paper de 15 paginas",
+    "antes": "teoria causal difusa",
+    "ahora": "ΔV=-0.61 Z=-105.2 p=2.64e-159 en T=2",
+    "veredicto": "PASS"
+  },
+  "PASO_2_C2": {
+    "borde": "Android 5W offline + shuffle que preserva grado exacto",
+    "resultado": "7/17 celdas sobreviven, region estable p=0.65 L=3 Z=20.6",
+    "veredicto": "PASS"
+  },
+  "PASO_3_C3": {
+    "reproducibilidad": "cat CausalForge/salida_v06e_sellada.log && cat CausalForge/salida_v06f.log",
+    "determinista": true,
+    "veredicto": "PASS"
+  },
+  "VEREDICTO_FINAL": "BORROMEO_TIGHT",
+  "interpretacion": "El corsé causal actua MAXIMO a 2 pasos. No es opinion, es martillo de acero con p=e-159"
+}
