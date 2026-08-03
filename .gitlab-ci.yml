@@ -1,7 +1,8 @@
 stages: [cairo]
 cairo_build:
-  image: software-mansion/scarb:2.20.0
+  image: ghcr.io/software-mansion/scarb:2.20.0
   script:
+    - scarb --version
     - cd cairo_verifier && scarb build && scarb test
   artifacts:
     paths:
