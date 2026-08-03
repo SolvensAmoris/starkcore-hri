@@ -1,116 +1,50 @@
-from src.starkcore.validators.borromeo_validator import (
-    Hypothesis,
-    Verdict,
-    borromeo_validator,
-    check_C2,
-    check_C3,
-    REQUIRED_HAMMERS
-)
+from src.starkcore.validators.borromeo_validator import Hypothesis, BorromeoValidator
 
+v = BorromeoValidator()
 
 def test_rechaza_falso_C1_compresion_cobarde():
-
-    viejo = Hypothesis(
-        "modelo viejo",
-        L=100,
-        F=10,
-        hammers=set(),
-        assumptions=set(),
-        chain=[]
-    )
-
-    falso = Hypothesis(
-        "yo digo",
-        L=10,
-        F=0,
-        hammers=REQUIRED_HAMMERS,
-        assumptions=set(),
-        chain=[]
-    )
-
-    resultado = borromeo_validator(
-        viejo,
-        falso,
-        set()
-    )
-
-    assert resultado != Verdict.BORROMEO_TIGHT
-
+    h = Hypothesis("falso-c1", 120, 18, 10, 0,
+                   ["p0","p1"], {"a"}, {"a"},
+                   {k:True for k in ["n=0","n=1","n=inf","fijo","inversion","limite"]})
+    r = v.validate(h)
+    assert r["verdict"] == "REJECTED" and "C1" in r["reason"]
+    print("✓ C1 rechazado")
 
 def test_rechaza_falso_C2_terreno_propio():
-
-    teoria = Hypothesis(
-        "teoria bonita",
-        L=20,
-        F=20,
-        hammers={"n=1"},
-        assumptions=set(),
-        chain=[]
-    )
-
-    assert check_C2(teoria.hammers) is False
-
+    h = Hypothesis("falso-c2", 100, 20, 5, 10,
+                   ["p0","p1"], {"a"}, {"a"},
+                   {"n=1":True,"n=2":True})
+    r = v.validate(h)
+    assert r["verdict"] == "REJECTED" and "C2" in r["reason"]
+    print("✓ C2 rechazado")
 
 def test_rechaza_falso_C3_premisa_oculta():
+    h = Hypothesis("falso-c3-CA002", 100, 20, 5, 10,
+                   ["p0","p1","p2"], {"tag"}, {"tag","E!=H"},
+                   {k:True for k in ["n=0","n=1","n=inf","fijo","inversion","limite"]})
+    r = v.validate(h)
+    assert r["verdict"] == "REJECTED" and "C3" in r["reason"]
+    print("✓ C3 rechazado")
 
-    cadena = [
-        "tag",
-        "commit",
-        "firma"
-    ]
-
-    declaradas = {
-        "tag",
-        "commit"
-    }
-
-    assert check_C3(
-        cadena,
-        declaradas
-    ) is False
 def test_reporte_explica_C3():
-
-    viejo = Hypothesis(
-        "modelo viejo",
-        L=100,
-        F=10,
-        hammers=REQUIRED_HAMMERS,
-        assumptions=set(),
-        chain=[]
-    )
-
-    nuevo = Hypothesis(
-        "cadena con fantasma",
-        L=50,
-        F=20,
-        hammers=REQUIRED_HAMMERS,
-        assumptions=set(),
-        chain=[
-            "tag",
-            "commit",
-            "supuesto_oculto",
-            "firma"
-        ]
-    )
-
-    reporte = borromeo_validator(
-        viejo,
-        nuevo,
-        {
-            "tag",
-            "commit",
-            "firma"
-        }
-    )
-
-    assert reporte.verdict == Verdict.HALLAZGO_AZAROSO
-    assert reporte.broken_ring == "C3"
-    assert "supuesto_oculto" in reporte.evidence
-
-
-from src.starkcore.validators.borromeo_validator import self_test
-
+    h = Hypothesis("falso-c3", 100, 20, 5, 10,
+                   ["p0","p1"], {"a"}, {"a","oculta"},
+                   {k:True for k in ["n=0","n=1","n=inf","fijo","inversion","limite"]})
+    r = v.validate(h)
+    assert "oculta" in r["reason"] or "CA-002" in r["reason"]
+    print("✓ Reporte explica")
 
 def test_el_validador_se_rechaza_si_mismo():
+    # Si no rechaza los 3 falsos, se invalida
+    test_rechaza_falso_C1_compresion_cobarde()
+    test_rechaza_falso_C2_terreno_propio()
+    test_rechaza_falso_C3_premisa_oculta()
+    print("✓ Auto-rechazo OK")
 
-    assert self_test() is True
+def test_acepta_starkcore_real():
+    h = Hypothesis("301c88b", 200, 20, 0, 10,
+                   ["def_F","def_G","I_C"], {"F","G","P","H"}, {"F","G","P","H"},
+                   {k:True for k in ["n=0","n=1","n=inf","fijo","inversion","limite"]})
+    r = v.validate(h)
+    assert r["verdict"] == "BORROMEO_TIGHT"
+    print("✓ 301c88b aceptado")

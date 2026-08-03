@@ -1,145 +1,48 @@
 from dataclasses import dataclass
-from enum import Enum
-
-
-class Verdict(Enum):
-    BORROMEO_TIGHT = "BORROMEO_TIGHT"
-    COMPRESION_SOLO = "COMPRESION_SOLO"
-    TEORIA_DEBIL = "TEORIA_DEBIL"
-    HALLAZGO_AZAROSO = "HALLAZGO_AZAROSO"
-
+from typing import Dict, List, Set
 
 @dataclass
 class Hypothesis:
-    name: str
-    L: int
-    F: int
-    hammers: set
-    assumptions: set
-    chain: list
+    id: str
+    L_old: float
+    L_new: float
+    F_old: int
+    F_new: int
+    chain: List[str]
+    assumptions_P0: Set[str]
+    assumptions_used: Set[str]
+    hammers_applied: Dict[str, bool]
 
+REQUIRED_HAMMERS = {"n=0","n=1","n=inf","fijo","inversion","limite"}
 
-@dataclass
-class ValidationReport:
-    verdict: Verdict
-    broken_ring: str | None
-    reason: str
-    evidence: list
+class BorromeoValidator:
+    def c1_peligrosa(self, h: Hypothesis):
+        if h.L_new >= h.L_old:
+            return False, f"C1 FAIL: L no bajo {h.L_old}->{h.L_new}"
+        if h.F_new <= h.F_old:
+            return False, f"C1 FAIL: F no subio {h.F_old}->{h.F_new} -> COMPRESION_SOLO"
+        return True, "C1 OK"
 
+    def c2_bordes(self, h: Hypothesis):
+        missing = REQUIRED_HAMMERS - set(h.hammers_applied.keys())
+        if missing:
+            return False, f"C2 FAIL: faltan {missing} -> TEORIA_DEBIL"
+        return True, "C2 OK"
 
-REQUIRED_HAMMERS = {
-    "n=0",
-    "n=1",
-    "n=infinito",
-    "punto_fijo",
-    "inversion",
-    "limite"
-}
+    def c3_inevitabilidad(self, h: Hypothesis):
+        if len(h.chain) < 2:
+            return False, "C3 FAIL: cadena vacia"
+        hidden = h.assumptions_used - h.assumptions_P0
+        if hidden:
+            return False, f"C3 FAIL: ocultas {hidden} -> CA-002"
+        return True, "C3 OK"
 
+    def validate(self, h: Hypothesis):
+        for check in [self.c1_peligrosa, self.c2_bordes, self.c3_inevitabilidad]:
+            ok, msg = check(h)
+            if not ok:
+                return {"verdict": "REJECTED", "reason": msg}
+        return {"verdict": "BORROMEO_TIGHT", "reason": "C1^C2^C3"}
 
-def check_C1(previous, current):
-
-    if current.L < previous.L and current.F > previous.F:
-        return True
-
-    return False
-
-
-def check_C2(applied):
-
-    return REQUIRED_HAMMERS.issubset(applied)
-
-
-def missing_hammers(applied):
-
-    return list(REQUIRED_HAMMERS - applied)
-
-
-def check_C3(chain, declared):
-
-    for step in chain:
-        if step not in declared:
-            return False
-
-    return True
-
-
-def borromeo_validator(previous, current, declared):
-
-    if not check_C1(previous, current):
-        return ValidationReport(
-            Verdict.COMPRESION_SOLO,
-            "C1",
-            "La compresion redujo longitud pero no aumentó falsabilidad",
-            [
-                f"L viejo={previous.L}",
-                f"L nuevo={current.L}",
-                f"F viejo={previous.F}",
-                f"F nuevo={current.F}"
-            ]
-        )
-
-
-    if not check_C2(current.hammers):
-
-        return ValidationReport(
-            Verdict.TEORIA_DEBIL,
-            "C2",
-            "No sobrevivio todos los martillos epistemicos",
-            missing_hammers(current.hammers)
-        )
-
-
-    if not check_C3(current.chain, declared):
-
-        return ValidationReport(
-            Verdict.HALLAZGO_AZAROSO,
-            "C3",
-            "Existe un paso no declarado en la cadena",
-            [
-                step for step in current.chain
-                if step not in declared
-            ]
-        )
-
-
-    return ValidationReport(
-        Verdict.BORROMEO_TIGHT,
-        None,
-        "Los tres anillos sobreviven",
-        []
-    )
-
-
-def self_test():
-    """
-    Prueba minima de identidad:
-    el validador debe rechazar
-    compresiones que pierden falsabilidad.
-    """
-
-    weak_old = Hypothesis(
-        "old",
-        L=100,
-        F=10,
-        hammers=REQUIRED_HAMMERS,
-        assumptions=set(),
-        chain=[]
-    )
-
-    weak_new = Hypothesis(
-        "fake",
-        L=10,
-        F=0,
-        hammers=REQUIRED_HAMMERS,
-        assumptions=set(),
-        chain=[]
-    )
-
-    report = borromeo_validator(
-        weak_old,
-        weak_new,
-        set()
-    )
-
-    return report.verdict != Verdict.BORROMEO_TIGHT
+# Ley sin escapes problemáticos
+LAW = r"F(H\X)==F(H) && L(H\X)<L(H) => MAKEUP else STRUCTURE"

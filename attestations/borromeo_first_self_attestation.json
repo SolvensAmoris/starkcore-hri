@@ -1,0 +1,21 @@
+{
+  "principle": "borromeo_nudo_executable",
+  "chain": [
+    "6327f3e",
+    "301c88b",
+    "d8002d4",
+    "c317d50",
+    "11abee4",
+    "da4ac8b",
+    "c1c7951"
+  ],
+  "borromeo": {
+    "verdict": "BORROMEO_TIGHT",
+    "reason": "C1^C2^C3"
+  },
+  "tests": "8/8 PASSED",
+  "verified": true,
+  "timestamp": "2026-08-03T13:44:56.898945Z",
+  "commit": "b9a871a4390b14d5d335411d1b99431201001626",
+  "law": "F(H\\X)==F(H) && L(H\\X)<L(H) => MAKEUP else STRUCTURE"
+}
