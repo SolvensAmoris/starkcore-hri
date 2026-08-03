@@ -1,0 +1,8 @@
+
+--- AUDIT TRAIL ---
+SHA-256: 480fd4ffda0bd15d5dffeb01cfba11dcf514e711451d079034cb47ed7203edd2
+Python: 3.14.4
+Platform: Linux-4.14.116-aarch64-with-glibc2.43
+Precision: terms=1500 | threshold=0.1
+UTC: 2026-08-03T08:04:59.164535Z
+Commit: ff1389e -> next
