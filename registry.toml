@@ -1,0 +1,24 @@
+# Cosmos Public Registry - El Rosario Genesis
+# Cada catálogo expone sus reglas y sus notary_hash aceptados
+
+[registry]
+name = "starkcore-hri-public"
+genesis_notary = "e5176b6077a6a4dd4bf0ff14eefb8857bac50b968cc67ab61de8d105ce6d2504"
+version = "v25"
+
+[catalog.physics-open]
+min_burn_sats = 10000
+trusted_checkpoint_hash = "28a4df6d38f84c8bc826e65a1444befa45b70b3c0fd6687ed02e97d4a386b995"
+trusted_checkpoint_height = 840000
+policy = "open - cualquier burn >= 10k sats"
+notary_accepted = ["e5176b6077a6a4dd4bf0ff14eefb8857bac50b968cc67ab61de8d105ce6d2504"]
+
+[catalog.physics-strict]
+min_burn_sats = 1000000
+trusted_checkpoint_hash = "00000000000000000001d1f4f8a2e5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4d5e6"
+trusted_checkpoint_height = 850000
+policy = "strict - 1M sats + peer review"
+notary_accepted = []
+
+# Cualquier persona puede forkar este archivo y cambiar min_burn
+# El software de verificación sigue siendo idéntico. Solo cambia el string del checkpoint.
