@@ -1,0 +1,7 @@
+Zero 1: PASS residual=0.002355 | falsify_off_line=False
+Zero 2: PASS residual=0.002731 | falsify_off_line=False
+Zero 3: PASS residual=0.003319 | falsify_off_line=False
+Zero 4: PASS residual=0.002564 | falsify_off_line=False
+Zero 5: PASS residual=0.002527 | falsify_off_line=False
+
+WITNESS SAVED -> 8000 terms
