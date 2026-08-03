@@ -1,0 +1,129 @@
+{
+  "version": "v0.5.1 Formal Witness",
+  "utc": "2026-08-03T08:18:58.386877+00:00",
+  "architecture": [
+    "Candidate",
+    "Numerical eval",
+    "Residual witness",
+    "Isolation witness",
+    "Portable JSON",
+    "SHA/Git"
+  ],
+  "witnesses": [
+    {
+      "candidate": "0.5 + 14.1347251417i",
+      "box": {
+        "re": [
+          0.3,
+          0.7
+        ],
+        "im": [
+          13.6347251417,
+          14.6347251417
+        ]
+      },
+      "segments": 1200,
+      "segments_per_edge": 300,
+      "precision_dps": 50,
+      "mpmath_version": "1.3.0",
+      "algorithm": "argument_principle_zeta_prime_over_zeta",
+      "integral_imag": 6.283274182876341,
+      "residual": 2.7517741873775364e-11,
+      "count": 1,
+      "unique": true,
+      "philosophy": "residual = footprint, count = footstep enclosure"
+    },
+    {
+      "candidate": "0.5 + 21.0220396387i",
+      "box": {
+        "re": [
+          0.3,
+          0.7
+        ],
+        "im": [
+          20.5220396387,
+          21.5220396387
+        ]
+      },
+      "segments": 1200,
+      "segments_per_edge": 300,
+      "precision_dps": 50,
+      "mpmath_version": "1.3.0",
+      "algorithm": "argument_principle_zeta_prime_over_zeta",
+      "integral_imag": 6.283241712757596,
+      "residual": 8.13465139091503e-11,
+      "count": 1,
+      "unique": true,
+      "philosophy": "residual = footprint, count = footstep enclosure"
+    },
+    {
+      "candidate": "0.5 + 25.0108575801i",
+      "box": {
+        "re": [
+          0.3,
+          0.7
+        ],
+        "im": [
+          24.5108575801,
+          25.5108575801
+        ]
+      },
+      "segments": 1200,
+      "segments_per_edge": 300,
+      "precision_dps": 50,
+      "mpmath_version": "1.3.0",
+      "algorithm": "argument_principle_zeta_prime_over_zeta",
+      "integral_imag": 6.283231088595436,
+      "residual": 6.267224908656316e-11,
+      "count": 1,
+      "unique": true,
+      "philosophy": "residual = footprint, count = footstep enclosure"
+    },
+    {
+      "candidate": "0.5 + 30.4248761259i",
+      "box": {
+        "re": [
+          0.3,
+          0.7
+        ],
+        "im": [
+          29.9248761259,
+          30.9248761259
+        ]
+      },
+      "segments": 1200,
+      "segments_per_edge": 300,
+      "precision_dps": 50,
+      "mpmath_version": "1.3.0",
+      "algorithm": "argument_principle_zeta_prime_over_zeta",
+      "integral_imag": 6.283221186869151,
+      "residual": 5.2792383024207775e-11,
+      "count": 1,
+      "unique": true,
+      "philosophy": "residual = footprint, count = footstep enclosure"
+    },
+    {
+      "candidate": "0.5 + 32.9350615877i",
+      "box": {
+        "re": [
+          0.3,
+          0.7
+        ],
+        "im": [
+          32.4350615877,
+          33.4350615877
+        ]
+      },
+      "segments": 1200,
+      "segments_per_edge": 300,
+      "precision_dps": 50,
+      "mpmath_version": "1.3.0",
+      "algorithm": "argument_principle_zeta_prime_over_zeta",
+      "integral_imag": 6.283217681509268,
+      "residual": 5.416483710722223e-11,
+      "count": 1,
+      "unique": true,
+      "philosophy": "residual = footprint, count = footstep enclosure"
+    }
+  ]
+}

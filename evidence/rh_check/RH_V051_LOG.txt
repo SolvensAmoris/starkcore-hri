@@ -1,0 +1,6 @@
+t=14.1347251417 res=2.75e-11 count=1
+t=21.0220396387 res=8.13e-11 count=1
+t=25.0108575801 res=6.27e-11 count=1
+t=30.4248761259 res=5.28e-11 count=1
+t=32.9350615877 res=5.42e-11 count=1
+FORMAL WITNESS SAVED

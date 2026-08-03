@@ -1,0 +1,4 @@
+x=100 psi_real=94.05 psi_aprox_30=94.92 error=-0.87
+x=1000 psi_real=996.68 psi_aprox_30=993.68 error=3.00
+x=10000 psi_real=10013.40 psi_aprox_30=10020.88 error=-7.49
+V0.6.3 DONE - aqui si se ve la musica de Riemann

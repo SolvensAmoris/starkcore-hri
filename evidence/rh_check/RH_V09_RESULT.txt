@@ -1,0 +1,22 @@
+N=50 spacings=49
+mean raw delta=2.691 var=1.396
+mean normalized s=1.011 (debe ~1.0 si normalizado)
+min s=0.526 max s=1.743
+
+s < 0.2 (niveles casi pegados): 0/49 = 0.0%
+Si fueran Poisson aleatorio, esperarías ~18% aqui.
+Si es GUE/GOE caotico, esperas ~2-3% (repulsion)
+
+Histograma s_n (0-3.0):
+0.0-0.3 |  (0)
+0.3-0.6 | ##### (5)
+0.6-0.9 | ################ (16)
+0.9-1.2 | ############### (15)
+1.2-1.5 | ####### (7)
+1.5-1.8 | ###### (6)
+1.8-2.1 |  (0)
+2.1-2.4 |  (0)
+2.4-2.7 |  (0)
+2.7-3.0 |  (0)
+
+V0.9 DONE - spacing signature

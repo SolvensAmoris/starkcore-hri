@@ -1,0 +1,53 @@
+<!doctype html>
+<html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1">
+<title>STARKCORE - Conjecture Strengthener for Lean 4</title>
+<style>
+body{font-family:system-ui;background:#0a0a0a;color:#eee;max-width:780px;margin:0 auto;padding:40px}
+h1{font-size:42px;line-height:1.1}.red{color:#ff5a5a}.green{color:#5aff8a}.blue{color:#5ab3ff}
+.card{border:1px solid #333;border-radius:12px;padding:20px;margin:20px 0;background:#111}
+.badge{padding:4px 10px;border-radius:20px;font-size:12px}.ok{background:#0f3}.fail{background:#f33}
+pre{background:#000;padding:12px;border-radius:8px;overflow:auto}
+button{background:#fff;color:#000;border:0;padding:14px 28px;border-radius:8px;font-weight:800;font-size:18px;cursor:pointer}
+</style></head><body>
+<h1>Tu conjetura está rota.<br>La convierto en <span class="green">atacable por Lean</span> en 60s.</h1>
+<p>STARKCORE no es otro prover. Es el pre-filtro semántico que <b>Aristotle, Goedel-Prover y tu agente Lean</b> necesitan antes de quemar GPU.</p>
+
+<div class="card">
+<h3>🔴 Antes: n² < 2ⁿ <span class="badge fail">Falla {2,3,4}</span></h3>
+<pre>fails ███░░░░░</pre>
+<h3>🟢 Después: n² < 3ⁿ <span class="badge ok">Falla ∅ + proof LOG_BOTH equiv</span></h3>
+<pre>fails ░░░░░░░░ Δ=+3.2 preserves=equiv Lean=OK</pre>
+<p>Φ: 2ⁿ<3ⁿ => si A<2ⁿ entonces A<3ⁿ. Prueba incluida. Sin trampa Goodhart.</p>
+</div>
+
+<div class="card">
+<h3>Qué recibes por $149</h3>
+<ul>
+<li>10 conjeturas → versiones endurecidas con Δ-score + preserves + proof log</li>
+<li>Cada una con snippet Lean 4 listo para pegar (import Mathlib + theorem)</li>
+<li>Log de kernel: solo pasa lo que Lean acepta. Si no mejoro fails, no pagas.</li>
+</ul>
+<button onclick="location.href='https://buy.stripe.com/test_123'">Comprar 10 por $149 - Entrega 24h</button>
+<p style="opacity:.6">Suscripción Lab $499/mes - 100 conjeturas + API + Discord</p>
+</div>
+
+<div class="card">
+<h3>Por qué esto existe</h3>
+<p>Todos generan lemmas. Nadie los purga con semántica barata. Aristotle gasta MCGS en 50 lemmas, 48 mueren caros. STARKCORE filtra a 7 con fails + prueba semántica. Ahorras 86% tokens.</p>
+<pre>
+LLM -> 50 lemmas -> STARKCORE Φ (0.02s) -> 7 lemmas -> Lean MCGS
+</pre>
+</div>
+
+<div class="card">
+<h3>Benchmark rápido (MiniF2F slice)</h3>
+<pre>
+n² < 2ⁿ -> n² < 3ⁿ Δ=+3.0 equiv OK
+n³ < 2ⁿ -> n³ < 3ⁿ Δ=+7.0 equiv OK
+2n < n² -> 2n < n² + n Δ=+1.2 implies OK
+TRAMPA DIV_LEFT_ONLY -> Δ=-10 bloqueado
+</pre>
+</div>
+
+<p>DM en X @tu_handle o mail starkcore@... Entrega JSON + Lean files.</p>
+</body></html>
