@@ -1,0 +1,5 @@
+=== CausalForge v0.6f ECL | LAYERS=6 WIDTH=10 RHO=0.65 L=3 ===
+
+--- EXP2: Barrido T [1..5] con M26 ---
+T=1: ΔV: +0.0000 Z:    +0.0 p:  1.00e+00 T=1 → misma #aristas, no hay caminos L=1 que cambiar
+T=2: ΔV: -0.6110 Z:  -105.2 p: 2.64e-159 T=2 MÍNIMO · Corsé actúa MÁXIMO en saltos de 2 pasos

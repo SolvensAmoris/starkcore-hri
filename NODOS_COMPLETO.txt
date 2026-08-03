@@ -1,0 +1,24 @@
+starkcore/evidence/__init__.py:4:class EvidenceStore:
+starkcore/evidence/__init__.py:40:def verify_proof(leaf, proof, root):
+starkcore/evidence/__init__.py:43:def reset():
+starkcore/evidence/notary.py:3:def notarize(execution_result, paper_path):
+starkcore/gate.py:2:class Gate:
+starkcore/gate.py:13:def is_external_anchored(evidence, gate_rules, did):
+starkcore/executor.py:3:def execute_verified_paper(paper_path):
+starkcore/cosmos.py:6:def run(dsl: str):
+starkcore/oracle/btc_burn_verifier.py:3:def dbl_sha256(b: bytes) -> bytes:
+starkcore/oracle/btc_burn_verifier.py:6:def read_varint(buf, off):
+starkcore/oracle/btc_burn_verifier.py:13:def parse_tx(tx_hex: str, did_pubkey_hex: str):
+starkcore/oracle/btc_burn_verifier.py:46:def bits_to_target(bits):
+starkcore/oracle/btc_burn_verifier.py:50:def verify_pow(header: bytes):
+starkcore/oracle/btc_burn_verifier.py:56:def merkle_root(txid_hex, proof_hashes, index):
+starkcore/oracle/btc_burn_verifier.py:64:def verify(evidence, gate_rules, did_pubkey_hex):
+starkcore/cairo_bridge/verifier.py:5:def cairo_prove_verify(evidence: dict, rules: dict, did_hash: str) -> dict:
+src/starkcore/validators/borromeo_validator.py:5:class Hypothesis:
+src/starkcore/validators/borromeo_validator.py:19:class BorromeoValidator:
+src/starkcore/validators/diacronic_identity_validator.py:5:class IdentityVerdict(Enum):
+src/starkcore/validators/diacronic_identity_validator.py:13:class EntityState:
+src/starkcore/validators/diacronic_identity_validator.py:20:def check_state(previous, current):
+src/starkcore/validators/diacronic_identity_validator.py:31:def check_history(entity):
+src/starkcore/validators/diacronic_identity_validator.py:39:def check_constraints(entity):
+src/starkcore/validators/diacronic_identity_validator.py:47:def diacronic_validator(previous, current):

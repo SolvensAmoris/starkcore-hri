@@ -1,0 +1,8 @@
+src/starkcore/validators/borromeo_validator.py:5:class Hypothesis:
+src/starkcore/validators/borromeo_validator.py:19:class BorromeoValidator:
+src/starkcore/validators/diacronic_identity_validator.py:5:class IdentityVerdict(Enum):
+src/starkcore/validators/diacronic_identity_validator.py:13:class EntityState:
+src/starkcore/validators/diacronic_identity_validator.py:20:def check_state(previous, current):
+src/starkcore/validators/diacronic_identity_validator.py:31:def check_history(entity):
+src/starkcore/validators/diacronic_identity_validator.py:39:def check_constraints(entity):
+src/starkcore/validators/diacronic_identity_validator.py:47:def diacronic_validator(previous, current):

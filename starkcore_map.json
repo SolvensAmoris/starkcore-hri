@@ -1,0 +1,1542 @@
+[
+  {
+    "file": "test06.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [],
+    "imports": [
+      "math"
+    ]
+  },
+  {
+    "file": "test07.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [],
+    "imports": []
+  },
+  {
+    "file": "verify_rh_v051_formal.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "count_box",
+      "f",
+      "edge"
+    ],
+    "imports": [
+      "mpmath",
+      "json",
+      "datetime",
+      "platform",
+      "hashlib",
+      "sys"
+    ]
+  },
+  {
+    "file": "verify_07b.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "pemdas_trap"
+    ],
+    "imports": []
+  },
+  {
+    "file": "verify_rh.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "zeta_approx"
+    ],
+    "imports": [
+      "cmath"
+    ]
+  },
+  {
+    "file": "verify_rh_v02.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [],
+    "imports": [
+      "hashlib",
+      "platform",
+      "sys",
+      "datetime",
+      "math"
+    ]
+  },
+  {
+    "file": "verify_rh_v06_explicit.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "pi_real",
+      "Li",
+      "explicit_correction"
+    ],
+    "imports": [
+      "mpmath"
+    ]
+  },
+  {
+    "file": "verify_rh_v04_full_witness.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "zeta_approx"
+    ],
+    "imports": [
+      "json",
+      "hashlib",
+      "sys",
+      "platform",
+      "datetime",
+      "cmath",
+      "random"
+    ]
+  },
+  {
+    "file": "verify_rh_v05_isolation.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "count_zeros_in_box",
+      "f",
+      "edge"
+    ],
+    "imports": [
+      "mpmath",
+      "json",
+      "datetime"
+    ]
+  },
+  {
+    "file": "verify_rh_v06_1_30zeros.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "pi_real",
+      "Li"
+    ],
+    "imports": [
+      "mpmath",
+      "math"
+    ]
+  },
+  {
+    "file": "verify_rh_v06_2_real_li.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "pi_real"
+    ],
+    "imports": [
+      "mpmath",
+      "math"
+    ]
+  },
+  {
+    "file": "verify_rh_v06_3_psi.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "psi_real"
+    ],
+    "imports": [
+      "mpmath",
+      "math"
+    ]
+  },
+  {
+    "file": "verify_rh_v07_ablation.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "psi_real",
+      "psi_approx"
+    ],
+    "imports": [
+      "mpmath",
+      "math"
+    ]
+  },
+  {
+    "file": "verify_rh_v08_phase.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "psi_real",
+      "psi_approx"
+    ],
+    "imports": [
+      "mpmath",
+      "math",
+      "random"
+    ]
+  },
+  {
+    "file": "verify_rh_v09_spacing.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [],
+    "imports": [
+      "math",
+      "statistics"
+    ]
+  },
+  {
+    "file": "verify_rh_v10_autocorr.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "autocorr"
+    ],
+    "imports": [
+      "math",
+      "random",
+      "statistics"
+    ]
+  },
+  {
+    "file": "verify_et_v01_emergent.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "step"
+    ],
+    "imports": [
+      "random"
+    ]
+  },
+  {
+    "file": "verify_et_v02_dimension.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "step",
+      "analyze",
+      "bfs"
+    ],
+    "imports": [
+      "random",
+      "collections",
+      "math"
+    ]
+  },
+  {
+    "file": "verify_et_v04_selfmap.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "step"
+    ],
+    "imports": [
+      "random",
+      "math",
+      "collections"
+    ]
+  },
+  {
+    "file": "verify_et_v03_reconstruct.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "step",
+      "laplacian_spectrum",
+      "ollivier_curvature",
+      "perturb_test",
+      "bfs_dist"
+    ],
+    "imports": [
+      "random",
+      "math",
+      "collections"
+    ]
+  },
+  {
+    "file": "verify_et_v05_proof.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "step",
+      "reconstruct_corr"
+    ],
+    "imports": [
+      "random",
+      "math",
+      "collections"
+    ]
+  },
+  {
+    "file": "verify_et_v06_final.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "make_world",
+      "reconstruct_corr",
+      "degree_preserved_shuffle",
+      "step"
+    ],
+    "imports": [
+      "random",
+      "math",
+      "collections",
+      "json"
+    ]
+  },
+  {
+    "file": "verify_et_v07_no_space.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "analyze",
+      "bfs"
+    ],
+    "imports": [
+      "random",
+      "math",
+      "collections",
+      "json"
+    ]
+  },
+  {
+    "file": "verify_et_v08_breath.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "analyze",
+      "bfs"
+    ],
+    "imports": [
+      "random",
+      "math",
+      "collections"
+    ]
+  },
+  {
+    "file": "verify_et_v09_memory.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "make_G0",
+      "evolve",
+      "jaccard",
+      "overlap_communities"
+    ],
+    "imports": [
+      "random",
+      "math",
+      "collections"
+    ]
+  },
+  {
+    "file": "verify_et_v10_causality.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [],
+    "imports": [
+      "random",
+      "math"
+    ]
+  },
+  {
+    "file": "verify_et_v11_docalculus.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "run_world"
+    ],
+    "imports": [
+      "random"
+    ]
+  },
+  {
+    "file": "verify_et_v12_shadow.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "make_world",
+      "evolve",
+      "response_fingerprint",
+      "dist_fp",
+      "degree_hist",
+      "diameter"
+    ],
+    "imports": [
+      "random",
+      "collections",
+      "collections"
+    ]
+  },
+  {
+    "file": "lab_identity.py",
+    "status": "ONLINE",
+    "classes": [
+      "Node"
+    ],
+    "functions": [
+      "compute_identity",
+      "generate_dag",
+      "mutate_node",
+      "test_gate",
+      "test_evidence_integrity",
+      "run_scale_test",
+      "generate_report"
+    ],
+    "imports": [
+      "hashlib",
+      "json",
+      "time",
+      "random",
+      "dataclasses",
+      "typing"
+    ]
+  },
+  {
+    "file": "lab_identity_v2.py",
+    "status": "ONLINE",
+    "classes": [
+      "Node"
+    ],
+    "functions": [
+      "compute_identity",
+      "gen_seed",
+      "test_collisions",
+      "gen_chain",
+      "gen_star",
+      "gen_deep_tree",
+      "test_topologies",
+      "test_corruption"
+    ],
+    "imports": [
+      "hashlib",
+      "time",
+      "random",
+      "asyncio",
+      "dataclasses",
+      "typing"
+    ]
+  },
+  {
+    "file": "lab_identity_v2_1.py",
+    "status": "ONLINE",
+    "classes": [
+      "Node"
+    ],
+    "functions": [
+      "compute_identity",
+      "test_corruption_detailed"
+    ],
+    "imports": [
+      "hashlib",
+      "time",
+      "random",
+      "asyncio",
+      "dataclasses"
+    ]
+  },
+  {
+    "file": "lab_race.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "compute_hash",
+      "write_unsafe",
+      "write_safe",
+      "run_test",
+      "worker"
+    ],
+    "imports": [
+      "threading",
+      "json",
+      "time",
+      "os",
+      "hashlib",
+      "random"
+    ]
+  },
+  {
+    "file": "lab_append_vs_json.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "h",
+      "write_json_lock",
+      "write_append_log",
+      "run",
+      "worker"
+    ],
+    "imports": [
+      "threading",
+      "json",
+      "time",
+      "os",
+      "hashlib"
+    ]
+  },
+  {
+    "file": "evidence_store_v2.py",
+    "status": "ONLINE",
+    "classes": [
+      "EvidenceStoreV2"
+    ],
+    "functions": [
+      "__init__",
+      "_load_counter",
+      "append",
+      "_make_snapshot",
+      "replay",
+      "get_history"
+    ],
+    "imports": [
+      "json",
+      "time",
+      "os",
+      "pathlib",
+      "shutil"
+    ]
+  },
+  {
+    "file": "evidence_store_v3.py",
+    "status": "ONLINE",
+    "classes": [
+      "EvidenceStoreV3"
+    ],
+    "functions": [
+      "sha256",
+      "__init__",
+      "_load_state",
+      "append",
+      "_make_snapshot",
+      "replay",
+      "verify_chain",
+      "get_history"
+    ],
+    "imports": [
+      "json",
+      "time",
+      "os",
+      "hashlib",
+      "pathlib",
+      "shutil"
+    ]
+  },
+  {
+    "file": "evidence_store_v4.py",
+    "status": "ONLINE",
+    "classes": [
+      "EvidenceStoreV4"
+    ],
+    "functions": [
+      "sha256",
+      "merkle_root",
+      "merkle_proof",
+      "verify_proof",
+      "__init__",
+      "_load",
+      "append",
+      "root",
+      "get_proof"
+    ],
+    "imports": [
+      "json",
+      "time",
+      "os",
+      "hashlib",
+      "pathlib",
+      "shutil",
+      "evidence_store_v4"
+    ]
+  },
+  {
+    "file": "verify_et_v13_resonance.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "make_world",
+      "evolve",
+      "resonance_fingerprint",
+      "dist"
+    ],
+    "imports": [
+      "random",
+      "collections"
+    ]
+  },
+  {
+    "file": "verify_et_v14_amnesia.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "evolve_from_scratch",
+      "resonance_norm"
+    ],
+    "imports": [
+      "random"
+    ]
+  },
+  {
+    "file": "verify_et_v15_amnesia.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "evolve",
+      "fingerprint",
+      "dist"
+    ],
+    "imports": [
+      "random",
+      "math",
+      "collections"
+    ]
+  },
+  {
+    "file": "starkcore_v1_5_v1_6.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "generate_world",
+      "evolve_step",
+      "diffusion_fingerprint",
+      "fingerprint_distance",
+      "run_v15",
+      "get_static_stats",
+      "static_distance",
+      "run_v16_adversario"
+    ],
+    "imports": [
+      "numpy",
+      "networkx",
+      "itertools",
+      "random"
+    ]
+  },
+  {
+    "file": "starkcore_v1_7_memoria.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "gen_world_trace",
+      "diffusion_fp",
+      "accuracy_law"
+    ],
+    "imports": [
+      "numpy",
+      "networkx",
+      "random",
+      "itertools"
+    ]
+  },
+  {
+    "file": "starkcore_v1_7b.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "gen_trace"
+    ],
+    "imports": [
+      "numpy",
+      "networkx",
+      "random"
+    ]
+  },
+  {
+    "file": "starkcore_v1_7c.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "gen_trace"
+    ],
+    "imports": [
+      "numpy",
+      "networkx"
+    ]
+  },
+  {
+    "file": "starkcore_v1_7d.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "gen_trace_churn"
+    ],
+    "imports": [
+      "numpy",
+      "networkx"
+    ]
+  },
+  {
+    "file": "starkcore_v1_7e_shannon.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "shannon",
+      "gen_trace_churn"
+    ],
+    "imports": [
+      "numpy",
+      "networkx"
+    ]
+  },
+  {
+    "file": "starkcore_v1_7f_demoniaco.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "shannon",
+      "block_entropy",
+      "entropy_rate_approx",
+      "lz_complexity",
+      "gen_trace_churn"
+    ],
+    "imports": [
+      "numpy",
+      "networkx"
+    ]
+  },
+  {
+    "file": "starkcore_v1_7h_umbral_online.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "shannon",
+      "block_entropy",
+      "entropy_rate",
+      "lz_complexity",
+      "gen_trace",
+      "gen_switching_trace",
+      "online_detect"
+    ],
+    "imports": [
+      "numpy",
+      "networkx"
+    ]
+  },
+  {
+    "file": "starkcore_v1_9_estructura_percolacion.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "shannon",
+      "entropy_rate",
+      "gen_trace",
+      "gen_switching",
+      "online_structural_detector"
+    ],
+    "imports": [
+      "numpy",
+      "networkx"
+    ]
+  },
+  {
+    "file": "starkcore_v1_10_multimecanismo_ruido.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "shannon",
+      "gen_base",
+      "rewire_triadic",
+      "rewire_pa",
+      "rewire_community",
+      "run_regime"
+    ],
+    "imports": [
+      "numpy",
+      "networkx"
+    ]
+  },
+  {
+    "file": "starkcore_v1_11_sampling_real.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "shannon",
+      "fast_random_rewire",
+      "sample_induced",
+      "metrics_on",
+      "run_sampled_regime"
+    ],
+    "imports": [
+      "numpy",
+      "networkx",
+      "gzip",
+      "urllib.request",
+      "os"
+    ]
+  },
+  {
+    "file": "starkcore_v1_12_heisenberg.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "sample_induced",
+      "metrics"
+    ],
+    "imports": [
+      "numpy",
+      "networkx",
+      "gzip",
+      "os"
+    ]
+  },
+  {
+    "file": "starkcore_v1_12b.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "sample_induced",
+      "metrics",
+      "run_regime"
+    ],
+    "imports": [
+      "numpy",
+      "networkx",
+      "gzip",
+      "random"
+    ]
+  },
+  {
+    "file": "conjecture_lab_v1.py",
+    "status": "ONLINE",
+    "classes": [
+      "Conjecture"
+    ],
+    "functions": [
+      "generate_polynomial_relations",
+      "generate_sequence_patterns",
+      "evaluate_conjecture",
+      "simplicity_score",
+      "rank_conjectures",
+      "run_lab",
+      "success_rate",
+      "make_fn",
+      "fn"
+    ],
+    "imports": [
+      "numpy",
+      "itertools",
+      "dataclasses",
+      "typing",
+      "math"
+    ]
+  },
+  {
+    "file": "conjecture_lab_v1_1.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "generate_polynomial_relations",
+      "make_fn",
+      "fn"
+    ],
+    "imports": [
+      "itertools"
+    ]
+  },
+  {
+    "file": "conjecture_lab_v2_llm.py",
+    "status": "ONLINE",
+    "classes": [
+      "Conjecture"
+    ],
+    "functions": [
+      "gen_stable",
+      "gen_llm_like",
+      "evaluate",
+      "simplicity",
+      "run_lab",
+      "rate",
+      "make_fn",
+      "make_fact",
+      "make_fn",
+      "fn",
+      "fn",
+      "fn"
+    ],
+    "imports": [
+      "numpy",
+      "itertools",
+      "random",
+      "math",
+      "dataclasses",
+      "typing"
+    ]
+  },
+  {
+    "file": "conjecture_lab_v2_evolver.py",
+    "status": "ONLINE",
+    "classes": [
+      "Conjecture"
+    ],
+    "functions": [
+      "safe_eval",
+      "test_conjecture",
+      "refine",
+      "evolve",
+      "rate",
+      "__str__"
+    ],
+    "imports": [
+      "numpy",
+      "math",
+      "dataclasses",
+      "typing"
+    ]
+  },
+  {
+    "file": "conjecture_lab_v2_darwin.py",
+    "status": "ONLINE",
+    "classes": [
+      "Conjecture"
+    ],
+    "functions": [
+      "eval_strict",
+      "test",
+      "find_min_threshold",
+      "evolve",
+      "rate",
+      "threshold"
+    ],
+    "imports": [
+      "math",
+      "dataclasses",
+      "typing"
+    ]
+  },
+  {
+    "file": "conjecture_lab_v2_eco.py",
+    "status": "ONLINE",
+    "classes": [
+      "Node"
+    ],
+    "functions": [
+      "eval_generic",
+      "test",
+      "find_min_k",
+      "build_tree",
+      "__str__"
+    ],
+    "imports": [
+      "math",
+      "dataclasses",
+      "typing"
+    ]
+  },
+  {
+    "file": "conjecture_lab_v3_darwin.py",
+    "status": "ONLINE",
+    "classes": [
+      "Species"
+    ],
+    "functions": [
+      "eval_safe",
+      "test",
+      "fitness_score",
+      "find_min_k",
+      "mutate_formula",
+      "crossover",
+      "evolve",
+      "__str__"
+    ],
+    "imports": [
+      "math",
+      "random",
+      "itertools",
+      "dataclasses",
+      "typing"
+    ]
+  },
+  {
+    "file": "conjecture_lab_v4_predator.py",
+    "status": "ONLINE",
+    "classes": [
+      "Species"
+    ],
+    "functions": [
+      "eval_safe",
+      "test",
+      "find_min_k",
+      "interestingness",
+      "subsumes",
+      "evolve",
+      "__str__"
+    ],
+    "imports": [
+      "math",
+      "dataclasses",
+      "typing"
+    ]
+  },
+  {
+    "file": "conjecture_lab_v5_geo.py",
+    "status": "ONLINE",
+    "classes": [
+      "Species"
+    ],
+    "functions": [
+      "eval_safe",
+      "test",
+      "find_min_k",
+      "interestingness",
+      "logically_subsumes",
+      "evolve_geo",
+      "__str__"
+    ],
+    "imports": [
+      "math",
+      "dataclasses",
+      "typing"
+    ]
+  },
+  {
+    "file": "conjecture_lab_v6_niches.py",
+    "status": "ONLINE",
+    "classes": [
+      "Species"
+    ],
+    "functions": [
+      "eval_safe",
+      "test",
+      "niche_of",
+      "failure_signature",
+      "interestingness",
+      "evolves"
+    ],
+    "imports": [
+      "math",
+      "dataclasses",
+      "typing"
+    ]
+  },
+  {
+    "file": "conjecture_lab_v7_surgery.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "eval_safe",
+      "fails_of",
+      "signature_vector",
+      "kmeans",
+      "surgery_mutations",
+      "run"
+    ],
+    "imports": [
+      "math",
+      "random",
+      "dataclasses",
+      "typing",
+      "numpy"
+    ]
+  },
+  {
+    "file": "conjecture_lab_v8_final.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "eval_safe",
+      "fails_of",
+      "kmin_of",
+      "niche_of",
+      "interest",
+      "landscape_bar",
+      "run"
+    ],
+    "imports": [
+      "math",
+      "random",
+      "itertools",
+      "collections",
+      "numpy"
+    ]
+  },
+  {
+    "file": "conjecture_lab_v9_final.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "eval_safe",
+      "fails_of",
+      "kmin_of",
+      "landscape_bar",
+      "surgery_search",
+      "print_tree",
+      "run"
+    ],
+    "imports": [
+      "math",
+      "random",
+      "collections",
+      "numpy"
+    ]
+  },
+  {
+    "file": "conjecture_lab_v10_meta.py",
+    "status": "ONLINE",
+    "classes": [
+      "Operator"
+    ],
+    "functions": [
+      "eval_safe",
+      "fails_of",
+      "landscape_bar",
+      "kmin_of",
+      "mutate_operator",
+      "run",
+      "__init__",
+      "apply",
+      "fitness",
+      "__str__"
+    ],
+    "imports": [
+      "math",
+      "random",
+      "collections",
+      "numpy"
+    ]
+  },
+  {
+    "file": "conjecture_lab_v11_anticheat.py",
+    "status": "ONLINE",
+    "classes": [
+      "Operator"
+    ],
+    "functions": [
+      "eval_safe",
+      "fails_of",
+      "landscape_bar",
+      "kmin_of",
+      "delta_score",
+      "run",
+      "__init__",
+      "apply",
+      "__str__",
+      "mutate_operator"
+    ],
+    "imports": [
+      "math",
+      "random",
+      "collections",
+      "numpy"
+    ]
+  },
+  {
+    "file": "lab_v12_inventor.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "eval_safe",
+      "fails_of",
+      "invent_operator"
+    ],
+    "imports": [
+      "math",
+      "random",
+      "ast"
+    ]
+  },
+  {
+    "file": "conjecture_lab_v14_final.py",
+    "status": "ONLINE",
+    "classes": [
+      "Phi"
+    ],
+    "functions": [
+      "eval_safe",
+      "fails_of",
+      "kmin_of",
+      "landscape_bar",
+      "make_both",
+      "delta_score",
+      "mutate_phi",
+      "print_tree",
+      "run",
+      "__init__",
+      "apply",
+      "verify",
+      "__str__",
+      "fn",
+      "comp"
+    ],
+    "imports": [
+      "math",
+      "random",
+      "sys",
+      "collections",
+      "sympy"
+    ]
+  },
+  {
+    "file": "starkcore_lean_agent.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "check_lean",
+      "to_lean_code",
+      "strengthen_with_lean_feedback"
+    ],
+    "imports": [
+      "subprocess",
+      "json",
+      "os",
+      "tempfile",
+      "re",
+      "conjecture_lab_v14_final"
+    ]
+  },
+  {
+    "file": "pack2_v14_real.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [],
+    "imports": [
+      "math",
+      "conjecture_lab_v14_final"
+    ]
+  },
+  {
+    "file": "verify_borromeo_attestation.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "commit_exists",
+      "verify"
+    ],
+    "imports": [
+      "json",
+      "subprocess",
+      "pathlib"
+    ]
+  },
+  {
+    "file": "tools_generate_borromeo_attestation.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "git_hash",
+      "run_tests",
+      "main"
+    ],
+    "imports": [
+      "json",
+      "subprocess",
+      "sys",
+      "datetime",
+      "pathlib"
+    ]
+  },
+  {
+    "file": "starkcore/__init__.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [],
+    "imports": []
+  },
+  {
+    "file": "starkcore/gate.py",
+    "status": "ONLINE",
+    "classes": [
+      "Gate"
+    ],
+    "functions": [
+      "is_external_anchored",
+      "check"
+    ],
+    "imports": [
+      "evidence",
+      "starkcore.oracle.btc_burn_verifier"
+    ]
+  },
+  {
+    "file": "starkcore/executor.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "execute_verified_paper"
+    ],
+    "imports": [
+      "hashlib",
+      "json"
+    ]
+  },
+  {
+    "file": "starkcore/cosmos.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "run"
+    ],
+    "imports": [
+      "time",
+      "hashlib",
+      "evidence",
+      "gate",
+      "executor",
+      "sys"
+    ]
+  },
+  {
+    "file": "starkcore/gate_cairo.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [],
+    "imports": [
+      "starkcore.cairo_bridge.verifier"
+    ]
+  },
+  {
+    "file": "conjecture-evolution/conjecture_pack2.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "eval_safe",
+      "fails_of",
+      "landscape_bar"
+    ],
+    "imports": [
+      "math",
+      "random",
+      "collections"
+    ]
+  },
+  {
+    "file": "src/__init__.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [],
+    "imports": []
+  },
+  {
+    "file": "tests/test_borromeo_character.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "test_rechaza_falso_C1_compresion_cobarde",
+      "test_rechaza_falso_C2_terreno_propio",
+      "test_rechaza_falso_C3_premisa_oculta",
+      "test_reporte_explica_C3",
+      "test_el_validador_se_rechaza_si_mismo"
+    ],
+    "imports": [
+      "sys",
+      "starkcore.validators.borromeo_validator"
+    ]
+  },
+  {
+    "file": "tests/__init__.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [],
+    "imports": []
+  },
+  {
+    "file": "tests/test_borromeo_attestation.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "test_attestation_valida",
+      "test_attestation_detecta_estado_invalido",
+      "test_attestation_detecta_commit_vacio"
+    ],
+    "imports": [
+      "sys",
+      "starkcore.validators.borromeo_validator"
+    ]
+  },
+  {
+    "file": "tests/test_diacronic_identity.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "test_identidad_sin_historia_es_rechazada",
+      "test_identidad_persistente",
+      "test_etiqueta_sin_continuidad"
+    ],
+    "imports": [
+      "src.starkcore.validators.diacronic_identity_validator"
+    ]
+  },
+  {
+    "file": "tests/test_diacronic_self_rejection.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "test_diacronic_rechaza_su_propia_perdida_de_historia"
+    ],
+    "imports": [
+      "src.starkcore.validators.diacronic_identity_validator"
+    ]
+  },
+  {
+    "file": "src/starkcore/__init__.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [],
+    "imports": []
+  },
+  {
+    "file": "src/starkcore/validators/borromeo_validator.py",
+    "status": "ONLINE",
+    "classes": [
+      "Hypothesis",
+      "BorromeoValidator"
+    ],
+    "functions": [
+      "c1_peligrosa",
+      "c2_bordes",
+      "c3_inevitabilidad",
+      "validate"
+    ],
+    "imports": [
+      "dataclasses",
+      "typing"
+    ]
+  },
+  {
+    "file": "src/starkcore/validators/__init__.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [],
+    "imports": []
+  },
+  {
+    "file": "src/starkcore/validators/diacronic_identity_validator.py",
+    "status": "ONLINE",
+    "classes": [
+      "IdentityVerdict",
+      "EntityState"
+    ],
+    "functions": [
+      "check_state",
+      "check_history",
+      "check_constraints",
+      "diacronic_validator"
+    ],
+    "imports": [
+      "dataclasses",
+      "enum"
+    ]
+  },
+  {
+    "file": "starkcore/evidence/__init__.py",
+    "status": "ONLINE",
+    "classes": [
+      "EvidenceStore"
+    ],
+    "functions": [
+      "verify_proof",
+      "reset",
+      "__new__",
+      "add",
+      "root",
+      "get_proof"
+    ],
+    "imports": [
+      "hashlib",
+      "json",
+      "typing"
+    ]
+  },
+  {
+    "file": "starkcore/evidence/notary.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "notarize"
+    ],
+    "imports": [
+      "hashlib",
+      "json",
+      "time",
+      "starkcore.executor"
+    ]
+  },
+  {
+    "file": "starkcore/h_test/evaluator.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "load_registry",
+      "evaluate_node",
+      "run_h_test"
+    ],
+    "imports": [
+      "json",
+      "importlib",
+      "pathlib"
+    ]
+  },
+  {
+    "file": "starkcore/h_test/cartographer.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [],
+    "imports": [
+      "ast",
+      "json",
+      "pathlib"
+    ]
+  },
+  {
+    "file": "starkcore/h_test/h_runner.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "load_registry",
+      "probe",
+      "main"
+    ],
+    "imports": [
+      "json",
+      "importlib",
+      "pathlib"
+    ]
+  },
+  {
+    "file": "starkcore/oracle/btc_burn_verifier.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "dbl_sha256",
+      "read_varint",
+      "parse_tx",
+      "bits_to_target",
+      "verify_pow",
+      "merkle_root",
+      "verify"
+    ],
+    "imports": [
+      "hashlib",
+      "struct"
+    ]
+  },
+  {
+    "file": "starkcore/cairo_bridge/verifier.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "cairo_prove_verify"
+    ],
+    "imports": []
+  },
+  {
+    "file": "evidence/rh_check/verify_rh.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [
+      "zeta_approx"
+    ],
+    "imports": [
+      "cmath"
+    ]
+  },
+  {
+    "file": "evidence/rh_check/RH_V09_SPACING.py",
+    "status": "ONLINE",
+    "classes": [],
+    "functions": [],
+    "imports": [
+      "math",
+      "statistics"
+    ]
+  }
+]

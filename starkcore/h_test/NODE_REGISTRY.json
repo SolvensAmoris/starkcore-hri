@@ -1,0 +1,54 @@
+{
+  "system": "STARKCORE",
+  "h_test_version": "0.1",
+  "nodes": [
+    {
+      "id": "COSMOS",
+      "module": "starkcore.cosmos",
+      "role": "DSL execution layer",
+      "test": "import"
+    },
+    {
+      "id": "EVIDENCE",
+      "module": "starkcore.evidence",
+      "role": "proof storage and verification",
+      "test": "import"
+    },
+    {
+      "id": "GATE",
+      "module": "starkcore.gate",
+      "role": "execution permission boundary",
+      "test": "import"
+    },
+    {
+      "id": "NOTARY",
+      "module": "starkcore.evidence.notary",
+      "role": "external evidence anchoring",
+      "test": "import"
+    },
+    {
+      "id": "BTC_ORACLE",
+      "module": "starkcore.oracle.btc_burn_verifier",
+      "role": "external verification oracle",
+      "test": "import"
+    },
+    {
+      "id": "CAIRO_BRIDGE",
+      "module": "starkcore.cairo_bridge.verifier",
+      "role": "formal verification bridge",
+      "test": "import"
+    },
+    {
+      "id": "BORROMEO",
+      "module": "src.starkcore.validators.borromeo_validator",
+      "role": "hypothesis validator",
+      "test": "import"
+    },
+    {
+      "id": "DIACRONIC_IDENTITY",
+      "module": "src.starkcore.validators.diacronic_identity_validator",
+      "role": "identity continuity validator",
+      "test": "import"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+/home/userland/starkcore/CausalForge/causalforge_v06_fase.py:97: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "fecha_utc": __import__("datetime").datetime.utcnow().isoformat()+"Z",
+==========================================================================
+ CAUSALFORGE v0.6 · Diagrama de Fase Causal (p × L)
+==========================================================================
+
+Δ(T=5):
+    p           L=0           L=1           L=2           L=3           L=4
+ 0.15        0.00 ○        0.00 ○        0.00 ○        0.00 ○        0.00 ○
+ 0.25        0.00 ○        0.00 ○        0.00 ○        0.00 ○        0.00 ○
+ 0.35        0.00 ○        0.00 ○        0.00 ○        0.00 ○        0.00 ○
+ 0.45        0.00 ○        0.00 ○        0.00 ○        0.00 ○        0.00 ○
+ 0.55        0.00 ○        0.00 ○        0.00 ○        0.00 ○        0.00 ○
+ 0.65        0.00 ○        0.00 ○        0.00 ○        0.00 ○        0.00 ○
+ 0.75        0.00 ○        0.00 ○        0.00 ○        0.00 ○        0.00 ○
+ 0.85        0.00 ○        0.00 ○        0.00 ○        0.00 ○        0.00 ○
+
+Z-score:
+    p           L=0           L=1           L=2           L=3           L=4
+ 0.15          0.00          0.00          0.00          0.00          0.00
+ 0.25          0.00          0.00          0.00          0.00          0.00
+ 0.35          0.00          0.00          0.00          0.00          0.00
+ 0.45          0.00          0.00          0.00          0.00          0.00
+ 0.55          0.00          0.00          0.00          0.00          0.00
+ 0.65          0.00          0.00          0.00          0.00          0.00
+ 0.75          0.00          0.00          0.00          0.00          0.00
+ 0.85          0.00          0.00          0.00          0.00          0.00
+
+🧭 Transiciones candidatas (Δ salta ≥ 3.0):
+
+[OK] tablilla_fase_v06.json
