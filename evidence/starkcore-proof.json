@@ -1,0 +1,17 @@
+{
+  "project": "StarkCore CA-002/CA-003",
+  "merkle_root": "2189d730255fffc7cf0311ea27716ec40b5684255fb84f998838cb6e3b0b8815",
+  "block_hash": "00007ad4cb74402481c7b90e6a86f70d1d508672bc6102f4fa0570116702111b",
+  "nonce": 39317,
+  "target": "0000ffff...",
+  "txs": [
+    "CA-002 firewall check",
+    "CA-003 mitigation",
+    "package-lock sha a59f1ed0e1cc19",
+    "StarkCore proof"
+  ],
+  "timestamp": 1785279470,
+  "anchored": "regtest + ready for mainnet OTS",
+  "updated_at": "2026-07-31T14:52:07.207337Z",
+  "superseded_by": "U3"
+}

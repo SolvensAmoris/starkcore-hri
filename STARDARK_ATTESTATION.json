@@ -1,0 +1,8 @@
+{
+  "policy_hash": "9972d23e82325a324b3058398da8905975d6cf78c51ee81b946b2a8ad08aeebd",
+  "canonical_sha256": "9972d23e82325a324b3058398da8905975d6cf78c51ee81b946b2a8ad08aeebd",
+  "identity_hash": "9972d23e82325a324b3058398da8905975d6cf78c51ee81b946b2a8ad08aeebd",
+  "policy_path": "firewall.yaml",
+  "root": "f8581c6f",
+  "status": "PASS"
+}
