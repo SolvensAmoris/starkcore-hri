@@ -1,0 +1,95 @@
+{
+  "starkcore_version": "v0.3 Zero Witness",
+  "commit": "e31acc0 -> next",
+  "utc": "2026-08-03T08:06:25.668069+00:00",
+  "philosophy": "VALID == REVERSIBLE - includes failed falsification",
+  "witnesses": [
+    {
+      "zero_candidate": {
+        "re": 0.5,
+        "im": 14.1347251417,
+        "index": 1
+      },
+      "verification": {
+        "method": "zeta_eval_eta",
+        "terms": 1500,
+        "residual": 0.0054397914870103455,
+        "status": "PASS"
+      },
+      "falsification_attempt": {
+        "found_off_line": true,
+        "re": 0.4,
+        "mag": 0.09282933880583424
+      },
+      "path": "ZERO -> WITNESS -> EVIDENCE -> ATTESTATION"
+    },
+    {
+      "zero_candidate": {
+        "re": 0.5,
+        "im": 21.0220396387,
+        "index": 2
+      },
+      "verification": {
+        "method": "zeta_eval_eta",
+        "terms": 1500,
+        "residual": 0.006308218798300973,
+        "status": "PASS"
+      },
+      "falsification_attempt": {
+        "found_off_line": false
+      },
+      "path": "ZERO -> WITNESS -> EVIDENCE -> ATTESTATION"
+    },
+    {
+      "zero_candidate": {
+        "re": 0.5,
+        "im": 25.0108575801,
+        "index": 3
+      },
+      "verification": {
+        "method": "zeta_eval_eta",
+        "terms": 1500,
+        "residual": 0.007665414638458655,
+        "status": "PASS"
+      },
+      "falsification_attempt": {
+        "found_off_line": false
+      },
+      "path": "ZERO -> WITNESS -> EVIDENCE -> ATTESTATION"
+    },
+    {
+      "zero_candidate": {
+        "re": 0.5,
+        "im": 30.4248761259,
+        "index": 4
+      },
+      "verification": {
+        "method": "zeta_eval_eta",
+        "terms": 1500,
+        "residual": 0.005922767416376737,
+        "status": "PASS"
+      },
+      "falsification_attempt": {
+        "found_off_line": false
+      },
+      "path": "ZERO -> WITNESS -> EVIDENCE -> ATTESTATION"
+    },
+    {
+      "zero_candidate": {
+        "re": 0.5,
+        "im": 32.9350615877,
+        "index": 5
+      },
+      "verification": {
+        "method": "zeta_eval_eta",
+        "terms": 1500,
+        "residual": 0.005837782605279311,
+        "status": "PASS"
+      },
+      "falsification_attempt": {
+        "found_off_line": false
+      },
+      "path": "ZERO -> WITNESS -> EVIDENCE -> ATTESTATION"
+    }
+  ]
+}
