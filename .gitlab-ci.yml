@@ -1,10 +1,16 @@
 stages: [cairo]
-
 cairo_build:
   stage: cairo
-  image: ghcr.io/software-mansion/scarb:2.20.0
+  image: rust:1.82-bookworm
+  before_script:
+    - apt-get update -y && apt-get install -y curl git pkg-config libssl-dev -y
+    - curl --proto '=https' --tlsv1.2 -sSf https://docs.swmansion.com/scarb/install.sh | sh -s -- -v 2.20.0
+    - export PATH="$HOME/.local/bin:$PATH"
+    - ls -lh $HOME/.local/bin/scarb
+    - ldd $HOME/.local/bin/scarb || true
+    - $HOME/.local/bin/scarb --version
   script:
-    - scarb --version
+    - export PATH="$HOME/.local/bin:$PATH"
     - cd cairo_verifier && scarb build
   artifacts:
     paths:
