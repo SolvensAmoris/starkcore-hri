@@ -1,6 +1,12 @@
 node_modules/
-venv/
+atanor/node_modules/
+atanor/dist/
 __pycache__/
 *.pyc
+.env
+*.log
+receipts/
+evidence_v3/
+*.gz
+venv-*
 *.tar.gz
-*.zip

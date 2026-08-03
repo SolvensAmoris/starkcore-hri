@@ -1,46 +1,36 @@
-# StarkCore HRI
+# Cosmos v1 - Computacion Verificable End-to-End
 
-Historical Reference Integrity
+> No confies. Verifica. Cada idea deja un rastro que nadie puede borrar.
 
-Sistema experimental para estudiar continuidad verificable de identidad bajo transformación.
+Autor: Luis Alberto Burciaga Miker - Luis.albm77@gmail.com
+GitLab: @Luis.albm77
+Built: Huawei + UserLAnd + Python stdlib | 2026
 
-## Componentes
+Cosmos v1 es un motor de confianza. Convierte una frase humana en un acto inscrito con hash chain + Merkle tree.
 
-- Identidad operacional
-- Evidencia criptográfica
-- Ledger verificable
-- Attestation reproducible
-- Pruebas adversariales CA-002 / CA-003
+Idea en DSL -> Parser -> Planner -> Gate -> Executor -> Evidence -> Receipt
+Una linea. 10 eventos. 1 root de 32 bytes.
 
----
+EN 10 SEGUNDOS:
+  git clone https://gitlab.com/luis.albm77/starkcore-hri-public.git
+  cd starkcore-hri-public
+  python3 -m starkcore.cosmos "SUN,NODE,ROOT,FLOW -> tarea1 -> tarea2 -> fail_api -> tarea3"
 
-## Documentation
+SALIDA REAL:
+  COSMOS v1 - Run 1785731690
+  Root: 75e470098078be1dadf051af5597eeb18d07fa480f6a9c67555edfbe258e8f97
+  Chain: OK 10 eventos
+  proof_len=4 -> True
 
-- [Threat Model](THREAT_MODEL.md)
-- [License](LICENSE)
-- [White Paper](WHITE_PAPER_STARDARK.md)
-- [STARDARK Attestation](STARDARK_ATTESTATION.json)
+ARQUITECTURA:
+  starkcore/evidence/ - Notario con Merkle proofs O(log n)
+  starkcore/gate.py - Juez ALLOWED/DENIED
+  starkcore/executor.py - Ejecutor con custodia
+  starkcore/cosmos.py - Motor completo
 
----
+AUDITORIA:
+  from starkcore.evidence import verify_proof
+  verify_proof(leaf, proof, root) # True
 
-## Scope
-
-StarkCore HRI is a defensive research project focused on integrity verification, reproducible evidence, and historical reference analysis.
-
-The attestation artifacts represent verification within the defined project scope and should be interpreted together with the associated documentation.
-
----
-
-## Principle
-
-La identidad no se conserva porque permanezca inmóvil.
-
-Se conserva porque puede demostrar su camino.
-
----
-
-## Autor
-
-Luis Alberto Burciaga Miker
-
-StarkCore Lab
+(c) 2026 Luis Alberto Burciaga Miker - Luis.albm77@gmail.com
+Built on Huawei + UserLAnd - Zero deps, 100% verifiable.
