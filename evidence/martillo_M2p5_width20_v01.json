@@ -1,0 +1,32 @@
+{
+  "martillo": "M2.5_scale_v01",
+  "layers": 6,
+  "width": 20,
+  "reps_T1": 1200,
+  "reps_T2": 2500,
+  "reps_T3": 1200,
+  "cpu_s": 120.87398743629456,
+  "results": {
+    "1": {
+      "dV": 0.0,
+      "Z": 0.0,
+      "Vr": 122.73,
+      "Ve": 122.73
+    },
+    "2": {
+      "dV": 0.0116,
+      "Z": 0.11941472908750751,
+      "Vr": 120.4372,
+      "Ve": 120.4256
+    },
+    "3": {
+      "dV": 0.31333333333333335,
+      "Z": 1.0426591852662401,
+      "Vr": 111.03916666666667,
+      "Ve": 110.72583333333333
+    }
+  },
+  "borromeo": "MODO_COMPRESION",
+  "min_T": 1,
+  "nota": "Preserva capas, rompe solo localidad. |Z|<1 => localidad NO invariante. Confirmado v06e."
+}
