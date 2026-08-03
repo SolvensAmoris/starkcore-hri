@@ -34,9 +34,9 @@ deploy-sepolia:
   script:
         - export PATH="$HOME/.local/bin:$HOME/.snfoundry/bin:$PATH"
         - cd cairo_verifier
-        - sncast --network sepolia account create --name myacc --type oz --url $RPC || true
-        - echo "=== TU ADDRESS PARA FONDEAR ==="
-        - cat ~/.starknet_accounts/starknet_open_zeppelin_accounts.json || cat ~/.snfoundry/accounts/sepolia/myacc.json || echo "no file"
-        - ls -la ~/.starknet_accounts/ || ls -la ~/.snfoundry/accounts/sepolia/
+        - sncast account create --network sepolia --name myacc --type open-zeppelin --url $RPC || true
+        - cat ~/.snfoundry/accounts/sepolia/myacc.json
+        - sncast account deploy --network sepolia --name myacc --url $RPC
+        - sncast declare --network sepolia --contract-name cosmos_burn_verifier --url $RPC --account myacc
   rules:
         - when: manual
