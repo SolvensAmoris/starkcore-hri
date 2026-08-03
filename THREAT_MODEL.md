@@ -1,16 +1,12 @@
+# Threat Model
+
 ## Overview
 
 This document defines the security assumptions, protected assets, considered threats, and limitations of StarkCore.
 
 StarkCore focuses on preserving integrity, traceability, and verifiable execution evidence.
 
-
-
-
-
-
-
-# Threat Model
+---
 
 ## Protected Assets
 
