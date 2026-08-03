@@ -1,0 +1,8 @@
+{
+  "version": "v0.5 Isolation - argument principle",
+  "device": "Huawei Mate - UserLAnd",
+  "dps": 50,
+  "result": "5/5 count=1 unique=True residual~1e-11",
+  "path": "ZERO -> WITNESS -> ISOLATION -> ATTESTATION",
+  "commit_parent": "284c179"
+}
