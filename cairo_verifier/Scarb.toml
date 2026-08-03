@@ -6,5 +6,4 @@ edition = "2024_07"
 [dependencies]
 starknet = "2.20.0"
 
-[lib]
-name = "cosmos_burn_verifier"
+[[target.starknet-contract]]
