@@ -21,10 +21,18 @@ deploy-sepolia:
   stage: deploy
   needs:
         - cairo_build
-  image: foundry-rs/starknet-foundry:latest
+  image: rust:1.82-bookworm
+  before_script:
+        - apt-get update -y && apt-get install -y curl git -y
+        - curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/foundry-rs/starknet-foundry/master/scripts/install.sh | sh -s -- --no-modify-path
+        - export PATH="$HOME/.local/bin:$PATH"
+        - /root/.local/bin/snfoundryup -v 0.35.0
+        - export PATH="$HOME/.snfoundry/bin:$PATH"
+        - sncast --version
   variables:
     RPC: "https://api.cartridge.gg/x/starknet/sepolia"
   script:
+        - export PATH="$HOME/.local/bin:$HOME/.snfoundry/bin:$PATH"
         - cd cairo_verifier
         - sncast account create --network sepolia --name myacc --type open-zeppelin --url $RPC || true
         - cat ~/.snfoundry/accounts/sepolia/myacc.json
