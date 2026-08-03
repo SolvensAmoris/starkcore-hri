@@ -1,0 +1,127 @@
+{
+  "starkcore_version": "v0.4 Full Witness",
+  "utc": "2026-08-03T08:10:15.109808+00:00",
+  "commit_parent": "45bc1a3",
+  "witnesses": [
+    {
+      "candidate": "0.5 + 14.1347251417i",
+      "index": 1,
+      "terms": 8000,
+      "residual": 0.0023551546717253623,
+      "threshold_on": 0.05,
+      "threshold_off": 0.02,
+      "status": "PASS",
+      "falsification_attempt": {
+        "tested_region": "critical_strip Re=[0.1,0.9] excl 0.5",
+        "samples": 100,
+        "counterexample_found": false,
+        "counterexample": null
+      },
+      "environment": {
+        "python": "3.14.4",
+        "platform": "Linux-4.14.116-aarch64-with-glibc2.43",
+        "sha256": "cdd6fa9be22be50c6d7834f2040c6aa49776361b581b0d98682fca127d32c2ae",
+        "terms": 8000,
+        "method": "zeta_eval_eta"
+      },
+      "path": "ZERO -> WITNESS -> EVIDENCE -> ATTESTATION",
+      "philosophy": "VALID == REVERSIBLE"
+    },
+    {
+      "candidate": "0.5 + 21.0220396387i",
+      "index": 2,
+      "terms": 8000,
+      "residual": 0.0027311043627460457,
+      "threshold_on": 0.05,
+      "threshold_off": 0.02,
+      "status": "PASS",
+      "falsification_attempt": {
+        "tested_region": "critical_strip Re=[0.1,0.9] excl 0.5",
+        "samples": 100,
+        "counterexample_found": false,
+        "counterexample": null
+      },
+      "environment": {
+        "python": "3.14.4",
+        "platform": "Linux-4.14.116-aarch64-with-glibc2.43",
+        "sha256": "cdd6fa9be22be50c6d7834f2040c6aa49776361b581b0d98682fca127d32c2ae",
+        "terms": 8000,
+        "method": "zeta_eval_eta"
+      },
+      "path": "ZERO -> WITNESS -> EVIDENCE -> ATTESTATION",
+      "philosophy": "VALID == REVERSIBLE"
+    },
+    {
+      "candidate": "0.5 + 25.0108575801i",
+      "index": 3,
+      "terms": 8000,
+      "residual": 0.0033186610888621187,
+      "threshold_on": 0.05,
+      "threshold_off": 0.02,
+      "status": "PASS",
+      "falsification_attempt": {
+        "tested_region": "critical_strip Re=[0.1,0.9] excl 0.5",
+        "samples": 100,
+        "counterexample_found": false,
+        "counterexample": null
+      },
+      "environment": {
+        "python": "3.14.4",
+        "platform": "Linux-4.14.116-aarch64-with-glibc2.43",
+        "sha256": "cdd6fa9be22be50c6d7834f2040c6aa49776361b581b0d98682fca127d32c2ae",
+        "terms": 8000,
+        "method": "zeta_eval_eta"
+      },
+      "path": "ZERO -> WITNESS -> EVIDENCE -> ATTESTATION",
+      "philosophy": "VALID == REVERSIBLE"
+    },
+    {
+      "candidate": "0.5 + 30.4248761259i",
+      "index": 4,
+      "terms": 8000,
+      "residual": 0.002564158981510281,
+      "threshold_on": 0.05,
+      "threshold_off": 0.02,
+      "status": "PASS",
+      "falsification_attempt": {
+        "tested_region": "critical_strip Re=[0.1,0.9] excl 0.5",
+        "samples": 100,
+        "counterexample_found": false,
+        "counterexample": null
+      },
+      "environment": {
+        "python": "3.14.4",
+        "platform": "Linux-4.14.116-aarch64-with-glibc2.43",
+        "sha256": "cdd6fa9be22be50c6d7834f2040c6aa49776361b581b0d98682fca127d32c2ae",
+        "terms": 8000,
+        "method": "zeta_eval_eta"
+      },
+      "path": "ZERO -> WITNESS -> EVIDENCE -> ATTESTATION",
+      "philosophy": "VALID == REVERSIBLE"
+    },
+    {
+      "candidate": "0.5 + 32.9350615877i",
+      "index": 5,
+      "terms": 8000,
+      "residual": 0.002527344726321901,
+      "threshold_on": 0.05,
+      "threshold_off": 0.02,
+      "status": "PASS",
+      "falsification_attempt": {
+        "tested_region": "critical_strip Re=[0.1,0.9] excl 0.5",
+        "samples": 100,
+        "counterexample_found": false,
+        "counterexample": null
+      },
+      "environment": {
+        "python": "3.14.4",
+        "platform": "Linux-4.14.116-aarch64-with-glibc2.43",
+        "sha256": "cdd6fa9be22be50c6d7834f2040c6aa49776361b581b0d98682fca127d32c2ae",
+        "terms": 8000,
+        "method": "zeta_eval_eta"
+      },
+      "path": "ZERO -> WITNESS -> EVIDENCE -> ATTESTATION",
+      "philosophy": "VALID == REVERSIBLE"
+    }
+  ]
+}

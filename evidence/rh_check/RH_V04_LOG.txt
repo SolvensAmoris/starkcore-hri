@@ -1,0 +1,7 @@
+Zero 1: residual=0.002355 | counter_found=False
+Zero 2: residual=0.002731 | counter_found=False
+Zero 3: residual=0.003319 | counter_found=False
+Zero 4: residual=0.002564 | counter_found=False
+Zero 5: residual=0.002527 | counter_found=False
+
+FULL WITNESS SAVED -> RH_V04_FULL_WITNESS.json | SHA cdd6fa9be22b
