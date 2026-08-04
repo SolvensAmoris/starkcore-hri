@@ -1,0 +1,7 @@
+CA002 Trust Boundary Marker
+
+Artifact: CA002
+Purpose: Explicit repository boundary declaration.
+
+No implicit state.
+No silent mutation.

@@ -1,0 +1,24 @@
+{
+    "telemetry_metadata": {
+        "knowledge_base": "KB-KERNEL-002",
+        "threat_actor": "Muzan-Adaptive-eBPF-Spoofer",
+        "vulnerability_class": "TOCTOU / Kernel Telemetry Evasion",
+        "status": "EVIDENCE_RECORDED_BY_STONE_WITNESS"
+    },
+    "the_illusion_metrics": {
+        "kernel_ebpf_map_status": "CLEAN (Spoofing Successful)",
+        "reported_binary_by_kernel": "/usr/bin/legit_service",
+        "actual_executed_binary": "/tmp/muzan_rootkit_payload",
+        "telemetry_divergence_detected": true
+    },
+    "gyomei_independent_verification": {
+        "defense_principle": "independent_integrity_verification (Piedra Testigo)",
+        "userland_proc_inspection": "MISMATCH_DETECTED",
+        "cryptographic_hash_comparison": {
+            "expected_elf_signature": "0x5A8E4C3D",
+            "runtime_elf_signature": "0xDEADC0DE_MUTATED"
+        },
+        "remediation_action": "Forced application memory freeze & forensic dump issued."
+    },
+    "audit_verdict": "La roca de Gyomei recuerda c\u00f3mo era antes del impacto. Aunque el telescopio del kernel fue enga\u00f1ado por el hechizo del mapa invisible, la estructura en userland delat\u00f3 la traici\u00f3n del software."
+}

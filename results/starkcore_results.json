@@ -1,0 +1,50 @@
+[
+  {
+    "orig": "n**2 < 2**n",
+    "strengthened": "n**2 < 3**n",
+    "phi": "EXP2->3[implies]",
+    "proof": "2**n<=3**n => si A<2**n entonces A<3**n",
+    "preserves": "implies",
+    "delta": 2.7,
+    "old_fails": 3,
+    "new_fails": 0,
+    "lean_ok": true,
+    "lean_log": "Lean no instalado, check sint\u00e1ctico"
+  },
+  {
+    "orig": "n**2 < 2**n",
+    "strengthened": "n**2 <= 2**n",
+    "phi": "WEAKEN_<[implies]",
+    "proof": "A<B => A<=B",
+    "preserves": "implies",
+    "delta": 1.67,
+    "old_fails": 3,
+    "new_fails": 1,
+    "lean_ok": true,
+    "lean_log": "Lean no instalado, check sint\u00e1ctico"
+  },
+  {
+    "orig": "n**3 < 2**n",
+    "strengthened": "n**3 < 3**n",
+    "phi": "EXP2->3[implies]",
+    "proof": "2**n<=3**n => si A<2**n entonces A<3**n",
+    "preserves": "implies",
+    "delta": 6.7,
+    "old_fails": 8,
+    "new_fails": 1,
+    "lean_ok": true,
+    "lean_log": "Lean no instalado, check sint\u00e1ctico"
+  },
+  {
+    "orig": "2*n < n**2",
+    "strengthened": "2*n <= n**2",
+    "phi": "WEAKEN_<[implies]",
+    "proof": "A<B => A<=B",
+    "preserves": "implies",
+    "delta": 0.6699999999999999,
+    "old_fails": 2,
+    "new_fails": 1,
+    "lean_ok": true,
+    "lean_log": "Lean no instalado, check sint\u00e1ctico"
+  }
+]

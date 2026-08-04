@@ -1,4 +1,11 @@
 __pycache__/
 *.pyc
-.venv/
 .pytest_cache/
+target/
+*.npy
+*.log
+pid.txt
+estado_antes_commit.txt
+check_import.py
+target/
+conjecture-evolution/

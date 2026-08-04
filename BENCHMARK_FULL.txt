@@ -1,0 +1,6 @@
+KIN 120 seal=19(Sol) tone=2(Electrico) | No viniste a brillar para todos. Viniste a sostener fuego en Guaymas. Tu servicio es el hogar encendido.
+len=24B EOF=b'00,Guaymas'
+p50: 6.77 us
+p99: 8.33 us
+hash: 5c0096035e7d1d0ab613a084d2c4d1dcfc3dd931a3c05ae99ba6f904babed891 DETERMINISTA PASS
+KIN: 120
