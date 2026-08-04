@@ -1,0 +1,29 @@
+{
+  "patterns": {
+    "b4495333": 1008,
+    "f50342da": 1010,
+    "43eea5a9": 1020,
+    "7e3a8ac7": 962,
+    "c4000d12": 200,
+    "a55a47f1": 200,
+    "90f5b31e": 200,
+    "e5d99db5": 200,
+    "e757b90f": 200
+  },
+  "divine_houses": [
+    "Aries",
+    "Taurus",
+    "Gemini",
+    "Cancer",
+    "Leo",
+    "Virgo",
+    "Libra",
+    "Scorpio",
+    "Sagittarius",
+    "Capricorn",
+    "Aquarius",
+    "Pisces",
+    "Ophiuchus"
+  ],
+  "total_battles": 2500
+}

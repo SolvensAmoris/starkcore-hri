@@ -1,0 +1,12 @@
+{
+  "status": "VULNERABLE",
+  "p_collision": 0.0,
+  "recall_full_memory_defense": 0.7797424594281896,
+  "recall_blind_state_only": 0.002472623156634657,
+  "spectral_detection_gradient": 1.0,
+  "meta": {
+    "mode_execution": "FORENSIC_TARGET_REAL",
+    "epsilon": 0.2,
+    "elapsed_s": 0.293
+  }
+}

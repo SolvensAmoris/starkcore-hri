@@ -1,0 +1,12 @@
+{
+  "status": "SECURE",
+  "p_collision": 0.0,
+  "recall_full_memory_defense": 0.3510995097877504,
+  "recall_blind_state_only": 0.002472623156634657,
+  "spectral_detection_gradient": 1.0,
+  "meta": {
+    "samples": 40,
+    "epsilon": 0.25,
+    "elapsed_s": 6.003
+  }
+}

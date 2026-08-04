@@ -1,0 +1,33 @@
+{
+  "martillo": "QA_v05_basal_normalization_ablation",
+  "baselines_utilizados": {
+    "info": 0.016212947426199914,
+    "topo": 0.15657069590591624,
+    "mem": 15.830963450842363
+  },
+  "pesos_adimensionales": {
+    "w_topo": 0.2916613261528823,
+    "w_info": 0.5248369240153832,
+    "w_mem": 0.18350156875077314
+  },
+  "rendimiento_ablacion": {
+    "full": {
+      "total": 80,
+      "detected": 80
+    },
+    "no_mem": {
+      "total": 80,
+      "detected": 80
+    },
+    "no_topo": {
+      "total": 80,
+      "detected": 80
+    },
+    "no_info": {
+      "total": 80,
+      "detected": 80
+    }
+  },
+  "cpu_seconds": 10.96,
+  "borromeo_clasificacion": "MODO_COMPRESION"
+}

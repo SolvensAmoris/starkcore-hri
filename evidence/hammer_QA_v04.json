@@ -1,0 +1,28 @@
+{
+  "martillo": "QA_v04_identometry_spectrometry",
+  "pesos_espectro_identidad": {
+    "w_info": 0.0062423258783279685,
+    "w_topo": 0.01248634463631698,
+    "w_mem": 0.9812713253971306
+  },
+  "rho_critica_gradiente": null,
+  "survival_curve_b": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "cpu_seconds": 47.291,
+  "borromeo_clasificacion": "MODO_COMPRESION"
+}

@@ -1,0 +1,9 @@
+{
+    "669adc55633c": {
+        "exception_type": "RuntimeError",
+        "first_seen_house": 6,
+        "frequency": 1,
+        "disposition": "NEW_EXPEDIENT",
+        "patched_at_epoch": null
+    }
+}

@@ -1,0 +1,225 @@
+{
+  "martillo": "QA_v03_adversarial_phase_attack",
+  "dimensiones": {
+    "layers": 6,
+    "width": 15,
+    "nodos": 90
+  },
+  "muestras_computadas": 675,
+  "cpu_seconds": 45.506,
+  "densidad_critica_rho_c": 0.15,
+  "cartografia_adversarial": {
+    "0.150": {
+      "ADV_Isospectral": {
+        "p": 0.0,
+        "ci": 0.0
+      },
+      "ADV_Isomorphic": {
+        "p": 0.0,
+        "ci": 0.0
+      },
+      "ADV_Markov": {
+        "p": 0.0,
+        "ci": 0.0
+      }
+    },
+    "0.207": {
+      "ADV_Isospectral": {
+        "p": 0.0,
+        "ci": 0.0
+      },
+      "ADV_Isomorphic": {
+        "p": 0.0,
+        "ci": 0.0
+      },
+      "ADV_Markov": {
+        "p": 0.0,
+        "ci": 0.0
+      }
+    },
+    "0.264": {
+      "ADV_Isospectral": {
+        "p": 0.0,
+        "ci": 0.0
+      },
+      "ADV_Isomorphic": {
+        "p": 0.0,
+        "ci": 0.0
+      },
+      "ADV_Markov": {
+        "p": 0.0,
+        "ci": 0.0
+      }
+    },
+    "0.321": {
+      "ADV_Isospectral": {
+        "p": 0.0,
+        "ci": 0.0
+      },
+      "ADV_Isomorphic": {
+        "p": 0.0,
+        "ci": 0.0
+      },
+      "ADV_Markov": {
+        "p": 0.0,
+        "ci": 0.0
+      }
+    },
+    "0.379": {
+      "ADV_Isospectral": {
+        "p": 0.06666666666666667,
+        "ci": 0.126235992989028
+      },
+      "ADV_Isomorphic": {
+        "p": 0.0,
+        "ci": 0.0
+      },
+      "ADV_Markov": {
+        "p": 0.0,
+        "ci": 0.0
+      }
+    },
+    "0.436": {
+      "ADV_Isospectral": {
+        "p": 0.0,
+        "ci": 0.0
+      },
+      "ADV_Isomorphic": {
+        "p": 0.0,
+        "ci": 0.0
+      },
+      "ADV_Markov": {
+        "p": 0.0,
+        "ci": 0.0
+      }
+    },
+    "0.493": {
+      "ADV_Isospectral": {
+        "p": 0.0,
+        "ci": 0.0
+      },
+      "ADV_Isomorphic": {
+        "p": 0.0,
+        "ci": 0.0
+      },
+      "ADV_Markov": {
+        "p": 0.0,
+        "ci": 0.0
+      }
+    },
+    "0.550": {
+      "ADV_Isospectral": {
+        "p": 0.0,
+        "ci": 0.0
+      },
+      "ADV_Isomorphic": {
+        "p": 0.0,
+        "ci": 0.0
+      },
+      "ADV_Markov": {
+        "p": 0.0,
+        "ci": 0.0
+      }
+    },
+    "0.607": {
+      "ADV_Isospectral": {
+        "p": 0.0,
+        "ci": 0.0
+      },
+      "ADV_Isomorphic": {
+        "p": 0.0,
+        "ci": 0.0
+      },
+      "ADV_Markov": {
+        "p": 0.0,
+        "ci": 0.0
+      }
+    },
+    "0.664": {
+      "ADV_Isospectral": {
+        "p": 0.0,
+        "ci": 0.0
+      },
+      "ADV_Isomorphic": {
+        "p": 0.0,
+        "ci": 0.0
+      },
+      "ADV_Markov": {
+        "p": 0.0,
+        "ci": 0.0
+      }
+    },
+    "0.721": {
+      "ADV_Isospectral": {
+        "p": 0.0,
+        "ci": 0.0
+      },
+      "ADV_Isomorphic": {
+        "p": 0.0,
+        "ci": 0.0
+      },
+      "ADV_Markov": {
+        "p": 0.0,
+        "ci": 0.0
+      }
+    },
+    "0.779": {
+      "ADV_Isospectral": {
+        "p": 0.0,
+        "ci": 0.0
+      },
+      "ADV_Isomorphic": {
+        "p": 0.0,
+        "ci": 0.0
+      },
+      "ADV_Markov": {
+        "p": 0.0,
+        "ci": 0.0
+      }
+    },
+    "0.836": {
+      "ADV_Isospectral": {
+        "p": 0.0,
+        "ci": 0.0
+      },
+      "ADV_Isomorphic": {
+        "p": 0.0,
+        "ci": 0.0
+      },
+      "ADV_Markov": {
+        "p": 0.0,
+        "ci": 0.0
+      }
+    },
+    "0.893": {
+      "ADV_Isospectral": {
+        "p": 0.0,
+        "ci": 0.0
+      },
+      "ADV_Isomorphic": {
+        "p": 0.0,
+        "ci": 0.0
+      },
+      "ADV_Markov": {
+        "p": 0.0,
+        "ci": 0.0
+      }
+    },
+    "0.950": {
+      "ADV_Isospectral": {
+        "p": 0.0,
+        "ci": 0.0
+      },
+      "ADV_Isomorphic": {
+        "p": 0.0,
+        "ci": 0.0
+      },
+      "ADV_Markov": {
+        "p": 0.0,
+        "ci": 0.0
+      }
+    }
+  },
+  "diagnostico_blindaje": "ZONA CR\u00cdTICA LOCALIZADA \u2192 Transici\u00f3n de fase en \u03c1_c \u2248 0.15",
+  "borromeo_clasificacion": "MODO_COMPRESION"
+}

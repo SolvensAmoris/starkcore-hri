@@ -1,0 +1,46 @@
+Metadata-Version: 2.4
+Name: starkcore-hammer
+Version: 0.9.0
+Summary: Detector forense de clonación diacrónica de trayectorias para grafos y modelos
+Author: StarkCore Labs
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.20.0
+Dynamic: license-file
+
+# Conjecture Evolution - De Falla a Teorema
+
+![evolution](cards/evolucion.png)
+
+> Tu conjetura está rota. La hacemos evolucionar frente a tus ojos.
+
+**🔴 n² < 2ⁿ Falla {2,3,4} → 🟢 n² < 3ⁿ Falla ∅ → 🔵 Teoremón Holo | Lean: True**
+
+### Qué es
+No es otro prover. Es el **pre-filtro semántico** que Aristotle / Goedel-Prover necesitan antes de quemar GPU.
+
+
+### Demo 30s
+- `n² < 2ⁿ` falla en {2,3,4}
+- Φ: `EXP2->3` | proof: `2ⁿ<3ⁿ => si A<2ⁿ entonces A<3ⁿ` | preserves=implies
+- `n² < 3ⁿ` falla ∅ | Δ=+3.2 | Lean kernel: OK
+
+### Pack que vendemos
+📦 **12 Conjecture Evolution Cards** + Código + Lean Snippets
+→ https://payhip.com/tu-link (Payhip $37)
+
+Incluye:
+- 3 líneas evolutivas completas (Blob, Cubo, N-cuadrado)
+- 1 carta TRAMPA Siniestra `DIV_LEFT_ONLY` (Goodhart bloqueado)
+- 3 Trainer Cards: `LOG_BOTH`, `ADD_BOTH`, `Φ SECRETO`
+- `starkcore_lean_agent.py` con feedback real de `lake env lean`
+- `results/starkcore_results.json` con Lean: True
+
+### Benchmark rápido
+### Uso
+```bash
+python3 starkcore_lean_agent.py
+# genera results/starkcore_results.json + lean/*.lean
+lake env lean lean/Strengthened.lean

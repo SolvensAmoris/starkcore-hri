@@ -1,0 +1,1 @@
+# StarkCore Cosmic Module

@@ -1,0 +1,64 @@
+{
+  "martillo": "QA_v07_fermi_continuous_hysteresis",
+  "cpu_seconds": 12.308,
+  "matriz_gradientes": {
+    "0.02": {
+      "Spect": {
+        "full": 0.9026767683965826,
+        "no_mem": 0.9026767683965826
+      },
+      "Topo": {
+        "full": 9.175584160593436,
+        "no_mem": 9.175584160593436
+      },
+      "Hist": {
+        "full": 100.0,
+        "no_mem": 0.8162571153159881
+      }
+    },
+    "0.08": {
+      "Spect": {
+        "full": 0.9220397981504823,
+        "no_mem": 0.9220397981504823
+      },
+      "Topo": {
+        "full": 27.59054800472125,
+        "no_mem": 27.59054800472125
+      },
+      "Hist": {
+        "full": 100.0,
+        "no_mem": 0.8162571153159881
+      }
+    },
+    "0.2": {
+      "Spect": {
+        "full": 1.0024465403195437,
+        "no_mem": 1.0024465403195437
+      },
+      "Topo": {
+        "full": 83.83513353217465,
+        "no_mem": 83.83513353217465
+      },
+      "Hist": {
+        "full": 100.0,
+        "no_mem": 0.8162571153159881
+      }
+    },
+    "0.45": {
+      "Spect": {
+        "full": 1.1833707683863774,
+        "no_mem": 1.1833707683863774
+      },
+      "Topo": {
+        "full": 99.88344416531294,
+        "no_mem": 99.88344416531294
+      },
+      "Hist": {
+        "full": 100.0,
+        "no_mem": 0.8162571153159881
+      }
+    }
+  },
+  "diagnostico_final": "HIST\u00c9RESIS DEMOSTRADA \u00b7 El ident\u00f3metro continuo captura la trayectoria. El clon markoviano es rechazado.",
+  "borromeo_clasificacion": "MODO_COMPRESION"
+}

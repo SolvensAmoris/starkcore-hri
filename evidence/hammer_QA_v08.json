@@ -1,0 +1,7 @@
+{
+  "martillo": "QA_v08_memory_collision_attack",
+  "cpu_seconds": 3.657,
+  "probabilidad_colision": 0.0,
+  "analisis_cripto": "CRIPTOGRAF\u00cdA INYECTIVA CONFIRMADA \u00b7 f_mem posee inmunidad a la falsificaci\u00f3n de trayectorias.",
+  "borromeo_clasificacion": "MODO_COMPRESION"
+}

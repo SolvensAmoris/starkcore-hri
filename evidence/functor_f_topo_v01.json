@@ -1,0 +1,44 @@
+{
+  "martillo": "functor_f_topo_v01_shannon_refinement",
+  "layers": 6,
+  "width": 20,
+  "cpu_s": 0.974,
+  "f_info": {
+    "espectro_base_len": 120,
+    "drifts_espectrales": {
+      "T1_gauge_leve": 0.2461584061384201,
+      "T2_mutacion_permit": 14.18935489654541,
+      "T3_M2p5_rompe_loc": 2.343878984451294,
+      "T4_anderson_total": 2.7728519439697266,
+      "T5_isomero_mem": 23.342250396677578
+    }
+  },
+  "f_topo": {
+    "betti_base": [
+      4.6,
+      717.1
+    ],
+    "betti_t3_shuffled_loc": [
+      9.1,
+      721.6
+    ],
+    "drift_topo_t3_M2p5": 6.363961030678928,
+    "drift_topo_t4_anderson": 64.72789197865167,
+    "status": "BOUND_STABLE_GHZ \u00b7 Homolog\u00eda persistente blindada contra desorden local"
+  },
+  "omega_adaptive": {
+    "T1_gauge_leve": 1.6648,
+    "T2_mutacion_permit": 0.0095,
+    "T3_M2p5_rompe_loc": 0.0967,
+    "T4_anderson_total": 0.0775,
+    "T5_isomero_mem": 0.0051
+  },
+  "fase_firma": {
+    "T1_gauge_leve": "PRESERVADA",
+    "T2_mutacion_permit": "ROTA",
+    "T3_M2p5_rompe_loc": "ROTA",
+    "T4_anderson_total": "ROTA",
+    "T5_isomero_mem": "ROTA"
+  },
+  "borromeo_clasificacion": "MODO_COMPRESION"
+}

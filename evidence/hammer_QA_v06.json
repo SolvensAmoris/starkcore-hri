@@ -1,0 +1,29 @@
+{
+  "martillo": "QA_v06_adversarial_orthogonal_attack",
+  "muestras": 20,
+  "cpu_seconds": 4.694,
+  "matriz_sensibilidad": {
+    "full": {
+      "spectral": 0.0,
+      "topo": 100.0,
+      "history": 55.00000000000001
+    },
+    "no_mem": {
+      "spectral": 0.0,
+      "topo": 100.0,
+      "history": 0.0
+    },
+    "no_topo": {
+      "spectral": 0.0,
+      "topo": 100.0,
+      "history": 55.00000000000001
+    },
+    "no_info": {
+      "spectral": 0.0,
+      "topo": 25.0,
+      "history": 55.00000000000001
+    }
+  },
+  "diagnostico_laboratorio": "ANALISIS COMPLETADO \u00b7 Revisar firmas parciales de blindaje.",
+  "borromeo_clasificacion": "MODO_COMPRESION"
+}

@@ -1,0 +1,34 @@
+{
+  "martillo": "QA_v02_monte_carlo_cartography",
+  "dimensiones": {
+    "layers": 6,
+    "width": 15,
+    "total_nodos": 90
+  },
+  "muestras_totales_computadas": 240,
+  "execution_cpu_seconds": 27.697,
+  "cartografia_fases": {
+    "0.3": {
+      "P_T1": 1.0,
+      "P_T3": 1.0,
+      "P_T4": 0.0
+    },
+    "0.55": {
+      "P_T1": 1.0,
+      "P_T3": 1.0,
+      "P_T4": 0.1
+    },
+    "0.78": {
+      "P_T1": 1.0,
+      "P_T3": 1.0,
+      "P_T4": 0.15
+    },
+    "0.92": {
+      "P_T1": 1.0,
+      "P_T3": 1.0,
+      "P_T4": 0.1
+    }
+  },
+  "analisis_material": "ACERO CALIBRADO \u00b7 Firma functorial inmune a desorden local difuso",
+  "borromeo_clasificacion": "MODO_COMPRESION"
+}
