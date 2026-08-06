@@ -1,0 +1,7 @@
+name = "starkcore_kernel_v1"
+version = "0.1.0"
+
+defaultTargets = ["StarkcoreKernelV1"]
+
+[[lean_lib]]
+name = "StarkcoreKernelV1"
