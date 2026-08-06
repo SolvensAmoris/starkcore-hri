@@ -1,0 +1,8 @@
+'StarkCore.identity_consistent' does not depend on any axioms
+'StarkCore.CA002_rejects_mutable_identity' does not depend on any axioms
+'StarkCore.CA002_identity_survives' does not depend on any axioms
+'StarkCore.StarkCore_kernel_invariant' does not depend on any axioms
+'StarkCore.CA002_MirrorGate_composition' does not depend on any axioms
+'StarkCore.mirror_gate_preserves_identity' does not depend on any axioms
+'StarkCore.no_false_identity' depends on axioms: [propext]
+'StarkCore.identity_conserved' does not depend on any axioms

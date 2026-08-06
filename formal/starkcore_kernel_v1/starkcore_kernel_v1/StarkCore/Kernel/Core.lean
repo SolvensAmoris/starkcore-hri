@@ -5,11 +5,9 @@ structure State where
   memory : Nat
   evidence : Nat
 
-
 structure Transition where
   before : State
   after : State
-
 
 def validTransition (t : Transition) : Prop :=
   t.after.evidence >= t.before.evidence

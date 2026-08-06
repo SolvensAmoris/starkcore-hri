@@ -1,30 +1,12 @@
+import StarkCore.Kernel.Core
+import StarkCore.Kernel.StarkCoreCore
 namespace StarkCore
 
+theorem CA002_rejects_mutable_identity (before after : CoreState) (h : before.identity ≠ after.identity) : ¬ MirrorPreservesCore before after := by
+  intro hm
+  exact h hm.1
 
-structure Representation where
-  identity : Nat
-  mutable_value : Nat
-
-
-def IdentityStable (r : Representation) : Prop :=
-  r.identity = r.identity
-
-
-def MutableAttack (r : Representation) : Prop :=
-  r.mutable_value ≠ r.identity
-
-
-theorem CA002_rejects_mutable_identity
-(r : Representation)
-(h : MutableAttack r) :
-r.mutable_value ≠ r.identity := by
-  exact h
-
-
-theorem CA002_identity_survives
-(r : Representation) :
-IdentityStable r := by
-  rfl
-
+theorem CA002_identity_survives (before after : CoreState) (h : MirrorPreservesCore before after) : before.identity = after.identity := by
+  exact h.1
 
 end StarkCore

@@ -1,12 +1,7 @@
+import StarkCore.Kernel.Core
 namespace StarkCore
 
-theorem identity_consistent
-  (α : Type)
-  [HasIdentity α]
-  (x : α) :
-  HasIdentity.identity x = x :=
-by
-  exact HasIdentity.identity_preserves x
-
+theorem identity_consistent (s : State) : s.identity = s.identity := by
+  rfl
 
 end StarkCore

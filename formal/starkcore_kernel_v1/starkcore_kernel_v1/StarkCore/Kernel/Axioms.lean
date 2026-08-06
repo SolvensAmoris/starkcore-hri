@@ -1,11 +1,5 @@
 namespace StarkCore
 
-axiom identity_persistence :
-  ∀ s : State, s.identity = s.identity
-
-
-axiom evidence_monotonic :
-  ∀ t : Transition,
-  validTransition t
+-- No external axioms in kernel v1 reduction
 
 end StarkCore

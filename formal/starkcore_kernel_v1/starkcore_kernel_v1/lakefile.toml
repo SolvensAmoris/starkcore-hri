@@ -5,3 +5,6 @@ defaultTargets = ["StarkcoreKernelV1"]
 
 [[lean_lib]]
 name = "StarkcoreKernelV1"
+
+[[lean_lib]]
+name = "StarkCore"

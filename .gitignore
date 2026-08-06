@@ -7,5 +7,4 @@ target/
 pid.txt
 estado_antes_commit.txt
 check_import.py
-target/
 conjecture-evolution/
