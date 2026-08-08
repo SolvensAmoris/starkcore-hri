@@ -1,0 +1,10 @@
+{
+  "claim": "sandbox offline",
+  "identity": {"type": "EI=H", "ref": "v6-divine-final"},
+  "events": [
+    {"ts":"2026-08-08T00:00:00Z","action":"net.disconnect","hash":"sha256:abc"},
+    {"ts":"2026-08-08T00:00:01Z","action":"verify.git-tag","hash":"sha256:18af75c"}
+  ],
+  "execution": {"runner":"isolated","dag":"H(G0|M|Pi0|Gamma|E)"},
+  "verification": {"hash_chain":"sha256:xyz","expire_in":"never","verified_by":"starkcore/proxy/verify.sh"}
+}
