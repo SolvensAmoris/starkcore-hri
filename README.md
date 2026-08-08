@@ -306,3 +306,7 @@ el Santuario debe aprender a crear nuevos caminos."*
 🐍 Ofiuco espera.
 
 ⚔️ Los Caballeros volverán.
+
+## 🔒 StarkCore Proxy v0.1 - A2A-ready
+`./starkcore/proxy/verify.sh v7-proxy-semantico claim.json`
+✅ CA-002 EI=H | ✅ WP-002 events[] expire_in:never | STARKCORE_VERIFIED=true
