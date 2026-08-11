@@ -1,0 +1,37 @@
+{
+  "snapshots": [
+    {
+      "ref_id": "model.bin",
+      "root": "18de4a5325905e783aa360b934b46c05aa2e998e98287320d8126fcf1839924d",
+      "prev_root": null,
+      "link": "0e7ae09ba1eb5763fa140be9f06281d98280f0f988e673c5a67f9244a426acdc",
+      "state": "LIVE",
+      "state_digest": "abc",
+      "facts": 3,
+      "ts": 1786427926,
+      "sig": "ae67bc5f74dec2d7620ebb08cdb64a95aa9095ae67c95fc4bb558a1c15931702cf0d8d15ef215d45d82352e6b1126536483598ecde2963273a73fa61571d0308"
+    },
+    {
+      "ref_id": "model.bin",
+      "root": "71b298d09f81cfcbe8264983187c9a16206a0f42a943fac874eb4d99eb6d6698",
+      "prev_root": "18de4a5325905e783aa360b934b46c05aa2e998e98287320d8126fcf1839924d",
+      "link": "fd23534813e1c10d5648f8c6b85fdf08685a0b7ba6ec5bc52457aac2b304799d",
+      "state": "LIVE",
+      "state_digest": "abc",
+      "facts": 3,
+      "ts": 1786427940,
+      "sig": "f245522bc135125e361b685be834ea443453e04a23382d57bda803fa35db28ffc783c4960091ef54d763282fb8887c96dced4ec02f46153017c361226835690a"
+    },
+    {
+      "ref_id": "model.bin",
+      "root": "8217e263dc7e2a3e45911237f91a77c00069f88db642ed1e6b8098b74ffb7383",
+      "prev_root": "71b298d09f81cfcbe8264983187c9a16206a0f42a943fac874eb4d99eb6d6698",
+      "link": "b2d11231cf1048f3e233f7c34788f6c3dac6667fec8a24258d71414fcabb6eee",
+      "state": "CONFLICT",
+      "state_digest": "abc|def",
+      "facts": 4,
+      "ts": 1786427941,
+      "sig": "cfc622ed5abf35d80028a4006be6b40b1bba2092edd41da2d6695f8342c93118bdd3fddb78708ae9a7608e6ea1d224dfdfbab017bd101cc4ad102e700a1ab904"
+    }
+  ]
+}
