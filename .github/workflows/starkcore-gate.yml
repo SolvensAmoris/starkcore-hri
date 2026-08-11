@@ -1,0 +1,19 @@
+name: STARKCORE MIRROR GATE C4-002
+on: [pull_request, push]
+jobs:
+  mirror-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - run: pip install numpy
+      - name: Run Mirror Gate v0.5
+        run: |
+          python starkcore_mirror_gate_v05.py
+      - name: Upload Evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: starkcore-evidence
+          path: .last_checks
