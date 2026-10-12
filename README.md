@@ -15,3 +15,4 @@ python3 starkcore_cli.py verify-chain
 
 Esperado: CHAIN LEN=3 VERIFY=True
 ROOT1=18de4a5325905e783aa360b934b46c05
+# prueba offline Mon Oct 12 02:12:12 UTC 2026
