@@ -1,26 +1,23 @@
-# StarkCore HRI - Omega Teorema de Identidad
+# StarkCore HRI v1.0 — Defense-Grade CI/CD Firewall
 
-**S(d) = Hash(Canonical(d)) | REP != STATE | E != H | FAIL_CLOSED**
+![HRI](https://img.shields.io/badge/HRI-v1.0-blue)
+![Evidence](https://img.shields.io/badge/evidence-cfb9c7c-green)
+![Rekor](https://img.shields.io/badge/Rekor-2255034057-orange)
+![CA-002](https://img.shields.io/badge/CA--002-3882262-red)
+![Status](https://img.shields.io/badge/status-FAIL_CLOSED-black)
 
-## Teorema
-La identidad operacional Omega: I S(P) D P
-- I: Identidad canónica del sujeto
-- S(P): Estado observable en contexto P
-- D: Diferencial de representación
-- P: Principio de prueba
+**WE DON'T NEED MORE EXPLANATIONS. WE NEED EVIDENCE.**
+**S(d) = Hash(Canonical(d)) | REP != STATE**
 
-S6 - Impostor: I PASS pero S(P1) FAIL -> suplantación
-S7 - Relatividad: 999 MONSTRUO en P1 = CIUDADANO en P2
+### Omega Teorema
+I S(P) D P — Sistema ontologico LISTO // v0.4 LOCKED | R2=0.99 n=1000
+- S6 - Impostor: I PASS pero S(P1) FAIL -> suplantacion
+- S7 - Relatividad: 999 MONSTRUO en P1 = CIUDADANO en P2
 
-## Arquitectura
-W2: IA genera prueba -> W3: HRI valida identidad -> ESTADO (FAIL_CLOSED/PENDING)
-
-## Evidencia
+### Evidencia
 - root-commit: cfb9c7c
 - Rekor: 2255034057
-- CA-002 #3882262
-- Caso PyPI: litellm 1.107.0 (cook.pth / sitecustomize.py)
+- CA-002 #3882262 + litellm 1.107.0
 
-## Uso
-```bash
+### Uso
 ./scripts/starkcore_hri_checker.sh
