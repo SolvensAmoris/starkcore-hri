@@ -1,0 +1,76 @@
+./docs/ARCHITECTURE.md:35:Evaluates whether tasks satisfy declared rules before execution.
+./docs/ARCHITECTURE.md:55:Checks evidence against declared verification rules.
+./docs/ARCHITECTURE.md:59:## Design Principles
+./docs/EVIDENCE_MODEL.md:11:## Core Principle
+./docs/EVIDENCE_MODEL.md:54:"Does this object satisfy the declared verification rules?"
+./docs/GATE_RULES.md:1:# StarkCore Gate Rules
+./docs/GATE_RULES.md:9:The Gate verifies whether an object satisfies declared rules.
+./docs/GATE_RULES.md:13:## Verification Principle
+./docs/GATE_RULES.md:38:- The verification rules are satisfied.
+./docs/GATE_RULES.md:78:Rule evaluation
+./docs/GATE_RULES.md:88:Rules must be inspectable, reproducible, and auditable.
+./docs/JSON_SCHEMA.md:93:## Design Principle
+./docs/foundations/STARKCORE-IDENTIDAD-VERIFICABLE-v1.0.md:24:- invariantes conservadas;
+./docs/foundations/STARKCORE-IDENTIDAD-VERIFICABLE-v1.0.md:31:Un sistema mantiene continuidad cuando las transformaciones observadas pueden reconstruirse mediante reglas e invariantes conocidas.
+./docs/foundations/WHITE_PAPER_STARDARK.md:1:# STARDARK: Vacuna Adversarial y Axioma XIV
+./docs/foundations/WHITE_PAPER_STARDARK.md:111:### El Axioma XIV — Identidad Verificable Bajo Transformación
+./docs/STARKCORE_FORMAL_MODEL.md:7:evolvable = {rules.delta_max, amendment_policy} # mutable con A
+./evidence/H_TEST_REPORT_v1.md:48:| Conjecture Labs | PASS |
+./evidence/HITO_C1_AUTOCONCIENCIA_v8.md:14:- T=2 Z~0: romper localidad NO mata senal -> localidad NO es invariante
+./evidence/HITO_C1_AUTOCONCIENCIA_v8.md:16:- Conclusion: invariante NO vive en |i-j|. Confirmado v06e. C2 funcionando.
+./evidence/CONVERSACION_CIERRE_BORROMEO_v0.1.md:8:- T1 Z=0.0 T2 Z=0.12 T3 Z=1.04 -> localidad NO es invariante
+./evidence/DEFINICION_CANONICA_STARKCORE_11e4b2b.md:16:El JSON demuestra que una afirmación sobre el mundo es falsa (localidad |i-j| no es invariante, Z=0.12).
+./evidence/BorromeoTight_v4.lean:28:theorem borromeo_sound
+./evidence/DEPENDENCY_GRAPH_v1.1.md:3:Commit: b89ba7c12cc406673aa01daab3020b5a2262a1f1 - v1.1: 11 jobs zero-axiom - CA002+MirrorGate verified - propext only
+./evidence/DEPENDENCY_GRAPH_v1.1.md:4:Axioms hash: 6b018058049567fff174474da3dc4683bdb00f49efa252740babb8309674c381
+./evidence/DEPENDENCY_GRAPH_v1.1.md:7:- StarkCore/CheckAxioms.lean
+./evidence/DEPENDENCY_GRAPH_v1.1.md:15:- StarkCore/Evolution/Invariant.lean
+./evidence/DEPENDENCY_GRAPH_v1.1.md:21:- StarkCore/Invariants/Conservation.lean
+./evidence/DEPENDENCY_GRAPH_v1.1.md:22:- StarkCore/Invariants/FixedPoints.lean
+./evidence/DEPENDENCY_GRAPH_v1.1.md:24:- StarkCore/Kernel/Axioms.lean
+./evidence/DEPENDENCY_GRAPH_v1.1.md:37:### StarkCore/CheckAxioms.lean
+./evidence/DEPENDENCY_GRAPH_v1.1.md:43: - import StarkCore.Invariants.Conservation
+./evidence/DEPENDENCY_GRAPH_v1.1.md:60:### StarkCore/Evolution/Invariant.lean
+./evidence/DEPENDENCY_GRAPH_v1.1.md:72:### StarkCore/Invariants/Conservation.lean
+./evidence/DEPENDENCY_GRAPH_v1.1.md:75:### StarkCore/Invariants/FixedPoints.lean
+./evidence/DEPENDENCY_GRAPH_v1.1.md:79: - import StarkCore.Kernel.Axioms
+./evidence/DEPENDENCY_GRAPH_v1.1.md:84:### StarkCore/Kernel/Axioms.lean
+./evidence/DEPENDENCY_GRAPH_v1.1.md:110:- .lake/build/lib/lean/StarkCore/Invariants/Conservation.olean
+./evidence/CORE_MANIFEST_v1.1.md:3:Hash axioms: 6b018058049567fff174474da3dc4683bdb00f49efa252740babb8309674c381
+./evidence/CORE_MANIFEST_v1.1.md:6:Axioms: 0 + propext
+./evidence/CORE_MANIFEST_v1.1.md:13:5. StarkCore/Invariants/Conservation.lean -> Core
+./evidence/CORE_MANIFEST_v1.1.md:22:- StarkCore/Invariants/FixedPoints
+./evidence/CORE_MANIFEST_v1.1.md:24:- StarkCore/Kernel/Axioms
+./evidence/CORE_MANIFEST_v1.1.md:26:Grafo: Core + StarkCoreCore son raíces. CA002 y MirrorGate son las dos invariantes críticas.
+./borromeo_level4/Borromeo/Basic.lean:28:theorem borromeo_sound
+./STARKCORE-IDENTIDAD-VERIFICABLE-v1.0.md:24:- invariantes conservadas;
+./STARKCORE-IDENTIDAD-VERIFICABLE-v1.0.md:31:Un sistema mantiene continuidad cuando las transformaciones observadas pueden reconstruirse mediante reglas e invariantes conocidas.
+./WHITE_PAPER_STARDARK.md:1:# STARDARK: Vacuna Adversarial y Axioma XIV
+./WHITE_PAPER_STARDARK.md:111:### El Axioma XIV — Identidad Verificable Bajo Transformación
+./formal/starkcore_kernel_v1/starkcore_kernel_v1/StarkcoreKernelV1/Basic.lean:6:import StarkCore.Invariants.Conservation
+./formal/starkcore_kernel_v1/starkcore_kernel_v1/StarkCore/Kernel.lean:2:import StarkCore.Kernel.Axioms
+./formal/starkcore_kernel_v1/starkcore_kernel_v1/StarkCore/Kernel/Axioms.lean:3:-- No external axioms in kernel v1 reduction
+./formal/starkcore_kernel_v1/starkcore_kernel_v1/StarkCore/Kernel/Consistency.lean:4:theorem identity_consistent (s : State) : s.identity = s.identity := by
+./formal/starkcore_kernel_v1/starkcore_kernel_v1/StarkCore/Kernel/CA002.lean:5:theorem CA002_rejects_mutable_identity (before after : CoreState) (h : before.identity ≠ after.identity) : ¬ MirrorPreservesCore before after := by
+./formal/starkcore_kernel_v1/starkcore_kernel_v1/StarkCore/Kernel/CA002.lean:9:theorem CA002_identity_survives (before after : CoreState) (h : MirrorPreservesCore before after) : before.identity = after.identity := by
+./formal/starkcore_kernel_v1/starkcore_kernel_v1/StarkCore/Kernel/StarkCoreCore.lean:9:def IdentityInvariant (s : CoreState) : Prop :=
+./formal/starkcore_kernel_v1/starkcore_kernel_v1/StarkCore/Kernel/StarkCoreCore.lean:19:theorem StarkCore_kernel_invariant
+./formal/starkcore_kernel_v1/starkcore_kernel_v1/StarkCore/Kernel/StarkCoreCore.lean:27:theorem CA002_MirrorGate_composition
+./formal/starkcore_kernel_v1/starkcore_kernel_v1/StarkCore/Evidence/MirrorGate.lean:4:theorem mirror_gate_preserves_identity (before after : CoreState) (h : MirrorPreservesCore before after) : before.identity = after.identity := by
+./formal/starkcore_kernel_v1/starkcore_kernel_v1/StarkCore/Logic/NoContradiction.lean:4:theorem no_false_identity (s : State) : ¬(s.identity ≠ s.identity) := by
+./formal/starkcore_kernel_v1/starkcore_kernel_v1/StarkCore/Invariants/Conservation.lean:4:theorem identity_conserved (s : State) : s.identity = s.identity := by
+./formal/starkcore_kernel_v1/starkcore_kernel_v1/StarkCore/CheckAxioms.lean:6:import StarkCore.Invariants.Conservation
+./formal/starkcore_kernel_v1/starkcore_kernel_v1/StarkCore/CheckAxioms.lean:10:#print axioms identity_consistent
+./formal/starkcore_kernel_v1/starkcore_kernel_v1/StarkCore/CheckAxioms.lean:11:#print axioms CA002_rejects_mutable_identity
+./formal/starkcore_kernel_v1/starkcore_kernel_v1/StarkCore/CheckAxioms.lean:12:#print axioms CA002_identity_survives
+./formal/starkcore_kernel_v1/starkcore_kernel_v1/StarkCore/CheckAxioms.lean:13:#print axioms StarkCore_kernel_invariant
+./formal/starkcore_kernel_v1/starkcore_kernel_v1/StarkCore/CheckAxioms.lean:14:#print axioms CA002_MirrorGate_composition
+./formal/starkcore_kernel_v1/starkcore_kernel_v1/StarkCore/CheckAxioms.lean:15:#print axioms mirror_gate_preserves_identity
+./formal/starkcore_kernel_v1/starkcore_kernel_v1/StarkCore/CheckAxioms.lean:16:#print axioms no_false_identity
+./formal/starkcore_kernel_v1/starkcore_kernel_v1/StarkCore/CheckAxioms.lean:17:#print axioms identity_conserved
+./formal/starkcore_kernel_v1/starkcore_kernel_v1/StarkCore/TestHeart.lean:35:  IO.println "[HEART] ❌ FALLO - revisar invariantes"
+./venv/lib/python3.14/site-packages/numpy-2.5.1.dist-info/licenses/numpy/random/src/splitmix64/LICENSE.md:5:To the extent possible under law, the author has dedicated all copyright
+./venv/lib64/python3.14/site-packages/numpy-2.5.1.dist-info/licenses/numpy/random/src/splitmix64/LICENSE.md:5:To the extent possible under law, the author has dedicated all copyright
+./conjecture-evolution/README.md:1:# conjecture-evolution - Pack v1 (9 cards)
+./conjecture-evolution/README.md:10:- 005 Axioma
+./conjecture-evolution/README.md:11:- 006 Lemma

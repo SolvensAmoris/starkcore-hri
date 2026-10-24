@@ -1,0 +1,158 @@
+starkcore/evidence/notary.py:38:    from starkcore.executor import execute_verified_paper
+starkcore/evidence/learning.py:6:    def __init__(self, filename="starkcore/evidence/immunological_memory.json"):
+starkcore/evidence/v7_pillars_memory.json:3:        "version": "StarkCore v7.0.4-MugenArc",
+starkcore/evidence/v7_pillars_memory.json:63:                    "action": "Dynamic linker exploitation via LD_PRELOAD spoofing intercepted. StarkCore forced fallback to internal cryptographic validation ring."
+starkcore/evidence/v7_sound_tengen.json:2:    "STARKCORE_V7_MUGEN_ARC": {
+starkcore/evidence/audio_trilogy_final.json:3:        "project_codename": "STARKCORE-QUALCOMM-HOGWARTS-TRILOGY",
+starkcore/evidence/audio_trilogy_final.json:4:        "architect": "StarkCore Slytherin - Neural Audio Architect",
+starkcore/evidence/audio_trilogy_final.json:13:                "AAC": "Ravenclaw (Eficiente)",
+starkcore/evidence/audio_trilogy_final.json:38:        "archived_at_library": "starkcore/evidence/audio_trilogy_final.json",
+starkcore/evidence/v7_kokushibo_defeat.json:6:        "mitigation_engine": "StarkCore_V7_Virgo_Hardening_12_12",
+starkcore/evidence/v7_kokushibo_defeat.json:12:        "core_integrity_status": "100%_INDESTRUCTIBLE_\ud83e\udea8",
+starkcore/evidence/v7_kokushibo_defeat.json:13:        "defense_principle": "independent_integrity_verification"
+starkcore/evidence/v7_kokushibo_defeat.json:47:        "file_path": "starkcore/evidence/v7_kokushibo_defeat.json"
+starkcore/evidence/kb_kernel_002_ebpf.json:15:        "defense_principle": "independent_integrity_verification (Piedra Testigo)",
+starkcore/evidence/v7_transparent_world.json:6:        "engine": "StarkCore_Transparent_World_v7"
+starkcore/evidence/v7_transparent_world.json:19:        "action": "Generated Immutable Core Rule",
+starkcore/evidence/v7_transparent_world.json:20:        "target_module": "StarkCore_V7_Virgo_Hardening_12_12",
+starkcore/evidence/v7_transparent_world.json:21:        "rule_injected": "IF behavior_sequence == ['sys_mprotect', 'sys_ptrace'] -> KILL_IMMEDIATELY"
+starkcore/evidence/v7_muzan_drift_defeat.json:22:        "forensic_signature": "starkcore/evidence/v7_muzan_drift_defeat.json"
+starkcore/h_test/NODE_REGISTRY.json:2:  "system": "STARKCORE",
+starkcore/h_test/NODE_REGISTRY.json:7:      "module": "starkcore.cosmos",
+starkcore/h_test/NODE_REGISTRY.json:13:      "module": "starkcore.evidence",
+starkcore/h_test/NODE_REGISTRY.json:19:      "module": "starkcore.gate",
+starkcore/h_test/NODE_REGISTRY.json:25:      "module": "starkcore.evidence.notary",
+starkcore/h_test/NODE_REGISTRY.json:31:      "module": "starkcore.oracle.btc_burn_verifier",
+starkcore/h_test/NODE_REGISTRY.json:37:      "module": "starkcore.cairo_bridge.verifier",
+starkcore/h_test/NODE_REGISTRY.json:43:      "module": "src.starkcore.validators.borromeo_validator",
+starkcore/h_test/NODE_REGISTRY.json:48:      "id": "DIACRONIC_IDENTITY",
+starkcore/h_test/NODE_REGISTRY.json:49:      "module": "src.starkcore.validators.diacronic_identity_validator",
+starkcore/h_test/NODE_REGISTRY.json:50:      "role": "identity continuity validator",
+starkcore/h_test/cartographer.py:50:print("STARKCORE H-TEST CARTOGRAPHER")
+starkcore/h_test/cartographer.py:76:with open(ROOT / "starkcore_map.json", "w", encoding="utf-8") as f:
+starkcore/h_test/cartographer.py:79:print("\n✅ Mapa guardado en starkcore_map.json")
+starkcore/h_test/h_runner.py:2:REGISTRY=pathlib.Path("starkcore_map.json")
+starkcore/h_test/h_runner.py:6:    print("STARKCORE HEALTH REPORT")
+starkcore/h_test/h_runner.py:8:    core=["cosmos.py","gate.py","executor.py","borromeo_validator.py"]
+starkcore/h_test/h_runner.py:9:    print("\nCORE")
+starkcore/h_test/h_runner.py:10:    for f in core:
+starkcore/h_test/h_runner.py:11:        print(f" ✓ {f} ONLINE" if pathlib.Path(f"starkcore/{f}").exists() else f" ✗ {f}")
+starkcore/h_test/h_runner.py:14:    print("\nHEALTH SCORE: 98% - H-TEST DISCOVERY OK")
+starkcore/h_test/hypothesis_runner.py:4:from starkcore.borromeo_validator import classify_architecture
+starkcore/h_test/hypothesis_runner.py:24:        from starkcore import cosmos
+starkcore/h_test/hypothesis_runner.py:29:        import starkcore.gate as gate
+starkcore/h_test/hypothesis_runner.py:41:    score = sum(1 for v in results.values() if "PASS" in v)
+starkcore/h_test/hypothesis_runner.py:42:    print(f"\nGLOBAL SCORE: {score}/{len(results)}")
+starkcore/gate.py:12:from starkcore.oracle.btc_burn_verifier import verify as verify_burn
+starkcore/gate.py:13:def is_external_anchored(evidence, gate_rules, did):
+starkcore/gate.py:14:    ok, msg = verify_burn(evidence, gate_rules, did)
+starkcore/fetcher.py:4:STORE = Path.home() / ".starkcore" / "store"
+starkcore/fetcher.py:50:def install_lock(lock_path="starkcore.lock"):
+starkcore/fetcher.py:52:    print(f"[STARKCORE] root_hash={lock['root_hash'][:16]} nodes={lock['nodes']}")
+starkcore/oracle/btc_burn_verifier.py:64:def verify(evidence, gate_rules, did_pubkey_hex):
+starkcore/oracle/btc_burn_verifier.py:68:    if burn_sats < gate_rules['min_burn_sats']: return False, f"burn {burn_sats} < min {gate_rules['min_burn_sats']}"
+starkcore/oracle/btc_burn_verifier.py:75:    if hhash == gate_rules['trusted_checkpoint_hash']: return True, f"OK burn={burn_sats} checkpoint directo"
+starkcore/cairo_bridge/verifier.py:5:def cairo_prove_verify(evidence: dict, rules: dict, did_hash: str) -> dict:
+starkcore/cairo_bridge/verifier.py:12:    assert burn >= rules.get('min_burn_sats',10000), "insufficient burn"
+starkcore/cairo_bridge/verifier.py:14:    print(f"[CAIRO-SIM] PoW OK | Burn {burn} >= {rules['min_burn_sats']} | DID {did_hash[:16]}...")
+starkcore/cairo_bridge/verifier.py:23:    rules = {"min_burn_sats":10000}
+starkcore/cairo_bridge/verifier.py:24:    print(cairo_prove_verify(ev, rules, "e5176b60"*8))
+starkcore/gate_cairo.py:1:from starkcore.cairo_bridge.verifier import cairo_prove_verify
+starkcore/gate_cairo.py:3:# proof = cairo_prove_verify(evidence, rules, did_hash)
+starkcore/hammer_QA_v01.py:10:from starkcore.borromeo_validator import classify_architecture
+starkcore/hammer_QA_v01.py:66:    print("  STARKCORE HAMMER · QA v0.1 · f = [topo, info, mem]")
+starkcore/hammer_M2p5_scale_v01.py:11:from starkcore.borromeo_validator import classify_architecture
+starkcore/hammer_M2p5_scale_v01.py:86:  "nota":"Preserva capas, rompe solo localidad. |Z|<1 => localidad NO invariante. Confirmado v06e."
+starkcore/functor_f_topo_v01.py:10:from starkcore.borromeo_validator import classify_architecture
+starkcore/functor_f_topo_v01.py:124:    print("  STARKCORE HAMMER · f_topo PERSISTENTE + SHANNON REFINADO")
+starkcore/hammer_QA_v02.py:3:STARKCORE HAMMER · QA v0.2 — MONTE CARLO PHASE CARTOGRAPHY
+starkcore/hammer_QA_v02.py:5:Somete el invariante estructural a un barrido estocástico de densidad (rho) y ruido.
+starkcore/hammer_QA_v02.py:10:from starkcore.borromeo_validator import classify_architecture
+starkcore/hammer_QA_v02.py:13:# 1. Geometría Paramétrica StarkCore
+starkcore/hammer_QA_v02.py:140:            # 1. Estado Base e Invariantes
+starkcore/hammer_QA_v02.py:173:    print("  STARKCORE HAMMER · QA v0.2 · CARTOGRAFÍA MONTE CARLO")
+starkcore/hammer_QA_v03.py:3:STARKCORE HAMMER · QA v0.3 — ADVERSARIAL PHASE ATTACK
+starkcore/hammer_QA_v03.py:9:from starkcore.borromeo_validator import classify_architecture
+starkcore/hammer_QA_v03.py:12:# 1. Geometría Base StarkCore
+starkcore/hammer_QA_v03.py:164:    print("  STARKCORE HAMMER v0.3 · ADVERSARIAL ATTACK & PHASE SWEEP")
+starkcore/hammer_QA_v04.py:3:STARKCORE HAMMER · QA v0.4 — IDENTOMETRY & SENSITIVITY SPECTROMETRY
+starkcore/hammer_QA_v04.py:9:from starkcore.borromeo_validator import classify_architecture
+starkcore/hammer_QA_v04.py:135:    print("  STARKCORE HAMMER v0.4 · IDENTOMETRY SENSITIVITY MATRIX")
+starkcore/hammer_QA_v04.py:210:    print(f"⚖️  FÓRMULA VECTORIAL STARKCORE: ΔIdentity = {w_topo:.2f}Δtopo + {w_info:.2f}Δinfo + {w_mem:.2f}Δmem")
+starkcore/hammer_QA_v05.py:3:STARKCORE HAMMER · QA v0.5 — BASAL NORMALIZATION & FUNCTOR ABLATION
+starkcore/hammer_QA_v05.py:9:from starkcore.borromeo_validator import classify_architecture
+starkcore/hammer_QA_v05.py:95:def evaluate_identity(drifts_norm, mode="full", base_capacity=0.35):
+starkcore/hammer_QA_v05.py:116:# 5. Core Experimental Monte Carlo v0.5
+starkcore/hammer_QA_v05.py:164:                survived = evaluate_identity([dn_i, dn_t, dn_m], mode=mode)
+starkcore/hammer_QA_v05.py:176:    print("  STARKCORE HAMMER v0.5 · LÍNEA DE BASE Y MATRIZ DE ABLACIÓN")
+starkcore/hammer_QA_v05.py:198:    print(f"   ΔIdentity = {w_topo:.2f}Δtopo + {w_info:.2f}Δinfo + {w_mem:.2f}Δmem")
+starkcore/hammer_QA_v06.py:3:STARKCORE HAMMER · QA v0.6 — ADVERSARIAL ORTHOGONAL ATTACK (AOA)
+starkcore/hammer_QA_v06.py:9:from starkcore.borromeo_validator import classify_architecture
+starkcore/hammer_QA_v06.py:12:# 1. Geometría Base Paramétrica StarkCore
+starkcore/hammer_QA_v06.py:130:    print("  STARKCORE HAMMER v0.6 · ADVERSARIAL ORTHOGONAL ATTACK")
+starkcore/hammer_QA_v07.py:3:STARKCORE HAMMER · QA v0.7 — CONTINUOUS SENSITIVITY & DEEP HYSTERESIS
+starkcore/hammer_QA_v07.py:9:from starkcore.borromeo_validator import classify_architecture
+starkcore/hammer_QA_v07.py:12:# 1. Geometría Base Paramétrica StarkCore
+starkcore/hammer_QA_v07.py:128:# 5. Core Experimental Monte Carlo de Sensibilidad Gradual
+starkcore/hammer_QA_v07.py:132:    print("  STARKCORE HAMMER v0.7 · GRADIENT SPECTROMETRY & PATH HYSTERESIS")
+starkcore/hammer_QA_v08.py:3:STARKCORE HAMMER · QA v0.8 — MEMORY COLLISION ATTACK (MCA)
+starkcore/hammer_QA_v08.py:9:from starkcore.borromeo_validator import classify_architecture
+starkcore/hammer_QA_v08.py:90:# 4. Core de Ataque Adversarial de Colisiones (MCA) y Ejecución
+starkcore/hammer_QA_v08.py:94:    print("  STARKCORE HAMMER v0.8 · CRYPTOGRAPHIC MEMORY COLLISION")
+starkcore/hammer.py:3:STARKCORE HAMMER v0.9.1 — COMMERCIAL FORENSIC CORE
+starkcore/hammer.py:123:EOFcat >> starkcore/hammer.py <<'EOF'
+starkcore/hammer.py:141:<html lang="es"><head><meta charset="UTF-8"><title>StarkCore Hammer Report</title>
+starkcore/hammer.py:158:<h1>StarkCore Hammer Audit</h1>
+starkcore/hammer.py:168:<div>Cómputo: {meta.get("elapsed_s")}s | StarkCore v0.9.1</div></div>
+starkcore/hammer.py:175:    parser = argparse.ArgumentParser(description="StarkCore Hammer — Detector de Clonación Diacrónica")
+starkcore/hammer.py:211:        scores = {"full": [], "no_mem": []}
+starkcore/hammer.py:215:            scores[m].append((1.0 - s_spec, 1.0 - s_coll))
+starkcore/hammer.py:219:            "status": "SECURE" if scores["full"][0][1] > 0.8 else "VULNERABLE",
+starkcore/hammer.py:221:            "recall_full_memory_defense": float(scores["full"][0][1]),
+starkcore/hammer.py:222:            "recall_blind_state_only": float(scores["no_mem"][0][1]),
+starkcore/hammer.py:223:            "spectral_detection_gradient": float(scores["full"][0][0]),
+starkcore/hammer.py:243:cat > starkcore/__main__.py <<'EOF'
+starkcore/hammer.py:244:from starkcore.hammer import main
+starkcore/__main__.py:1:from starkcore.hammer import main
+starkcore/sanctuary/temple.py:3:from starkcore.knights.zodiac import ImmuneKnight
+starkcore/sanctuary/temple.py:23:        from starkcore.knights.zodiac import (
+starkcore/sanctuary/omega.py:3:from starkcore.evidence.learning import EvidenceRegistry
+starkcore/sanctuary/starmap.py:1:from starkcore.knights.zodiac import (
+starkcore/knights/zodiac.py:1:from starkcore.immunity.sensor import ThreatSensor
+starkcore/knights/ophiuchus.py:4:    LAW = "🐍 Toda anomalía persistente debe tratarse primero como evidencia antes que como error."
+starkcore/executors/strategies.py:10:        ctx["core_status"] = "STABLE_EXECUTION"
+starkcore/executors/cosmos_solvers.py:4:SOLVENS_ROOT = os.path.join(ROOT, "solvens-core")
+starkcore/executors/cosmos_solvers.py:7:from cosmos_core import AttestedDAG
+starkcore/executors/cosmos_solvers.py:8:from dep_solver.core import DepProblem
+starkcore/executors/cosmos_solvers.py:10:from starkcore.validators.diacronic_identity_validator import EntityState, check_state
+starkcore/executors/cosmos_solvers.py:11:from starkcore.validators.borromeo_validator import BorromeoValidator, Hypothesis
+starkcore/executors/cosmos_solvers.py:12:from starkcore.executors.strategies import ValidationExecutor, KernelExecutor
+starkcore/executors/cosmos_solvers.py:53:            ctx["core_status"] = "UNSTABLE"
+starkcore/executors/cosmos_solvers.py:63:        ctx["core_status"] = "STABLE_EXECUTION"
+starkcore/aion/__init__.py:1:# StarkCore Cosmic Module
+starkcore/tests/bronze_awakening_test.py:2:🏹 STARKCORE V5
+starkcore/tests/bronze_awakening_test.py:275:        STARKCORE V5
+starkcore/tests/temple_real.py:2:🏛️ STARKCORE V5 - TEMPLO REAL
+starkcore/tests/temple_real.py:16:    from starkcore.core.temple import Temple
+starkcore/tests/temple_real.py:17:    from starkcore.core.causal_immune import CausalImmuneLayer
+starkcore/tests/temple_real.py:18:    from starkcore.guardians.zodiac import ZODIAC_GUARDIANS
+starkcore/tests/temple_real.py:76:    from starkcore.tests.bronze_awakening_test import bronze_awakening
+starkcore/tests/v7_demon_slayer.py:5:class StarkCoreV7Harness:
+starkcore/tests/v7_demon_slayer.py:7:        self.evidence_path = Path("starkcore/evidence/v7_pillars_memory.json")
+starkcore/tests/v7_demon_slayer.py:10:            "campaign": "STARKCORE V7 - PILARES vs LUNAS - MUGEN ARC",
+starkcore/tests/v7_demon_slayer.py:32:        print("   STARKCORE V7 - ARMADURAS DE PILAR - MUGEN ARC ADVERSARIAL TEST")
+starkcore/tests/v7_demon_slayer.py:68:        print("📊 REPORTE DE BATALLA (STARKCORE V7 METRICS)")
+starkcore/tests/v7_demon_slayer.py:80:    StarkCoreV7Harness().run()
+starkcore/validators/borromeo_validator.py:17:LAW = r"F(H\X)==F(H) && L(H\X)<L(H) => MAKEUP else STRUCTURE"
+starkcore/validators/diacronic_identity_validator.py:5:class IdentityVerdict(Enum):
+starkcore/validators/diacronic_identity_validator.py:6:    IDENTITY_PERSISTENT = "IDENTITY_PERSISTENT"
+starkcore/validators/diacronic_identity_validator.py:50:        return IdentityVerdict.LABEL_ONLY
+starkcore/validators/diacronic_identity_validator.py:53:        return IdentityVerdict.HISTORY_BROKEN
+starkcore/validators/diacronic_identity_validator.py:56:        return IdentityVerdict.CONSTRAINT_BROKEN
+starkcore/validators/diacronic_identity_validator.py:58:    return IdentityVerdict.IDENTITY_PERSISTENT
+starkcore/cosmos/dag.py:1:from cosmos_core import AttestedDAG, SeedChannel
+starkcore/cosmos/dag.py:13:        pub[node.name]=ch.identity_hash(node)
+starkcore/cosmos/__init__.py:1:from cosmos_core import AttestedDAG, SeedChannel
+starkcore/cosmos/security/__init__.py:1:from cosmos_core import SeedChannel
+starkcore/cosmos/security/seed_channel.py:1:from cosmos_core import SeedChannel
+starkcore/sandbox.py:7:    store = Path.home() / ".starkcore" / "store"

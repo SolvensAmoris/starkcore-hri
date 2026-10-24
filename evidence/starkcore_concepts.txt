@@ -1,0 +1,30 @@
+starkcore/evidence/v7_kokushibo_defeat.json:7:        "tactical_lemma": "No bloqueamos el golpe. Hacemos que el golpe no tenga d\u00f3nde caer."
+starkcore/h_test/NODE_REGISTRY.json:48:      "id": "DIACRONIC_IDENTITY",
+starkcore/h_test/NODE_REGISTRY.json:49:      "module": "src.starkcore.validators.diacronic_identity_validator",
+starkcore/h_test/NODE_REGISTRY.json:50:      "role": "identity continuity validator",
+starkcore/executor.py:5:    Original implementation preserved.
+starkcore/hammer_QA_v01.py:137:        "f_mem_note":  "T5 demuestra: mismo estado ≠ misma identidad (φ distinta)",
+starkcore/hammer_M2p5_scale_v01.py:86:  "nota":"Preserva capas, rompe solo localidad. |Z|<1 => localidad NO invariante. Confirmado v06e."
+starkcore/hammer_QA_v02.py:5:Somete el invariante estructural a un barrido estocástico de densidad (rho) y ruido.
+starkcore/hammer_QA_v02.py:6:Calcula la probabilidad empírica de preservación de identidad P(Omega > 1 | T).
+starkcore/hammer_QA_v02.py:101:# 3. Métrica de Shannon para Canales de Identidad (Ω)
+starkcore/hammer_QA_v02.py:140:            # 1. Estado Base e Invariantes
+starkcore/hammer_QA_v02.py:184:    print(f"\n📊 MATRIZ DE PRESERVACIÓN DE IDENTIDAD: P(Ω > 1 | ρ)")
+starkcore/hammer_QA_v04.py:177:    # 1. Cálculo de pesos normados del Espectrómetro de Identidad
+starkcore/hammer_QA_v04.py:197:        "pesos_espectro_identidad": {"w_info": w_info, "w_topo": w_topo, "w_mem": w_mem},
+starkcore/hammer_QA_v04.py:210:    print(f"⚖️  FÓRMULA VECTORIAL STARKCORE: ΔIdentity = {w_topo:.2f}Δtopo + {w_info:.2f}Δinfo + {w_mem:.2f}Δmem")
+starkcore/hammer_QA_v05.py:95:def evaluate_identity(drifts_norm, mode="full", base_capacity=0.35):
+starkcore/hammer_QA_v05.py:164:                survived = evaluate_identity([dn_i, dn_t, dn_m], mode=mode)
+starkcore/hammer_QA_v05.py:166:                if not survived: # Si detectó correctamente la pérdida de identidad
+starkcore/hammer_QA_v05.py:198:    print(f"   ΔIdentity = {w_topo:.2f}Δtopo + {w_info:.2f}Δinfo + {w_mem:.2f}Δmem")
+starkcore/hammer_QA_v07.py:96:    # S -> 1.0 (Identidad Preservada), S -> 0.0 (Ruptura irreversible)
+starkcore/executors/cosmos_solvers.py:10:from starkcore.validators.diacronic_identity_validator import EntityState, check_state
+starkcore/validators/diacronic_identity_validator.py:5:class IdentityVerdict(Enum):
+starkcore/validators/diacronic_identity_validator.py:6:    IDENTITY_PERSISTENT = "IDENTITY_PERSISTENT"
+starkcore/validators/diacronic_identity_validator.py:23:    pero debe conservar continuidad.
+starkcore/validators/diacronic_identity_validator.py:33:    Una identidad sin trayectoria
+starkcore/validators/diacronic_identity_validator.py:50:        return IdentityVerdict.LABEL_ONLY
+starkcore/validators/diacronic_identity_validator.py:53:        return IdentityVerdict.HISTORY_BROKEN
+starkcore/validators/diacronic_identity_validator.py:56:        return IdentityVerdict.CONSTRAINT_BROKEN
+starkcore/validators/diacronic_identity_validator.py:58:    return IdentityVerdict.IDENTITY_PERSISTENT
+starkcore/cosmos/dag.py:13:        pub[node.name]=ch.identity_hash(node)

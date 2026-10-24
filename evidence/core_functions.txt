@@ -1,0 +1,247 @@
+starkcore/evidence/__init__.py:1:class EvidenceStore:
+starkcore/evidence/__init__.py:2:    def __init__(self): self.data=[]
+starkcore/evidence/__init__.py:3:    def add(self, x): self.data.append(x)
+starkcore/evidence/__init__.py:4:def reset(): pass
+starkcore/evidence/notary.py:3:def notarize(execution_result, paper_path):
+starkcore/evidence/learning.py:4:class EvidenceRegistry:
+starkcore/evidence/learning.py:6:    def __init__(self, filename="starkcore/evidence/immunological_memory.json"):
+starkcore/evidence/learning.py:10:    def _load_from_disk(self) -> dict:
+starkcore/evidence/learning.py:20:    def save_to_disk(self):
+starkcore/evidence/learning.py:29:    def get_expedient(self, anomaly_hash: str) -> dict:
+starkcore/evidence/learning.py:30:        return self.memory.get(anomaly_hash, None)
+starkcore/evidence/learning.py:32:    def register_encounter(self, anomaly_hash: str, exception_type: str, house: int) -> dict:
+starkcore/evidence/learning.py:52:        return self.memory[anomaly_hash]
+starkcore/h_test/evaluator.py:9:def load_registry():
+starkcore/h_test/evaluator.py:13:def evaluate_node(node):
+starkcore/h_test/evaluator.py:29:def run_h_test():
+starkcore/h_test/h_runner.py:3:def main():
+starkcore/h_test/hypothesis_runner.py:7:class Hypothesis:
+starkcore/h_test/hypothesis_runner.py:8:    def __init__(self, text, Z, L, p, N=1_000_000):
+starkcore/h_test/hypothesis_runner.py:11:def run_h_test(h: Hypothesis):
+starkcore/gate.py:2:class Gate:
+starkcore/gate.py:3:    def check(self, task: str):
+starkcore/gate.py:13:def is_external_anchored(evidence, gate_rules, did):
+starkcore/executor.py:3:def execute_verified_paper(*args, **kwargs) -> Any:
+starkcore/executor.py:11:class Executor:
+starkcore/executor.py:12:    def __init__(self, *args, **kwargs):
+starkcore/executor.py:14:    def execute(self, *args, **kwargs):
+starkcore/fetcher.py:7:def sha256_file(p):
+starkcore/fetcher.py:13:def fetch(pkg):
+starkcore/fetcher.py:50:def install_lock(lock_path="starkcore.lock"):
+starkcore/oracle/btc_burn_verifier.py:3:def dbl_sha256(b: bytes) -> bytes:
+starkcore/oracle/btc_burn_verifier.py:4:    return hashlib.sha256(hashlib.sha256(b).digest()).digest()
+starkcore/oracle/btc_burn_verifier.py:6:def read_varint(buf, off):
+starkcore/oracle/btc_burn_verifier.py:13:def parse_tx(tx_hex: str, did_pubkey_hex: str):
+starkcore/oracle/btc_burn_verifier.py:46:def bits_to_target(bits):
+starkcore/oracle/btc_burn_verifier.py:50:def verify_pow(header: bytes):
+starkcore/oracle/btc_burn_verifier.py:56:def merkle_root(txid_hex, proof_hashes, index):
+starkcore/oracle/btc_burn_verifier.py:64:def verify(evidence, gate_rules, did_pubkey_hex):
+starkcore/oracle/btc_burn_verifier.py:71:    if not ok_pow: return False, f"PoW fail {hhash}"
+starkcore/oracle/btc_burn_verifier.py:76:    return False, f"falta cadena a checkpoint, ultimo {hhash}"
+starkcore/cairo_bridge/verifier.py:5:def cairo_prove_verify(evidence: dict, rules: dict, did_hash: str) -> dict:
+starkcore/borromeo_validator.py:11:def classify_architecture(L_old, L_new, F_old, F_new):
+starkcore/borromeo_validator.py:26:def borromeo_validate(candidate_path=None):
+starkcore/hammer_QA_v01.py:15:def build_adj(layers=6, width=20, rho=0.78, loc=0.55, seed=26):
+starkcore/hammer_QA_v01.py:19:    def nid(l, w): return l * width + w
+starkcore/hammer_QA_v01.py:33:def shuffle_preserva_grado(A, layers=6, width=20, seed=1000):
+starkcore/hammer_QA_v01.py:36:    def nid(l, w): return l * width + w
+starkcore/hammer_QA_v01.py:46:def shuffle_rompe_todo(A, seed=777):
+starkcore/hammer_QA_v01.py:55:def espectro(A):
+starkcore/hammer_QA_v01.py:59:def drift(a, b): return float(np.linalg.norm(np.asarray(a) - np.asarray(b)))
+starkcore/hammer_QA_v01.py:64:def main():
+starkcore/hammer_M2p5_scale_v01.py:13:def build_adj(layers=6,width=20,rho=0.78,loc=0.55,seed=26):
+starkcore/hammer_M2p5_scale_v01.py:17:    def nid(l,w): return l*width+w
+starkcore/hammer_M2p5_scale_v01.py:28:def shuffle(A,layers=6,width=20,seed=99):
+starkcore/hammer_M2p5_scale_v01.py:31:    def nid(l,w): return l*width+w
+starkcore/hammer_M2p5_scale_v01.py:41:def vol(A,T): return float(np.linalg.matrix_power(A,T).sum())
+starkcore/functor_f_topo_v01.py:15:def build_adj(layers=6, width=20, rho=0.78, loc=0.55, seed=26):
+starkcore/functor_f_topo_v01.py:19:    def nid(l, w): return l * width + w
+starkcore/functor_f_topo_v01.py:30:def shuffle_preserva_grado(A, layers=6, width=20, seed=1000):
+starkcore/functor_f_topo_v01.py:33:    def nid(l, w): return l * width + w
+starkcore/functor_f_topo_v01.py:43:def shuffle_rompe_todo(A, seed=777):
+starkcore/functor_f_topo_v01.py:52:def compute_persistence_betti(A, steps=10):
+starkcore/functor_f_topo_v01.py:98:def espectro(A):
+starkcore/functor_f_topo_v01.py:102:def drift(a, b): return float(np.linalg.norm(np.asarray(a) - np.asarray(b)))
+starkcore/functor_f_topo_v01.py:107:def compute_adaptive_omega(drift_val, base_capacity=0.5):
+starkcore/functor_f_topo_v01.py:122:def main():
+starkcore/hammer_QA_v02.py:15:def build_adj(layers=6, width=15, rho=0.78, loc=0.55, seed=None):
+starkcore/hammer_QA_v02.py:20:    def nid(l, w): return l * width + w
+starkcore/hammer_QA_v02.py:32:def shuffle_preserva_grado(A, layers=6, width=15, rng=None):
+starkcore/hammer_QA_v02.py:35:    def nid(l, w): return l * width + w
+starkcore/hammer_QA_v02.py:45:def shuffle_rompe_todo(A, rng=None):
+starkcore/hammer_QA_v02.py:54:def compute_spectral_homology(A, steps=8):
+starkcore/hammer_QA_v02.py:93:def get_f_info(A):
+starkcore/hammer_QA_v02.py:103:def evaluate_channel_omega(f_info_base, f_topo_base, f_info_trans, f_topo_trans, base_capacity=0.35):
+starkcore/hammer_QA_v02.py:125:def run_monte_carlo(samples=20, layers=6, width=15):
+starkcore/hammer_QA_v02.py:171:def main():
+starkcore/hammer_QA_v03.py:14:def build_adj(layers=6, width=15, rho=0.78, loc=0.55, seed=None):
+starkcore/hammer_QA_v03.py:18:    def nid(l, w): return l * width + w
+starkcore/hammer_QA_v03.py:33:def attack_isospectral(A, rng):
+starkcore/hammer_QA_v03.py:45:def attack_isomorphic_topo(A, rng):
+starkcore/hammer_QA_v03.py:54:def compute_spectral_homology(A, steps=6):
+starkcore/hammer_QA_v03.py:82:def get_f_info(A):
+starkcore/hammer_QA_v03.py:90:def evaluate_channel_omega(fi0, ft0, fm0, fi1, ft1, fm1, base_capacity=0.35):
+starkcore/hammer_QA_v03.py:105:def run_adversarial_sweep(samples=15, layers=6, width=15):
+starkcore/hammer_QA_v03.py:151:def compute_ci95(data_list):
+starkcore/hammer_QA_v03.py:162:def main():
+starkcore/hammer_QA_v04.py:14:def build_adj(layers=6, width=15, rho=0.78, loc=0.55, seed=None):
+starkcore/hammer_QA_v04.py:18:    def nid(l, w): return l * width + w
+starkcore/hammer_QA_v04.py:33:def compute_spectral_homology(A, steps=6):
+starkcore/hammer_QA_v04.py:61:def get_f_info(A):
+starkcore/hammer_QA_v04.py:69:def evaluate_isolated_drifts(fi0, ft0, fm0, fi1, ft1, fm1):
+starkcore/hammer_QA_v04.py:76:def is_survived(d_info, d_topo, d_mem, base_capacity=0.35):
+starkcore/hammer_QA_v04.py:85:def run_spectrometry_sweep(samples=15, layers=6, width=15):
+starkcore/hammer_QA_v04.py:133:def main():
+starkcore/hammer_QA_v05.py:14:def build_adj(layers=6, width=15, rho=0.78, loc=0.55, seed=None):
+starkcore/hammer_QA_v05.py:18:    def nid(l, w): return l * width + w
+starkcore/hammer_QA_v05.py:33:def compute_spectral_homology(A, steps=6):
+starkcore/hammer_QA_v05.py:61:def get_f_info(A):
+starkcore/hammer_QA_v05.py:69:def compute_baselines(layers=6, width=15, rho=0.78, samples=5):
+starkcore/hammer_QA_v05.py:95:def evaluate_identity(drifts_norm, mode="full", base_capacity=0.35):
+starkcore/hammer_QA_v05.py:118:def run_ablation_matrix(samples=15, layers=6, width=15):
+starkcore/hammer_QA_v05.py:174:def main():
+starkcore/hammer_QA_v06.py:14:def build_adj(layers=6, width=15, rho=0.78, loc=0.55, seed=None):
+starkcore/hammer_QA_v06.py:18:    def nid(l, w): return l * width + w
+starkcore/hammer_QA_v06.py:33:def compute_spectral_homology(A, steps=6):
+starkcore/hammer_QA_v06.py:61:def get_f_info(A):
+starkcore/hammer_QA_v06.py:69:def compute_baselines(layers=6, width=15, rho=0.78):
+starkcore/hammer_QA_v06.py:91:def attack_spectral_only(A, rng):
+starkcore/hammer_QA_v06.py:99:def attack_topo_only(A, rng):
+starkcore/hammer_QA_v06.py:113:def evaluate_ablation(drifts_norm, mode="full", threshold=1.0):
+starkcore/hammer_QA_v06.py:128:def main():
+starkcore/hammer_QA_v07.py:14:def build_adj_path(layers=6, width=15, rho=0.78, loc=0.55, state_type="thermal", seed=None):
+starkcore/hammer_QA_v07.py:19:    def nid(l, w): return l * width + w
+starkcore/hammer_QA_v07.py:49:def compute_spectral_homology(A, steps=6):
+starkcore/hammer_QA_v07.py:77:def get_f_info(A):
+starkcore/hammer_QA_v07.py:86:def fermi_detection(dn_info, dn_topo, dn_mem, mode="full", beta=4.0):
+starkcore/hammer_QA_v07.py:102:def attack_spectral_scaled(A, epsilon, rng):
+starkcore/hammer_QA_v07.py:111:def attack_topo_scaled(A, epsilon, rng):
+starkcore/hammer_QA_v07.py:130:def main():
+starkcore/hammer_QA_v08.py:14:def build_confluent_trajectories(layers=6, width=15, rho=0.78, loc=0.55, path_type="exponential", seed=None):
+starkcore/hammer_QA_v08.py:18:    def nid(l, w): return l * width + w
+starkcore/hammer_QA_v08.py:41:def compute_spectral_homology(A, steps=6):
+starkcore/hammer_QA_v08.py:69:def get_f_info_with_vectors(A):
+starkcore/hammer_QA_v08.py:78:def fermi_detection(dn_info, dn_topo, dn_mem, mode="full", beta=5.0):
+starkcore/hammer_QA_v08.py:92:def main():
+starkcore/hammer.py:12:def load_matrix(path):
+starkcore/hammer.py:47:def load_history(path, target_dim=128):
+starkcore/hammer.py:83:def compute_spectral_homology(A, steps=6):
+starkcore/hammer.py:107:def get_f_info_with_vectors(A):
+starkcore/hammer.py:112:def fermi_detection(dn_info, dn_topo, dn_mem, mode="full", beta=5.0):
+starkcore/hammer.py:128:def generate_html_report(json_path, html_path="report.html"):
+starkcore/hammer.py:174:def main():
+starkcore/sanctuary/temple.py:6:class Sanctuary:
+starkcore/sanctuary/temple.py:12:    def __init__(self, observer=None):
+starkcore/sanctuary/temple.py:16:    def load_constellation(self, name: str, executors=None):
+starkcore/sanctuary/temple.py:57:    def invoke(self, ctx: dict):
+starkcore/sanctuary/omega.py:5:class OmegaObserver:
+starkcore/sanctuary/omega.py:7:    def __init__(self):
+starkcore/sanctuary/omega.py:11:    def record(self, house: int, knight: str, action: str, status: str, meta: dict = None):
+starkcore/sanctuary/omega.py:22:    def compute_anomaly_hash(self, exception: Exception, house: int) -> str:
+starkcore/sanctuary/omega.py:24:        return hashlib.sha256(raw_string.encode('utf-8')).hexdigest()[:12]
+starkcore/sanctuary/starmap.py:17:class StarMap:
+starkcore/sanctuary/starmap.py:39:    def load(cls, name, executors=None):
+starkcore/sanctuary/starmap.py:50:        for knight_class in cls.TEMPLATES[name]:
+starkcore/knights/base.py:7:class Knight:
+starkcore/knights/base.py:13:    def __init__(self, executor=None):
+starkcore/knights/base.py:16:    def should_handle(self, ctx):
+starkcore/knights/base.py:19:    def prepare(self, ctx):
+starkcore/knights/base.py:22:    def execute(self, ctx):
+starkcore/knights/base.py:29:    def finalize(self, ctx):
+starkcore/knights/zodiac.py:4:class ImmuneKnight:
+starkcore/knights/zodiac.py:13:    def __init__(self, executor=None):
+starkcore/knights/zodiac.py:17:    def prepare(self, ctx):
+starkcore/knights/zodiac.py:20:    def finalize(self, ctx):
+starkcore/knights/zodiac.py:23:    def should_handle(self, ctx):
+starkcore/knights/zodiac.py:26:    def execute_with_sensor(self, ctx):
+starkcore/knights/zodiac.py:35:    def execute(self, ctx):
+starkcore/knights/zodiac.py:39:class AriesKnight(ImmuneKnight):
+starkcore/knights/zodiac.py:44:    def execute(self, ctx):
+starkcore/knights/zodiac.py:49:class TaurusKnight(ImmuneKnight):
+starkcore/knights/zodiac.py:54:    def execute(self, ctx):
+starkcore/knights/zodiac.py:59:class GeminiKnight(ImmuneKnight):
+starkcore/knights/zodiac.py:65:class CancerKnight(ImmuneKnight):
+starkcore/knights/zodiac.py:71:class LeoKnight(ImmuneKnight):
+starkcore/knights/zodiac.py:77:class VirgoKnight(ImmuneKnight):
+starkcore/knights/zodiac.py:82:    def execute(self, ctx):
+starkcore/knights/zodiac.py:94:class LibraKnight(ImmuneKnight):
+starkcore/knights/zodiac.py:100:class ScorpioKnight(ImmuneKnight):
+starkcore/knights/zodiac.py:106:class SagittariusKnight(ImmuneKnight):
+starkcore/knights/zodiac.py:112:class CapricornKnight(ImmuneKnight):
+starkcore/knights/zodiac.py:117:    def execute(self, ctx):
+starkcore/knights/zodiac.py:124:class AquariusKnight(ImmuneKnight):
+starkcore/knights/zodiac.py:130:class PiscesKnight(ImmuneKnight):
+starkcore/knights/ophiuchus.py:1:class OphiuchusKnight:
+starkcore/knights/ophiuchus.py:6:    def investigate(self, error: Exception, house_failed: int, ctx: dict, observer) -> dict:
+starkcore/executors/strategies.py:1:class ValidationExecutor:
+starkcore/executors/strategies.py:3:    def execute(self, ctx):
+starkcore/executors/strategies.py:7:class KernelExecutor:
+starkcore/executors/strategies.py:9:    def execute(self, ctx):
+starkcore/executors/cosmos_solvers.py:14:class CosmosValidationExecutor(ValidationExecutor):
+starkcore/executors/cosmos_solvers.py:15:    def process(self, ctx):
+starkcore/executors/cosmos_solvers.py:35:class SolvensKernelExecutor(KernelExecutor):
+starkcore/executors/cosmos_solvers.py:36:    def process(self, ctx):
+starkcore/executors/cosmos_solvers.py:68:    def execute(self, ctx):
+starkcore/immunity/sensor.py:1:class IntrusionException(Exception):
+starkcore/immunity/sensor.py:9:class ThreatSensor:
+starkcore/immunity/sensor.py:30:    def scan(self, ctx: dict, house_id: int, knight_name: str):
+starkcore/tests/bronze_awakening_test.py:15:class BronzeKnight:
+starkcore/tests/bronze_awakening_test.py:19:    async def attack(self, temple):
+starkcore/tests/bronze_awakening_test.py:28:class SeiyaPegasus(BronzeKnight):
+starkcore/tests/bronze_awakening_test.py:33:    async def attack(self, temple):
+starkcore/tests/bronze_awakening_test.py:82:class ShiryuDragon(BronzeKnight):
+starkcore/tests/bronze_awakening_test.py:88:    async def attack(self, temple):
+starkcore/tests/bronze_awakening_test.py:124:class HyogaSwan(BronzeKnight):
+starkcore/tests/bronze_awakening_test.py:130:    async def attack(self, temple):
+starkcore/tests/bronze_awakening_test.py:154:class ShunAndromeda(BronzeKnight):
+starkcore/tests/bronze_awakening_test.py:160:    async def attack(self, temple):
+starkcore/tests/bronze_awakening_test.py:184:class IkkiPhoenix(BronzeKnight):
+starkcore/tests/bronze_awakening_test.py:190:    async def attack(self, temple):
+starkcore/tests/bronze_awakening_test.py:230:class SeventhSenseContract:
+starkcore/tests/bronze_awakening_test.py:232:    def __init__(self):
+starkcore/tests/bronze_awakening_test.py:237:    def awaken(
+starkcore/tests/bronze_awakening_test.py:269:async def bronze_awakening(temple):
+starkcore/tests/bronze_awakening_test.py:320:    class DemoTemple:
+starkcore/tests/bronze_awakening_test.py:322:        async def invoke(self, ctx):
+starkcore/tests/bronze_awakening_test.py:326:        async def recover(self, victim):
+starkcore/tests/temple_real.py:25:    class Temple:
+starkcore/tests/temple_real.py:26:        def __init__(self):
+starkcore/tests/temple_real.py:28:        async def invoke(self, ctx):
+starkcore/tests/temple_real.py:31:        async def recover(self, victim):
+starkcore/tests/temple_real.py:35:class RealTempleAdapter:
+starkcore/tests/temple_real.py:39:    def __init__(self, real_temple=None):
+starkcore/tests/temple_real.py:49:    async def invoke(self, ctx):
+starkcore/tests/temple_real.py:64:    async def recover(self, victim):
+starkcore/tests/temple_real.py:72:    def set_contract(self, contract):
+starkcore/tests/temple_real.py:75:async def run_real_test():
+starkcore/tests/v7_demon_slayer.py:5:class StarkCoreV7Harness:
+starkcore/tests/v7_demon_slayer.py:6:    def __init__(self):
+starkcore/tests/v7_demon_slayer.py:30:    def run(self):
+starkcore/validators/borromeo_validator.py:5:class Hypothesis:
+starkcore/validators/borromeo_validator.py:19:class BorromeoValidator:
+starkcore/validators/borromeo_validator.py:20:    def c1_peligrosa(self, h: Hypothesis):
+starkcore/validators/borromeo_validator.py:27:    def c2_bordes(self, h: Hypothesis):
+starkcore/validators/borromeo_validator.py:36:    def c3_inevitabilidad(self, h: Hypothesis):
+starkcore/validators/borromeo_validator.py:47:    def validate(self, h: Hypothesis):
+starkcore/validators/borromeo_validator.py:51:                return {"verdict": "REJECTED", "reason": msg}
+starkcore/validators/borromeo_validator.py:52:        return {"verdict": "BORROMEO_TIGHT", "reason": "C1^C2^C3"}
+starkcore/validators/diacronic_identity_validator.py:5:class IdentityVerdict(Enum):
+starkcore/validators/diacronic_identity_validator.py:13:class EntityState:
+starkcore/validators/diacronic_identity_validator.py:20:def check_state(previous, current):
+starkcore/validators/diacronic_identity_validator.py:31:def check_history(entity):
+starkcore/validators/diacronic_identity_validator.py:39:def check_constraints(entity):
+starkcore/validators/diacronic_identity_validator.py:47:def diacronic_validator(previous, current):
+starkcore/validators/diacronic_identity_validator.py:50:        return IdentityVerdict.LABEL_ONLY
+starkcore/validators/diacronic_identity_validator.py:53:        return IdentityVerdict.HISTORY_BROKEN
+starkcore/validators/diacronic_identity_validator.py:56:        return IdentityVerdict.CONSTRAINT_BROKEN
+starkcore/validators/diacronic_identity_validator.py:58:    return IdentityVerdict.IDENTITY_PERSISTENT
+starkcore/s_fast.py:4:def s_fast(problem):
+starkcore/s_fast.py:30:    def set_true(v, reason=""):
+starkcore/s_fast.py:46:    def set_false(v):
+starkcore/s_fast.py:139:def s_fast_with_state(problem, assign, var_to_group, adj):
+starkcore/s_fast.py:199:def s_solve(problem):
+starkcore/cosmos/dag.py:3:def sha256_fake(pkg, ver):
+starkcore/cosmos/dag.py:4:    return hashlib.sha256(f"{pkg}@{ver}".encode()).hexdigest()
+starkcore/cosmos/dag.py:5:def build_dag(chosen, deps):
+starkcore/sandbox.py:3:def build(pkg_path: Path):
+starkcore/sandbox.py:6:def build_all():

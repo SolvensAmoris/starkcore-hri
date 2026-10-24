@@ -1,0 +1,35 @@
+starkcore/evidence/v7_pillars_memory.json:56:            "submodule": "runtime-dependency-attestation",
+starkcore/evidence/kb_kernel_002_ebpf.json:23:    "audit_verdict": "La roca de Gyomei recuerda c\u00f3mo era antes del impacto. Aunque el telescopio del kernel fue enga\u00f1ado por el hechizo del mapa invisible, la estructura en userland delat\u00f3 la traici\u00f3n del software."
+starkcore/evidence/v7_transparent_world.json:23:    "final_verdict": "El binario enemigo ha sido desnudado por el Mundo Transparente. No importa si altera su hash MD5 o cambia el nombre de sus variables; su estructura at\u00f3mica de llamadas ha quedado grabada en la roca para siempre."
+starkcore/h_test/hypothesis_runner.py:30:        results["GATE"]="PASS" if hasattr(gate,"validate") or hasattr(gate,"check") else "PASS"
+starkcore/oracle/btc_burn_verifier.py:67:    if not did_match: return False, f"binding fail: {did_pubkey_hex[:12]} not in witness"
+starkcore/oracle/btc_burn_verifier.py:71:    if not ok_pow: return False, f"PoW fail {hhash}"
+starkcore/borromeo_validator.py:26:def borromeo_validate(candidate_path=None):
+starkcore/borromeo_validator.py:46:    print(json.dumps(borromeo_validate(), indent=2))
+starkcore/executors/cosmos_solvers.py:7:from cosmos_core import AttestedDAG
+starkcore/executors/cosmos_solvers.py:10:from starkcore.validators.diacronic_identity_validator import EntityState, check_state
+starkcore/executors/cosmos_solvers.py:21:        ca002_ok = check_state(e1, e2)
+starkcore/executors/cosmos_solvers.py:28:        borromeo = BorromeoValidator().validate(h)
+starkcore/executors/cosmos_solvers.py:29:        print(f"  CA002={ca002_ok} Borromeo={borromeo['verdict']}")
+starkcore/executors/cosmos_solvers.py:31:        ctx["cosmos_validation"] = {"ca002": ca002_ok, "borromeo": borromeo, "ok": ca002_ok and borromeo['verdict']=="BORROMEO_TIGHT"}
+starkcore/validators/borromeo_validator.py:22:            return False, f"C1 FAIL: L no bajo {h.L_old}->{h.L_new}"
+starkcore/validators/borromeo_validator.py:24:            return False, f"C1 FAIL: F no subio {h.F_old}->{h.F_new}"
+starkcore/validators/borromeo_validator.py:29:            return False, "C2 FAIL: sin martillos -> TEORIA_DEBIL"
+starkcore/validators/borromeo_validator.py:33:            return False, f"C2 FAIL: faltan {missing} -> TEORIA_DEBIL"
+starkcore/validators/borromeo_validator.py:38:            return False, "C3 FAIL: cadena vacia"
+starkcore/validators/borromeo_validator.py:44:            return False, f"C3 FAIL: ocultas {hidden} -> CA-002"
+starkcore/validators/borromeo_validator.py:47:    def validate(self, h: Hypothesis):
+starkcore/validators/borromeo_validator.py:51:                return {"verdict": "REJECTED", "reason": msg}
+starkcore/validators/borromeo_validator.py:52:        return {"verdict": "BORROMEO_TIGHT", "reason": "C1^C2^C3"}
+starkcore/validators/diacronic_identity_validator.py:5:class IdentityVerdict(Enum):
+starkcore/validators/diacronic_identity_validator.py:20:def check_state(previous, current):
+starkcore/validators/diacronic_identity_validator.py:49:    if not check_state(previous, current):
+starkcore/validators/diacronic_identity_validator.py:50:        return IdentityVerdict.LABEL_ONLY
+starkcore/validators/diacronic_identity_validator.py:53:        return IdentityVerdict.HISTORY_BROKEN
+starkcore/validators/diacronic_identity_validator.py:56:        return IdentityVerdict.CONSTRAINT_BROKEN
+starkcore/validators/diacronic_identity_validator.py:58:    return IdentityVerdict.IDENTITY_PERSISTENT
+starkcore/cosmos/dag.py:1:from cosmos_core import AttestedDAG, SeedChannel
+starkcore/cosmos/dag.py:7:    dag=AttestedDAG()
+starkcore/cosmos/dag.py:13:        pub[node.name]=ch.identity_hash(node)
+starkcore/cosmos/dag.py:16:    dag.attest(seed_channel=ch, published_hashes=pub)
+starkcore/cosmos/__init__.py:1:from cosmos_core import AttestedDAG, SeedChannel

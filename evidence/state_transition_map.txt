@@ -1,0 +1,108 @@
+starkcore/evidence/notary.py:18:        "final_state_root": execution_result["final_root"],
+starkcore/evidence/v7_pillars_memory.json:27:                    "action": "Restored original unit file state from protected userland cache"
+starkcore/evidence/v7_kokushibo_defeat.json:33:            "exploit_mechanism": "Tampering with structural pointers (l_next, l_name) within internal loader state to spoof provenances.",
+starkcore/evidence/v7_kokushibo_defeat.json:40:            "exploit_mechanism": "Evading Linux Security Modules by attempting runtime RWX transitions via mprotect/memfd_create.",
+starkcore/evidence/v7_muzan_drift_defeat.json:17:        "ebpf_telemetry_override": "Independent userland integrity ring verified the memory state directly."
+starkcore/hammer_QA_v01.py:122:        topo = "PARTIAL_COLLAPSE"
+starkcore/hammer_QA_v01.py:133:        "omega":       {k: round(v, 3) for k, v in Ω.items()},
+starkcore/functor_f_topo_v01.py:5:Implementa homología persistente nativa (Betti 0 y Betti 1) para grafos dirigidos por capas.
+starkcore/functor_f_topo_v01.py:6:Refina la métrica Omega (Ω) usando capacidad de Shannon adaptativa según entropía de ruido.
+starkcore/functor_f_topo_v01.py:50:# 2. Motor de Homología Persistente Nativa (f_topo)
+starkcore/functor_f_topo_v01.py:54:    Calcula un proxy de homología persistente filtrando el grafo por umbrales de peso.
+starkcore/functor_f_topo_v01.py:105:# 4. Código Corrector de Errores Dinámico (Métrica Omega Refinada)
+starkcore/functor_f_topo_v01.py:107:def compute_adaptive_omega(drift_val, base_capacity=0.5):
+starkcore/functor_f_topo_v01.py:124:    print("  STARKCORE HAMMER · f_topo PERSISTENTE + SHANNON REFINADO")
+starkcore/functor_f_topo_v01.py:169:    # --- CÁLCULO DE OMEGA DINÁMICO (Corrección de Errores) ---
+starkcore/functor_f_topo_v01.py:170:    Ω = {k: compute_adaptive_omega(v, base_capacity=0.5) for k, v in drifts.items()}
+starkcore/functor_f_topo_v01.py:181:        topo = "BOUND_STABLE_GHZ · Homología persistente blindada contra desorden local"
+starkcore/functor_f_topo_v01.py:201:        "omega_adaptive": {k: round(v, 4) for k, v in Ω.items()},
+starkcore/hammer_QA_v02.py:6:Calcula la probabilidad empírica de preservación de identidad P(Omega > 1 | T).
+starkcore/hammer_QA_v02.py:103:def evaluate_channel_omega(f_info_base, f_topo_base, f_info_trans, f_topo_trans, base_capacity=0.35):
+starkcore/hammer_QA_v02.py:106:    Aplica la ley de degradación de Shannon para dictaminar si Omega > 1.
+starkcore/hammer_QA_v02.py:119:    omega = capacity_eff / drift_total
+starkcore/hammer_QA_v02.py:120:    return omega, drift_total
+starkcore/hammer_QA_v02.py:149:            o1, _ = evaluate_channel_omega(fi0, ft0, fi1, ft1)
+starkcore/hammer_QA_v02.py:156:            o3, _ = evaluate_channel_omega(fi0, ft0, fi3, ft3)
+starkcore/hammer_QA_v02.py:163:            o4, _ = evaluate_channel_omega(fi0, ft0, fi4, ft4)
+starkcore/hammer_QA_v02.py:182:    # Procesamiento estadístico de probabilidades P(Omega > 1)
+starkcore/hammer_QA_v03.py:90:def evaluate_channel_omega(fi0, ft0, fm0, fi1, ft1, fm1, base_capacity=0.35):
+starkcore/hammer_QA_v03.py:114:        omega_adv1, omega_adv2, omega_adv3 = [], [], []
+starkcore/hammer_QA_v03.py:133:            omega_adv1.append(evaluate_channel_omega(fi0, ft0, fm0, fi1, ft1, fm0))
+starkcore/hammer_QA_v03.py:139:            omega_adv2.append(evaluate_channel_omega(fi0, ft0, fm0, fi2, ft2, fm0))
+starkcore/hammer_QA_v03.py:142:            omega_adv3.append(evaluate_channel_omega(fi0, ft0, fm0, fi0, ft0, fm_clon))
+starkcore/hammer_QA_v03.py:145:            "ADV_1_Isospectral": omega_adv1,
+starkcore/hammer_QA_v03.py:146:            "ADV_2_Isomorphic": omega_adv2,
+starkcore/hammer_QA_v03.py:147:            "ADV_3_Markov_Clon": omega_adv3
+starkcore/hammer_QA_v04.py:76:def is_survived(d_info, d_topo, d_mem, base_capacity=0.35):
+starkcore/hammer_QA_v04.py:172:        survivals = [1.0 if is_survived(x[0], x[1], x[2]) else 0.0 for x in data["B"]]
+starkcore/hammer_QA_v05.py:164:                survived = evaluate_identity([dn_i, dn_t, dn_m], mode=mode)
+starkcore/hammer_QA_v05.py:166:                if not survived: # Si detectó correctamente la pérdida de identidad
+starkcore/hammer_QA_v06.py:141:        mode: {"AOA_1_Spectral": 0, "AOA_2_Topo": 0, "AOA_3_History": 0, "total": 0}
+starkcore/hammer_QA_v06.py:181:            # Evaluación ante AOA_3 (History)
+starkcore/hammer_QA_v06.py:184:                matrix_report[mode]["AOA_3_History"] += 1
+starkcore/hammer_QA_v06.py:200:        r3 = (matrix_report[mode]["AOA_3_History"] / tot) * 100
+starkcore/hammer_QA_v06.py:201:        summary_data[mode] = {"spectral": r1, "topo": r2, "history": r3}
+starkcore/hammer_QA_v06.py:212:    if summary_data["no_mem"]["history"] == 0.0 and summary_data["full"]["history"] == 100.0:
+starkcore/hammer_QA_v07.py:14:def build_adj_path(layers=6, width=15, rho=0.78, loc=0.55, state_type="thermal", seed=None):
+starkcore/hammer_QA_v07.py:33:    if state_type == "thermal":
+starkcore/hammer_QA_v07.py:34:        history_vector = np.zeros(128, dtype=np.float32)
+starkcore/hammer_QA_v07.py:37:            history_vector += (step / (i + 1))
+starkcore/hammer_QA_v07.py:40:        history_vector = rng.uniform(-3.0, 3.0, 128).astype(np.float32)
+starkcore/hammer_QA_v07.py:41:        history_vector = history_vector / (np.linalg.norm(history_vector) + 1e-6)
+starkcore/hammer_QA_v07.py:42:        history_vector = history_vector * 1.83  # Escala de calibración homóloga
+starkcore/hammer_QA_v07.py:44:    return A, history_vector
+starkcore/hammer_QA_v07.py:156:            A_thermal, fm_thermal = build_adj_path(LAYERS, WIDTH, rho=0.75, state_type="thermal", seed=seed)
+starkcore/hammer_QA_v07.py:157:            _, fm_chaotic = build_adj_path(LAYERS, WIDTH, rho=0.75, state_type="chaotic", seed=seed)
+starkcore/hammer_QA_v08.py:31:        history = np.exp(-t / 3.0) + rng.normal(0, 0.01, 128)
+starkcore/hammer_QA_v08.py:33:        history = np.sin(2 * np.pi * t / 4.0) * np.exp(-t / 5.0) + rng.normal(0, 0.01, 128)
+starkcore/hammer_QA_v08.py:35:    history = history / (np.linalg.norm(history) + 1e-6)
+starkcore/hammer_QA_v08.py:36:    return A, history
+starkcore/hammer.py:35:                    raise ValueError("No se encontró matriz 2D en el state_dict")
+starkcore/hammer.py:47:def load_history(path, target_dim=128):
+starkcore/hammer.py:134:    rec_blind = data.get("recall_blind_state_only", 0.0) * 100
+starkcore/hammer.py:177:    parser.add_argument("--history", type=str, help="Vector de historia (cualquier dim)")
+starkcore/hammer.py:188:    if args.target and args.history:
+starkcore/hammer.py:191:        f_mem = load_history(args.history)
+starkcore/hammer.py:222:            "recall_blind_state_only": float(scores["no_mem"][0][1]),
+starkcore/hammer.py:228:        print("[*] Modo sintético (demo). Usa --target y --history para forense real.")
+starkcore/hammer.py:231:                  "recall_blind_state_only": 0.02, "spectral_detection_gradient": 0.88,
+starkcore/sanctuary/temple.py:12:    def __init__(self, observer=None):
+starkcore/sanctuary/temple.py:14:        self.observer = observer
+starkcore/sanctuary/temple.py:65:                if self.observer:
+starkcore/sanctuary/temple.py:66:                    self.observer.record(
+starkcore/sanctuary/temple.py:86:                if self.observer:
+starkcore/sanctuary/temple.py:87:                    self.observer.record(
+starkcore/sanctuary/temple.py:96:                if self.observer:
+starkcore/sanctuary/temple.py:97:                    self.observer.record(
+starkcore/sanctuary/omega.py:5:class OmegaObserver:
+starkcore/sanctuary/omega.py:6:    """👁️ El Observador Omega ahora se apoya en el EvidenceRegistry para persistencia."""
+starkcore/knights/zodiac.py:55:        ctx["persistent"] = True
+starkcore/knights/ophiuchus.py:4:    LAW = "🐍 Toda anomalía persistente debe tratarse primero como evidencia antes que como error."
+starkcore/knights/ophiuchus.py:6:    def investigate(self, error: Exception, house_failed: int, ctx: dict, observer) -> dict:
+starkcore/knights/ophiuchus.py:10:        anomaly_hash = observer.compute_anomaly_hash(error, house_failed)
+starkcore/knights/ophiuchus.py:12:        # Registrar o actualizar el expediente directamente en el disco duro a través de Omega
+starkcore/knights/ophiuchus.py:13:        expedient = observer.registry.register_encounter(anomaly_hash, type(error).__name__, house_failed)
+starkcore/knights/ophiuchus.py:21:            observer.record(13, self.NAME, "Apply Disk Patch", "SYSTEM_INMUNIZED")
+starkcore/knights/ophiuchus.py:26:            observer.record(13, self.NAME, "Log Evidence to Disk", "EXPEDIENT_SAVED", {"hash": anomaly_hash})
+starkcore/knights/ophiuchus.py:33:            return {"status": "COLLECTED_AS_PERSISTENT_EVIDENCE", "ctx": ctx}
+starkcore/executors/cosmos_solvers.py:10:from starkcore.validators.diacronic_identity_validator import EntityState, check_state
+starkcore/executors/cosmos_solvers.py:19:        e1 = EntityState(name="pkg", state={"old"}, history=["init"], constraints=set())
+starkcore/executors/cosmos_solvers.py:20:        e2 = EntityState(name="pkg", state={"old"}, history=["init","resolve"], constraints=set())
+starkcore/executors/cosmos_solvers.py:21:        ca002_ok = check_state(e1, e2)
+starkcore/validators/diacronic_identity_validator.py:6:    IDENTITY_PERSISTENT = "IDENTITY_PERSISTENT"
+starkcore/validators/diacronic_identity_validator.py:8:    HISTORY_BROKEN = "HISTORY_BROKEN"
+starkcore/validators/diacronic_identity_validator.py:13:class EntityState:
+starkcore/validators/diacronic_identity_validator.py:15:    state: set
+starkcore/validators/diacronic_identity_validator.py:16:    history: list
+starkcore/validators/diacronic_identity_validator.py:20:def check_state(previous, current):
+starkcore/validators/diacronic_identity_validator.py:31:def check_history(entity):
+starkcore/validators/diacronic_identity_validator.py:36:    return len(entity.history) > 0
+starkcore/validators/diacronic_identity_validator.py:44:    return entity.constraints.issubset(entity.state)
+starkcore/validators/diacronic_identity_validator.py:49:    if not check_state(previous, current):
+starkcore/validators/diacronic_identity_validator.py:52:    if not check_history(current):
+starkcore/validators/diacronic_identity_validator.py:53:        return IdentityVerdict.HISTORY_BROKEN
+starkcore/validators/diacronic_identity_validator.py:58:    return IdentityVerdict.IDENTITY_PERSISTENT
+starkcore/s_fast.py:111:                    result = s_fast_with_state(problem, assign, var_to_group, adj)
+starkcore/s_fast.py:130:            return s_fast_with_state(problem, assign, var_to_group, adj)
+starkcore/s_fast.py:139:def s_fast_with_state(problem, assign, var_to_group, adj):
+starkcore/s_fast.py:188:                res=s_fast_with_state(problem, new_assign, var_to_group, adj)

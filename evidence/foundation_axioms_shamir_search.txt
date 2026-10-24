@@ -1,0 +1,350 @@
+starkcore/evidence/notary.py:1:import hashlib, json, time
+starkcore/evidence/notary.py:17:        "execution_seed": execution_result["seed"],
+starkcore/evidence/notary.py:18:        "final_state_root": execution_result["final_root"],
+starkcore/evidence/notary.py:19:        "logs_root": hashlib.sha256(json.dumps(execution_result["logs"]).encode()).hexdigest(),
+starkcore/evidence/notary.py:21:        "proof_type": "btc-burn-v24"
+starkcore/evidence/notary.py:24:    # Hash final que se publica en el registry (75e47009... que mencionaste)
+starkcore/evidence/notary.py:25:    notary_hash = hashlib.sha256(json.dumps(notary_doc, sort_keys=True).encode()).hexdigest()
+starkcore/evidence/notary.py:26:    notary_doc["notary_hash"] = notary_hash
+starkcore/evidence/notary.py:31:    print(f"NOTARY V1: notary_hash={notary_hash}")
+starkcore/evidence/notary.py:32:    print(f"Final root: {execution_result['final_root']}")
+starkcore/evidence/learning.py:29:    def get_expedient(self, anomaly_hash: str) -> dict:
+starkcore/evidence/learning.py:30:        return self.memory.get(anomaly_hash, None)
+starkcore/evidence/learning.py:32:    def register_encounter(self, anomaly_hash: str, exception_type: str, house: int) -> dict:
+starkcore/evidence/learning.py:34:        if anomaly_hash not in self.memory:
+starkcore/evidence/learning.py:35:            self.memory[anomaly_hash] = {
+starkcore/evidence/learning.py:43:        self.memory[anomaly_hash]["frequency"] += 1
+starkcore/evidence/learning.py:46:        if self.memory[anomaly_hash]["frequency"] >= 3:
+starkcore/evidence/learning.py:47:            self.memory[anomaly_hash]["disposition"] = "PERMANENT_IMMUNITY_PATCH"
+starkcore/evidence/learning.py:49:            self.memory[anomaly_hash]["patched_at_epoch"] = time.time()
+starkcore/evidence/learning.py:52:        return self.memory[anomaly_hash]
+starkcore/evidence/v7_pillars_memory.json:14:    "hashira_monitored_namespaces": {
+starkcore/evidence/v7_pillars_memory.json:20:                    "technique": "T1135 - Network Share Discovery / T1105 - Ingress Tool Transfer via /dev/shm",
+starkcore/evidence/v7_pillars_memory.json:27:                    "action": "Restored original unit file state from protected userland cache"
+starkcore/evidence/v7_pillars_memory.json:56:            "submodule": "runtime-dependency-attestation",
+starkcore/evidence/v7_sound_tengen.json:10:            "estado": "0% desorden | 100% Sincronizado"
+starkcore/evidence/audio_trilogy_final.json:13:                "AAC": "Ravenclaw (Eficiente)",
+starkcore/evidence/audio_trilogy_final.json:37:        "integrity_hash": "0xDEADC0DE_SLYTHERIN_V7",
+starkcore/evidence/v7_kokushibo_defeat.json:13:        "defense_principle": "independent_integrity_verification"
+starkcore/evidence/v7_kokushibo_defeat.json:26:            "exploit_mechanism": "Spoofing rtld auditing interfaces to force illicit shared object injection.",
+starkcore/evidence/v7_kokushibo_defeat.json:32:            "target": "shared_object_resolution_link_map",
+starkcore/evidence/v7_kokushibo_defeat.json:33:            "exploit_mechanism": "Tampering with structural pointers (l_next, l_name) within internal loader state to spoof provenances.",
+starkcore/evidence/v7_kokushibo_defeat.json:34:            "gyomei_counter": "Runtime cryptographic hashing of ELF headers in-memory against local verifiable signatures.",
+starkcore/evidence/v7_kokushibo_defeat.json:40:            "exploit_mechanism": "Evading Linux Security Modules by attempting runtime RWX transitions via mprotect/memfd_create.",
+starkcore/evidence/kb_kernel_002_ebpf.json:6:        "status": "EVIDENCE_RECORDED_BY_STONE_WITNESS"
+starkcore/evidence/kb_kernel_002_ebpf.json:11:        "actual_executed_binary": "/tmp/muzan_rootkit_payload",
+starkcore/evidence/kb_kernel_002_ebpf.json:14:    "gyomei_independent_verification": {
+starkcore/evidence/kb_kernel_002_ebpf.json:15:        "defense_principle": "independent_integrity_verification (Piedra Testigo)",
+starkcore/evidence/kb_kernel_002_ebpf.json:17:        "cryptographic_hash_comparison": {
+starkcore/evidence/v7_transparent_world.json:16:        "structural_fuzzy_hash": "\u2728_SLYTHERIN_STRUCT_HASH_990KBPS_\u2728"
+starkcore/evidence/v7_transparent_world.json:19:        "action": "Generated Immutable Core Rule",
+starkcore/evidence/v7_transparent_world.json:21:        "rule_injected": "IF behavior_sequence == ['sys_mprotect', 'sys_ptrace'] -> KILL_IMMEDIATELY"
+starkcore/evidence/v7_transparent_world.json:23:    "final_verdict": "El binario enemigo ha sido desnudado por el Mundo Transparente. No importa si altera su hash MD5 o cambia el nombre de sus variables; su estructura at\u00f3mica de llamadas ha quedado grabada en la roca para siempre."
+starkcore/evidence/v7_muzan_drift_defeat.json:17:        "ebpf_telemetry_override": "Independent userland integrity ring verified the memory state directly."
+starkcore/h_test/NODE_REGISTRY.json:14:      "role": "proof storage and verification",
+starkcore/h_test/NODE_REGISTRY.json:26:      "role": "external evidence anchoring",
+starkcore/h_test/NODE_REGISTRY.json:31:      "module": "starkcore.oracle.btc_burn_verifier",
+starkcore/h_test/NODE_REGISTRY.json:32:      "role": "external verification oracle",
+starkcore/h_test/NODE_REGISTRY.json:37:      "module": "starkcore.cairo_bridge.verifier",
+starkcore/h_test/NODE_REGISTRY.json:38:      "role": "formal verification bridge",
+starkcore/h_test/NODE_REGISTRY.json:48:      "id": "DIACRONIC_IDENTITY",
+starkcore/h_test/NODE_REGISTRY.json:49:      "module": "src.starkcore.validators.diacronic_identity_validator",
+starkcore/h_test/NODE_REGISTRY.json:50:      "role": "identity continuity validator",
+starkcore/h_test/cartographer.py:5:ROOT = Path(__file__).resolve().parents[2]
+starkcore/h_test/cartographer.py:9:for py in ROOT.rglob("*.py"):
+starkcore/h_test/cartographer.py:14:        source = py.read_text(encoding="utf-8")
+starkcore/h_test/cartographer.py:15:        tree = ast.parse(source)
+starkcore/h_test/cartographer.py:18:            "file": str(py.relative_to(ROOT)),
+starkcore/h_test/cartographer.py:42:        "file": str(py.relative_to(ROOT)),
+starkcore/h_test/cartographer.py:76:with open(ROOT / "starkcore_map.json", "w", encoding="utf-8") as f:
+starkcore/gate.py:12:from starkcore.oracle.btc_burn_verifier import verify as verify_burn
+starkcore/gate.py:13:def is_external_anchored(evidence, gate_rules, did):
+starkcore/gate.py:14:    ok, msg = verify_burn(evidence, gate_rules, did)
+starkcore/executor.py:5:    Original implementation preserved.
+starkcore/executor.py:8:    # TODO: restore original body here if you overwrote it
+starkcore/fetcher.py:1:import os, hashlib, json, urllib.request
+starkcore/fetcher.py:8:    h=hashlib.sha256()
+starkcore/fetcher.py:21:        actual = sha256_file(store_path / "pkg.tgz") if (store_path / "pkg.tgz").exists() else hashlib.sha256(f"{name}@{ver}".encode()).hexdigest()
+starkcore/fetcher.py:23:        if actual == expected or True: # para demo con hash fake de tu lock actual
+starkcore/fetcher.py:38:            print(f"[WARN] hash mismatch {name}: expected {expected[:12]} got {actual[:12]} - usando cache para demo")
+starkcore/fetcher.py:44:        # recalcula hash real para tu lock actual que es sha256(name)
+starkcore/fetcher.py:45:        real_hash = hashlib.sha256(f"{name}@{ver}".encode()).hexdigest()
+starkcore/fetcher.py:46:        if real_hash == expected:
+starkcore/fetcher.py:47:            print(f"[FAKE OK] {name}@{ver} hash verified")
+starkcore/fetcher.py:52:    print(f"[STARKCORE] root_hash={lock['root_hash'][:16]} nodes={lock['nodes']}")
+starkcore/oracle/btc_burn_verifier.py:1:import hashlib, struct
+starkcore/oracle/btc_burn_verifier.py:4:    return hashlib.sha256(hashlib.sha256(b).digest()).digest()
+starkcore/oracle/btc_burn_verifier.py:35:    witness_pubkeys=[]
+starkcore/oracle/btc_burn_verifier.py:42:        if len(items)==2: witness_pubkeys.append(items[1].hex())
+starkcore/oracle/btc_burn_verifier.py:43:    did_match = did_pubkey_hex.lower() in [p.lower() for p in witness_pubkeys]
+starkcore/oracle/btc_burn_verifier.py:44:    return burns, found, did_match, witness_pubkeys
+starkcore/oracle/btc_burn_verifier.py:50:def verify_pow(header: bytes):
+starkcore/oracle/btc_burn_verifier.py:56:def merkle_root(txid_hex, proof_hashes, index):
+starkcore/oracle/btc_burn_verifier.py:58:    for ph in proof_hashes:
+starkcore/oracle/btc_burn_verifier.py:64:def verify(evidence, gate_rules, did_pubkey_hex):
+starkcore/oracle/btc_burn_verifier.py:67:    if not did_match: return False, f"binding fail: {did_pubkey_hex[:12]} not in witness"
+starkcore/oracle/btc_burn_verifier.py:68:    if burn_sats < gate_rules['min_burn_sats']: return False, f"burn {burn_sats} < min {gate_rules['min_burn_sats']}"
+starkcore/oracle/btc_burn_verifier.py:70:    ok_pow, hhash = verify_pow(header)
+starkcore/oracle/btc_burn_verifier.py:71:    if not ok_pow: return False, f"PoW fail {hhash}"
+starkcore/oracle/btc_burn_verifier.py:72:    calc_root = merkle_root(evidence['txid'], evidence['merkle_proof_hashes'], evidence['tx_index_in_block'])
+starkcore/oracle/btc_burn_verifier.py:73:    root_in_header = header[36:68][::-1].hex()
+starkcore/oracle/btc_burn_verifier.py:74:    if calc_root!= root_in_header: return False, "merkle mismatch"
+starkcore/oracle/btc_burn_verifier.py:75:    if hhash == gate_rules['trusted_checkpoint_hash']: return True, f"OK burn={burn_sats} checkpoint directo"
+starkcore/oracle/btc_burn_verifier.py:76:    return False, f"falta cadena a checkpoint, ultimo {hhash}"
+starkcore/oracle/btc_burn_verifier.py:79:    print("btc_burn_verifier v2 cargado - listo para verify(evidence, gate, did)")
+starkcore/cairo_bridge/verifier.py:5:def cairo_prove_verify(evidence: dict, rules: dict, did_hash: str) -> dict:
+starkcore/cairo_bridge/verifier.py:12:    assert burn >= rules.get('min_burn_sats',10000), "insufficient burn"
+starkcore/cairo_bridge/verifier.py:13:    # 3. Binding DID (simulado)
+starkcore/cairo_bridge/verifier.py:14:    print(f"[CAIRO-SIM] PoW OK | Burn {burn} >= {rules['min_burn_sats']} | DID {did_hash[:16]}...")
+starkcore/cairo_bridge/verifier.py:16:        "stark_proof_hash": "sim_e5176b60_" + header[:16],
+starkcore/cairo_bridge/verifier.py:18:        "circuit": "cosmos_burn_verifier v0.1.0"
+starkcore/cairo_bridge/verifier.py:23:    rules = {"min_burn_sats":10000}
+starkcore/cairo_bridge/verifier.py:24:    print(cairo_prove_verify(ev, rules, "e5176b60"*8))
+starkcore/gate_cairo.py:1:from starkcore.cairo_bridge.verifier import cairo_prove_verify
+starkcore/gate_cairo.py:3:# proof = cairo_prove_verify(evidence, rules, did_hash)
+starkcore/gate_cairo.py:4:# si proof['verified']: permite publicar
+starkcore/hammer_QA_v01.py:15:def build_adj(layers=6, width=20, rho=0.78, loc=0.55, seed=26):
+starkcore/hammer_QA_v01.py:18:    rng = np.random.default_rng(seed)
+starkcore/hammer_QA_v01.py:33:def shuffle_preserva_grado(A, layers=6, width=20, seed=1000):
+starkcore/hammer_QA_v01.py:35:    rng = np.random.default_rng(seed)
+starkcore/hammer_QA_v01.py:46:def shuffle_rompe_todo(A, seed=777):
+starkcore/hammer_QA_v01.py:47:    rng = np.random.default_rng(seed)
+starkcore/hammer_QA_v01.py:72:    A0 = build_adj(layers=LAYERS, width=WIDTH, seed=26)
+starkcore/hammer_QA_v01.py:84:    A3 = shuffle_preserva_grado(A0, layers=LAYERS, width=WIDTH, seed=1000)
+starkcore/hammer_QA_v01.py:88:    A4 = shuffle_rompe_todo(A0, seed=777)
+starkcore/hammer_QA_v01.py:91:    # --- T5 · f_mem · ISÓMERO DE TRAYECTORIA (mismo estado, distinta historia) ---
+starkcore/hammer_QA_v01.py:92:    A5 = build_adj(layers=LAYERS, width=WIDTH, seed=26)   # mismo estado
+starkcore/hammer_QA_v01.py:118:    # --- ESTADO TOPOLÓGICO EVOLUCIONADO (Relacional y no rígido) ---
+starkcore/hammer_QA_v01.py:122:        topo = "PARTIAL_COLLAPSE"
+starkcore/hammer_QA_v01.py:137:        "f_mem_note":  "T5 demuestra: mismo estado ≠ misma identidad (φ distinta)",
+starkcore/hammer_M2p5_scale_v01.py:13:def build_adj(layers=6,width=20,rho=0.78,loc=0.55,seed=26):
+starkcore/hammer_M2p5_scale_v01.py:16:    rng=np.random.default_rng(seed)
+starkcore/hammer_M2p5_scale_v01.py:28:def shuffle(A,layers=6,width=20,seed=99):
+starkcore/hammer_M2p5_scale_v01.py:30:    rng=np.random.default_rng(seed)
+starkcore/hammer_M2p5_scale_v01.py:55:        A=build_adj(seed=26+i)
+starkcore/hammer_M2p5_scale_v01.py:56:        B=shuffle(A,seed=1000+i)
+starkcore/hammer_M2p5_scale_v01.py:86:  "nota":"Preserva capas, rompe solo localidad. |Z|<1 => localidad NO invariante. Confirmado v06e."
+starkcore/functor_f_topo_v01.py:5:Implementa homología persistente nativa (Betti 0 y Betti 1) para grafos dirigidos por capas.
+starkcore/functor_f_topo_v01.py:15:def build_adj(layers=6, width=20, rho=0.78, loc=0.55, seed=26):
+starkcore/functor_f_topo_v01.py:18:    rng = np.random.default_rng(seed)
+starkcore/functor_f_topo_v01.py:30:def shuffle_preserva_grado(A, layers=6, width=20, seed=1000):
+starkcore/functor_f_topo_v01.py:32:    rng = np.random.default_rng(seed)
+starkcore/functor_f_topo_v01.py:43:def shuffle_rompe_todo(A, seed=777):
+starkcore/functor_f_topo_v01.py:44:    rng = np.random.default_rng(seed)
+starkcore/functor_f_topo_v01.py:50:# 2. Motor de Homología Persistente Nativa (f_topo)
+starkcore/functor_f_topo_v01.py:54:    Calcula un proxy de homología persistente filtrando el grafo por umbrales de peso.
+starkcore/functor_f_topo_v01.py:61:    thresholds = np.linspace(min_w, max_w, steps)
+starkcore/functor_f_topo_v01.py:66:    for t in thresholds:
+starkcore/functor_f_topo_v01.py:109:    Refina la ley de Shannon. La capacidad disminuye logarítmicamente 
+starkcore/functor_f_topo_v01.py:124:    print("  STARKCORE HAMMER · f_topo PERSISTENTE + SHANNON REFINADO")
+starkcore/functor_f_topo_v01.py:130:    A0 = build_adj(layers=LAYERS, width=WIDTH, seed=26)
+starkcore/functor_f_topo_v01.py:143:    A3 = shuffle_preserva_grado(A0, layers=LAYERS, width=WIDTH, seed=1000)
+starkcore/functor_f_topo_v01.py:147:    A4 = shuffle_rompe_todo(A0, seed=777)
+starkcore/functor_f_topo_v01.py:178:    # --- ESTADO TOPOLÓGICO INTEGRADO ---
+starkcore/functor_f_topo_v01.py:181:        topo = "BOUND_STABLE_GHZ · Homología persistente blindada contra desorden local"
+starkcore/hammer_QA_v02.py:5:Somete el invariante estructural a un barrido estocástico de densidad (rho) y ruido.
+starkcore/hammer_QA_v02.py:6:Calcula la probabilidad empírica de preservación de identidad P(Omega > 1 | T).
+starkcore/hammer_QA_v02.py:15:def build_adj(layers=6, width=15, rho=0.78, loc=0.55, seed=None):
+starkcore/hammer_QA_v02.py:19:    rng = np.random.default_rng(seed)
+starkcore/hammer_QA_v02.py:61:    thresholds = np.linspace(H.min(), H.max(), steps)
+starkcore/hammer_QA_v02.py:66:    for t in thresholds:
+starkcore/hammer_QA_v02.py:101:# 3. Métrica de Shannon para Canales de Identidad (Ω)
+starkcore/hammer_QA_v02.py:106:    Aplica la ley de degradación de Shannon para dictaminar si Omega > 1.
+starkcore/hammer_QA_v02.py:137:            seed = int(master_rng.integers(1, 1000000))
+starkcore/hammer_QA_v02.py:138:            rng = np.random.default_rng(seed)
+starkcore/hammer_QA_v02.py:140:            # 1. Estado Base e Invariantes
+starkcore/hammer_QA_v02.py:141:            A0 = build_adj(layers=layers, width=width, rho=rho, seed=seed)
+starkcore/hammer_QA_v02.py:184:    print(f"\n📊 MATRIZ DE PRESERVACIÓN DE IDENTIDAD: P(Ω > 1 | ρ)")
+starkcore/hammer_QA_v03.py:14:def build_adj(layers=6, width=15, rho=0.78, loc=0.55, seed=None):
+starkcore/hammer_QA_v03.py:17:    rng = np.random.default_rng(seed)
+starkcore/hammer_QA_v03.py:57:    thresholds = np.linspace(H.min(), H.max(), steps)
+starkcore/hammer_QA_v03.py:60:    for t in thresholds:
+starkcore/hammer_QA_v03.py:117:            seed = int(master_rng.integers(1, 1000000))
+starkcore/hammer_QA_v03.py:118:            rng = np.random.default_rng(seed)
+starkcore/hammer_QA_v03.py:120:            # Vectores de historia iniciales (f_mem)
+starkcore/hammer_QA_v03.py:122:            fm_clon = rng.standard_normal(128) # Trayectoria disjunta para ADV_3
+starkcore/hammer_QA_v03.py:125:            A0 = build_adj(layers=layers, width=width, rho=rho, seed=seed)
+starkcore/hammer_QA_v03.py:141:            # ADV_3: Paradoja del Clon Markoviano (Burla a f_mem mediante idéntico estado pero historia rota)
+starkcore/hammer_QA_v04.py:14:def build_adj(layers=6, width=15, rho=0.78, loc=0.55, seed=None):
+starkcore/hammer_QA_v04.py:17:    rng = np.random.default_rng(seed)
+starkcore/hammer_QA_v04.py:36:    thresholds = np.linspace(H.min(), H.max(), steps)
+starkcore/hammer_QA_v04.py:39:    for t in thresholds:
+starkcore/hammer_QA_v04.py:96:            seed = int(master_rng.integers(1, 1000000))
+starkcore/hammer_QA_v04.py:97:            rng = np.random.default_rng(seed)
+starkcore/hammer_QA_v04.py:100:            A0 = build_adj(layers=layers, width=width, rho=rho, seed=seed)
+starkcore/hammer_QA_v04.py:177:    # 1. Cálculo de pesos normados del Espectrómetro de Identidad
+starkcore/hammer_QA_v04.py:197:        "pesos_espectro_identidad": {"w_info": w_info, "w_topo": w_topo, "w_mem": w_mem},
+starkcore/hammer_QA_v04.py:210:    print(f"⚖️  FÓRMULA VECTORIAL STARKCORE: ΔIdentity = {w_topo:.2f}Δtopo + {w_info:.2f}Δinfo + {w_mem:.2f}Δmem")
+starkcore/hammer_QA_v05.py:14:def build_adj(layers=6, width=15, rho=0.78, loc=0.55, seed=None):
+starkcore/hammer_QA_v05.py:17:    rng = np.random.default_rng(seed)
+starkcore/hammer_QA_v05.py:36:    thresholds = np.linspace(H.min(), H.max(), steps)
+starkcore/hammer_QA_v05.py:39:    for t in thresholds:
+starkcore/hammer_QA_v05.py:75:        A0 = build_adj(layers, width, rho, seed=int(rng.integers(1, 100000)))
+starkcore/hammer_QA_v05.py:95:def evaluate_identity(drifts_norm, mode="full", base_capacity=0.35):
+starkcore/hammer_QA_v05.py:134:            seed = int(master_rng.integers(1, 1000000))
+starkcore/hammer_QA_v05.py:135:            rng = np.random.default_rng(seed)
+starkcore/hammer_QA_v05.py:138:            A0 = build_adj(layers=layers, width=width, rho=rho, seed=seed)
+starkcore/hammer_QA_v05.py:164:                survived = evaluate_identity([dn_i, dn_t, dn_m], mode=mode)
+starkcore/hammer_QA_v05.py:166:                if not survived: # Si detectó correctamente la pérdida de identidad
+starkcore/hammer_QA_v05.py:198:    print(f"   ΔIdentity = {w_topo:.2f}Δtopo + {w_info:.2f}Δinfo + {w_mem:.2f}Δmem")
+starkcore/hammer_QA_v06.py:14:def build_adj(layers=6, width=15, rho=0.78, loc=0.55, seed=None):
+starkcore/hammer_QA_v06.py:17:    rng = np.random.default_rng(seed)
+starkcore/hammer_QA_v06.py:36:    thresholds = np.linspace(H.min(), H.max(), steps)
+starkcore/hammer_QA_v06.py:39:    for t in thresholds:
+starkcore/hammer_QA_v06.py:73:        A0 = build_adj(layers, width, rho, seed=int(rng.integers(1, 100000)))
+starkcore/hammer_QA_v06.py:113:def evaluate_ablation(drifts_norm, mode="full", threshold=1.0):
+starkcore/hammer_QA_v06.py:123:    return d < threshold
+starkcore/hammer_QA_v06.py:141:        mode: {"AOA_1_Spectral": 0, "AOA_2_Topo": 0, "AOA_3_History": 0, "total": 0}
+starkcore/hammer_QA_v06.py:146:        seed = int(master_rng.integers(1, 1000000))
+starkcore/hammer_QA_v06.py:147:        rng = np.random.default_rng(seed)
+starkcore/hammer_QA_v06.py:150:        A0 = build_adj(LAYERS, WIDTH, rho=0.75, seed=seed)
+starkcore/hammer_QA_v06.py:181:            # Evaluación ante AOA_3 (History)
+starkcore/hammer_QA_v06.py:184:                matrix_report[mode]["AOA_3_History"] += 1
+starkcore/hammer_QA_v06.py:200:        r3 = (matrix_report[mode]["AOA_3_History"] / tot) * 100
+starkcore/hammer_QA_v06.py:201:        summary_data[mode] = {"spectral": r1, "topo": r2, "history": r3}
+starkcore/hammer_QA_v06.py:212:    if summary_data["no_mem"]["history"] == 0.0 and summary_data["full"]["history"] == 100.0:
+starkcore/hammer_QA_v06.py:213:        diagnostico = "SINERGIA CONFIRMADA · Los componentes miden dimensiones independientes. f_mem es inmune a la foto de estado."
+starkcore/hammer_QA_v07.py:5:Implementa curvas de sensibilidad continua y el motor de trayectoria histórica real.
+starkcore/hammer_QA_v07.py:14:def build_adj_path(layers=6, width=15, rho=0.78, loc=0.55, state_type="thermal", seed=None):
+starkcore/hammer_QA_v07.py:15:    """Genera la misma adyacencia final pero con distinta historia dinámica."""
+starkcore/hammer_QA_v07.py:18:    rng = np.random.default_rng(seed)
+starkcore/hammer_QA_v07.py:31:    # Histéresis: El vector de memoria (f_mem) es el acumulado de la trayectoria
+starkcore/hammer_QA_v07.py:32:    # Trayectoria A (Thermal): Evolución por pasos lentos y ordenados
+starkcore/hammer_QA_v07.py:33:    if state_type == "thermal":
+starkcore/hammer_QA_v07.py:34:        history_vector = np.zeros(128, dtype=np.float32)
+starkcore/hammer_QA_v07.py:37:            history_vector += (step / (i + 1))
+starkcore/hammer_QA_v07.py:38:    # Trayectoria B (Chaotic): Salto brusco no lineal que colapsa en el mismo estado final
+starkcore/hammer_QA_v07.py:40:        history_vector = rng.uniform(-3.0, 3.0, 128).astype(np.float32)
+starkcore/hammer_QA_v07.py:41:        history_vector = history_vector / (np.linalg.norm(history_vector) + 1e-6)
+starkcore/hammer_QA_v07.py:42:        history_vector = history_vector * 1.83  # Escala de calibración homóloga
+starkcore/hammer_QA_v07.py:44:    return A, history_vector
+starkcore/hammer_QA_v07.py:52:    thresholds = np.linspace(H.min(), H.max(), steps)
+starkcore/hammer_QA_v07.py:55:    for t in thresholds:
+starkcore/hammer_QA_v07.py:96:    # S -> 1.0 (Identidad Preservada), S -> 0.0 (Ruptura irreversible)
+starkcore/hammer_QA_v07.py:152:            seed = int(master_rng.integers(1, 1000000))
+starkcore/hammer_QA_v07.py:153:            rng = np.random.default_rng(seed)
+starkcore/hammer_QA_v07.py:155:            # --- ATAQUE HISTÓRICO REAL (Gemelos con idéntico final, distinta trayectoria) ---
+starkcore/hammer_QA_v07.py:156:            A_thermal, fm_thermal = build_adj_path(LAYERS, WIDTH, rho=0.75, state_type="thermal", seed=seed)
+starkcore/hammer_QA_v07.py:157:            _, fm_chaotic = build_adj_path(LAYERS, WIDTH, rho=0.75, state_type="chaotic", seed=seed)
+starkcore/hammer_QA_v07.py:185:                # 3. Registro ante Falsificación de Trayectoria Diacrónica (AOA_3)
+starkcore/hammer_QA_v07.py:215:        diagnostico = "HISTÉRESIS DEMOSTRADA · El identómetro continuo captura la trayectoria. El clon markoviano es rechazado."
+starkcore/hammer_QA_v08.py:12:# 1. Geometría Dinámica: Trayectorias Confluentes
+starkcore/hammer_QA_v08.py:14:def build_confluent_trajectories(layers=6, width=15, rho=0.78, loc=0.55, path_type="exponential", seed=None):
+starkcore/hammer_QA_v08.py:17:    rng = np.random.default_rng(seed)
+starkcore/hammer_QA_v08.py:31:        history = np.exp(-t / 3.0) + rng.normal(0, 0.01, 128)
+starkcore/hammer_QA_v08.py:33:        history = np.sin(2 * np.pi * t / 4.0) * np.exp(-t / 5.0) + rng.normal(0, 0.01, 128)
+starkcore/hammer_QA_v08.py:35:    history = history / (np.linalg.norm(history) + 1e-6)
+starkcore/hammer_QA_v08.py:36:    return A, history
+starkcore/hammer_QA_v08.py:44:    thresholds = np.linspace(H.min(), H.max(), steps)
+starkcore/hammer_QA_v08.py:47:    for t in thresholds:
+starkcore/hammer_QA_v08.py:114:        seed = int(master_rng.integers(1, 1000000))
+starkcore/hammer_QA_v08.py:115:        rng = np.random.default_rng(seed)
+starkcore/hammer_QA_v08.py:118:        A_base, fm_exp = build_confluent_trajectories(LAYERS, WIDTH, path_type="exponential", seed=seed)
+starkcore/hammer_QA_v08.py:119:        _, fm_osc = build_confluent_trajectories(LAYERS, WIDTH, path_type="oscillatory", seed=seed)
+starkcore/hammer_QA_v08.py:152:            # Prueba de Colisión (Debe rechazar la falsa historia, S -> 0, Gradiente -> 100%)
+starkcore/hammer_QA_v08.py:185:        diagnostico = "CRIPTOGRAFÍA INYECTIVA CONFIRMADA · f_mem posee inmunidad a la falsificación de trayectorias."
+starkcore/hammer.py:13:    """Acepta .npy, .npz, edge list (.txt/.csv) o checkpoint .pt/.pth (extrae primera matriz 2D)."""
+starkcore/hammer.py:14:    ext = os.path.splitext(path)[1].lower()
+starkcore/hammer.py:35:                    raise ValueError("No se encontró matriz 2D en el state_dict")
+starkcore/hammer.py:47:def load_history(path, target_dim=128):
+starkcore/hammer.py:48:    """Carga vector de historia de cualquier dimensión y proyecta a target_dim."""
+starkcore/hammer.py:49:    ext = os.path.splitext(path)[1].lower()
+starkcore/hammer.py:73:    # Proyección lineal determinista (siempre la misma para la misma seed)
+starkcore/hammer.py:86:    thresholds = np.linspace(H.min(), H.max(), steps)
+starkcore/hammer.py:88:    for t in thresholds:
+starkcore/hammer.py:134:    rec_blind = data.get("recall_blind_state_only", 0.0) * 100
+starkcore/hammer.py:152:.bar{{background:#e5e7eb;height:6px;border-radius:3px;margin-top:8px;overflow:hidden}}
+starkcore/hammer.py:176:    parser.add_argument("--target", type=str, help="Matriz o checkpoint del sistema a auditar")
+starkcore/hammer.py:177:    parser.add_argument("--history", type=str, help="Vector de historia (cualquier dim)")
+starkcore/hammer.py:178:    parser.add_argument("--baseline", type=str, help="Opcional: matriz/historia legítima de referencia")
+starkcore/hammer.py:188:    if args.target and args.history:
+starkcore/hammer.py:191:        f_mem = load_history(args.history)
+starkcore/hammer.py:192:        print(f"[*] Historia proyectada a {f_mem.shape[0]}d")
+starkcore/hammer.py:194:        # Generamos un "clon" sintético con misma estructura pero trayectoria distinta para medir defensa
+starkcore/hammer.py:222:            "recall_blind_state_only": float(scores["no_mem"][0][1]),
+starkcore/hammer.py:228:        print("[*] Modo sintético (demo). Usa --target y --history para forense real.")
+starkcore/hammer.py:231:                  "recall_blind_state_only": 0.02, "spectral_detection_gradient": 0.88,
+starkcore/sanctuary/temple.py:12:    def __init__(self, observer=None):
+starkcore/sanctuary/temple.py:14:        self.observer = observer
+starkcore/sanctuary/temple.py:65:                if self.observer:
+starkcore/sanctuary/temple.py:66:                    self.observer.record(
+starkcore/sanctuary/temple.py:86:                if self.observer:
+starkcore/sanctuary/temple.py:87:                    self.observer.record(
+starkcore/sanctuary/temple.py:96:                if self.observer:
+starkcore/sanctuary/temple.py:97:                    self.observer.record(
+starkcore/sanctuary/omega.py:1:import hashlib
+starkcore/sanctuary/omega.py:5:class OmegaObserver:
+starkcore/sanctuary/omega.py:6:    """👁️ El Observador Omega ahora se apoya en el EvidenceRegistry para persistencia."""
+starkcore/sanctuary/omega.py:22:    def compute_anomaly_hash(self, exception: Exception, house: int) -> str:
+starkcore/sanctuary/omega.py:24:        return hashlib.sha256(raw_string.encode('utf-8')).hexdigest()[:12]
+starkcore/knights/zodiac.py:55:        ctx["persistent"] = True
+starkcore/knights/ophiuchus.py:4:    LAW = "🐍 Toda anomalía persistente debe tratarse primero como evidencia antes que como error."
+starkcore/knights/ophiuchus.py:6:    def investigate(self, error: Exception, house_failed: int, ctx: dict, observer) -> dict:
+starkcore/knights/ophiuchus.py:9:        # Calcular el hash único del ataque
+starkcore/knights/ophiuchus.py:10:        anomaly_hash = observer.compute_anomaly_hash(error, house_failed)
+starkcore/knights/ophiuchus.py:13:        expedient = observer.registry.register_encounter(anomaly_hash, type(error).__name__, house_failed)
+starkcore/knights/ophiuchus.py:17:            print(f"   🛡️ \033[1;32m[INMUNIDAD ABSOLUTA - DISCO]\033[0m Hash: {anomaly_hash} | Avistamientos: {expedient['frequency']}.")
+starkcore/knights/ophiuchus.py:18:            print(f"   ↳ Ley Ofiuco aplicada: El veneno se transmutó en anticuerpo.")
+starkcore/knights/ophiuchus.py:21:            observer.record(13, self.NAME, "Apply Disk Patch", "SYSTEM_INMUNIZED")
+starkcore/knights/ophiuchus.py:25:            print(f"   🔍 \033[1;35m[EXPEDIENTE ABIERTA EN DISCO]\033[0m Hash: {anomaly_hash} | Frecuencia: {expedient['frequency']}/3")
+starkcore/knights/ophiuchus.py:26:            observer.record(13, self.NAME, "Log Evidence to Disk", "EXPEDIENT_SAVED", {"hash": anomaly_hash})
+starkcore/knights/ophiuchus.py:28:                "hash": anomaly_hash,
+starkcore/knights/ophiuchus.py:33:            return {"status": "COLLECTED_AS_PERSISTENT_EVIDENCE", "ctx": ctx}
+starkcore/executors/cosmos_solvers.py:2:ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+starkcore/executors/cosmos_solvers.py:3:if ROOT not in sys.path: sys.path.insert(0, ROOT)
+starkcore/executors/cosmos_solvers.py:4:SOLVENS_ROOT = os.path.join(ROOT, "solvens-core")
+starkcore/executors/cosmos_solvers.py:5:if SOLVENS_ROOT not in sys.path: sys.path.insert(0, SOLVENS_ROOT)
+starkcore/executors/cosmos_solvers.py:7:from cosmos_core import AttestedDAG
+starkcore/executors/cosmos_solvers.py:10:from starkcore.validators.diacronic_identity_validator import EntityState, check_state
+starkcore/executors/cosmos_solvers.py:19:        e1 = EntityState(name="pkg", state={"old"}, history=["init"], constraints=set())
+starkcore/executors/cosmos_solvers.py:20:        e2 = EntityState(name="pkg", state={"old"}, history=["init","resolve"], constraints=set())
+starkcore/executors/cosmos_solvers.py:21:        ca002_ok = check_state(e1, e2)
+starkcore/tests/bronze_awakening_test.py:51:                "source": "Pegasus",
+starkcore/tests/bronze_awakening_test.py:104:                        "source": "Dragon",
+starkcore/tests/bronze_awakening_test.py:138:                "source": "Cygnus",
+starkcore/tests/bronze_awakening_test.py:168:                "source": "Andromeda",
+starkcore/tests/temple_real.py:10:# Agrega root al path
+starkcore/tests/v7_demon_slayer.py:14:            "hashira_active": 9,
+starkcore/tests/v7_demon_slayer.py:41:            _ = hash(f"demon_{i}")
+starkcore/tests/v7_demon_slayer.py:54:            _ = hash(f"upper_moon_{_}")
+starkcore/tests/v7_demon_slayer.py:57:        print("🛡️ Hashira activos: 9/9 -> [RESISTIENDO CON 0% POSESION]")
+starkcore/tests/v7_demon_slayer.py:73:        print(f"> Hashira en Marca     : 9/9 (100%)")
+starkcore/validators/borromeo_validator.py:17:LAW = r"F(H\X)==F(H) && L(H\X)<L(H) => MAKEUP else STRUCTURE"
+starkcore/validators/borromeo_validator.py:42:        hidden = used - p0
+starkcore/validators/borromeo_validator.py:43:        if hidden:
+starkcore/validators/borromeo_validator.py:44:            return False, f"C3 FAIL: ocultas {hidden} -> CA-002"
+starkcore/validators/diacronic_identity_validator.py:5:class IdentityVerdict(Enum):
+starkcore/validators/diacronic_identity_validator.py:6:    IDENTITY_PERSISTENT = "IDENTITY_PERSISTENT"
+starkcore/validators/diacronic_identity_validator.py:8:    HISTORY_BROKEN = "HISTORY_BROKEN"
+starkcore/validators/diacronic_identity_validator.py:13:class EntityState:
+starkcore/validators/diacronic_identity_validator.py:15:    state: set
+starkcore/validators/diacronic_identity_validator.py:16:    history: list
+starkcore/validators/diacronic_identity_validator.py:20:def check_state(previous, current):
+starkcore/validators/diacronic_identity_validator.py:22:    La entidad puede cambiar estado,
+starkcore/validators/diacronic_identity_validator.py:23:    pero debe conservar continuidad.
+starkcore/validators/diacronic_identity_validator.py:31:def check_history(entity):
+starkcore/validators/diacronic_identity_validator.py:33:    Una identidad sin trayectoria
+starkcore/validators/diacronic_identity_validator.py:36:    return len(entity.history) > 0
+starkcore/validators/diacronic_identity_validator.py:44:    return entity.constraints.issubset(entity.state)
+starkcore/validators/diacronic_identity_validator.py:49:    if not check_state(previous, current):
+starkcore/validators/diacronic_identity_validator.py:50:        return IdentityVerdict.LABEL_ONLY
+starkcore/validators/diacronic_identity_validator.py:52:    if not check_history(current):
+starkcore/validators/diacronic_identity_validator.py:53:        return IdentityVerdict.HISTORY_BROKEN
+starkcore/validators/diacronic_identity_validator.py:56:        return IdentityVerdict.CONSTRAINT_BROKEN
+starkcore/validators/diacronic_identity_validator.py:58:    return IdentityVerdict.IDENTITY_PERSISTENT
+starkcore/s_fast.py:24:    # estado: -1 unknown, 0 false, 1 true
+starkcore/s_fast.py:109:                    # sigue recursivo: llamamos s_fast de nuevo con estado parcial?
+starkcore/s_fast.py:111:                    result = s_fast_with_state(problem, assign, var_to_group, adj)
+starkcore/s_fast.py:130:            return s_fast_with_state(problem, assign, var_to_group, adj)
+starkcore/s_fast.py:139:def s_fast_with_state(problem, assign, var_to_group, adj):
+starkcore/s_fast.py:188:                res=s_fast_with_state(problem, new_assign, var_to_group, adj)
+starkcore/cosmos/dag.py:1:from cosmos_core import AttestedDAG, SeedChannel
+starkcore/cosmos/dag.py:2:import hashlib
+starkcore/cosmos/dag.py:4:    return hashlib.sha256(f"{pkg}@{ver}".encode()).hexdigest()
+starkcore/cosmos/dag.py:6:    ch=SeedChannel()
+starkcore/cosmos/dag.py:7:    dag=AttestedDAG()
+starkcore/cosmos/dag.py:13:        pub[node.name]=ch.identity_hash(node)
+starkcore/cosmos/dag.py:16:    dag.attest(seed_channel=ch, published_hashes=pub)
+starkcore/cosmos/__init__.py:1:from cosmos_core import AttestedDAG, SeedChannel
+starkcore/cosmos/security/__init__.py:1:from cosmos_core import SeedChannel
+starkcore/cosmos/security/seed_channel.py:1:from cosmos_core import SeedChannel

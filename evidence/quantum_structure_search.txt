@@ -1,0 +1,20 @@
+starkcore/hammer_QA_v01.py:3:HAMMER QUANTUM ANALOGY v0.1 — FASE 1
+starkcore/hammer_QA_v01.py:122:        topo = "PARTIAL_COLLAPSE"
+starkcore/hammer.py:152:.bar{{background:#e5e7eb;height:6px;border-radius:3px;margin-top:8px;overflow:hidden}}
+starkcore/sanctuary/temple.py:12:    def __init__(self, observer=None):
+starkcore/sanctuary/temple.py:14:        self.observer = observer
+starkcore/sanctuary/temple.py:65:                if self.observer:
+starkcore/sanctuary/temple.py:66:                    self.observer.record(
+starkcore/sanctuary/temple.py:86:                if self.observer:
+starkcore/sanctuary/temple.py:87:                    self.observer.record(
+starkcore/sanctuary/temple.py:96:                if self.observer:
+starkcore/sanctuary/temple.py:97:                    self.observer.record(
+starkcore/sanctuary/omega.py:5:class OmegaObserver:
+starkcore/knights/ophiuchus.py:6:    def investigate(self, error: Exception, house_failed: int, ctx: dict, observer) -> dict:
+starkcore/knights/ophiuchus.py:10:        anomaly_hash = observer.compute_anomaly_hash(error, house_failed)
+starkcore/knights/ophiuchus.py:13:        expedient = observer.registry.register_encounter(anomaly_hash, type(error).__name__, house_failed)
+starkcore/knights/ophiuchus.py:21:            observer.record(13, self.NAME, "Apply Disk Patch", "SYSTEM_INMUNIZED")
+starkcore/knights/ophiuchus.py:26:            observer.record(13, self.NAME, "Log Evidence to Disk", "EXPEDIENT_SAVED", {"hash": anomaly_hash})
+starkcore/validators/borromeo_validator.py:42:        hidden = used - p0
+starkcore/validators/borromeo_validator.py:43:        if hidden:
+starkcore/validators/borromeo_validator.py:44:            return False, f"C3 FAIL: ocultas {hidden} -> CA-002"
