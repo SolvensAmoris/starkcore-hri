@@ -1,0 +1,13 @@
+{
+  "version": "StarkCore HRI v1.0",
+  "formula": "S(d) = Hash(Canonical(d))",
+  "principle": "REP != STATE",
+  "evidence": {
+    "root_commit": "cfb9c7c",
+    "rekor_id": "2255034057",
+    "case": "CA-002 #3882262",
+    "bundle": "ledger.bundle"
+  },
+  "artifacts": {
+  }
+}
