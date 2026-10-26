@@ -1,0 +1,30 @@
+{
+  "version": "StarkCore HRI v1.0 (Redemption)",
+  "trajectory": [
+    {
+      "block_index": 0,
+      "data": {
+        "event": "T_REDEMPTION",
+        "timestamp": "2026-10-26T01:57:58Z",
+        "reason": "Original ledger.bundle lost during repository flattening (commit cfb9c7c not found).",
+        "policy": "FAIL_CLOSED_REBUILD",
+        "reconstructed_artifacts": [
+          {
+            "path": "README.md",
+            "sha256": "f3cadd3e7970f96cde7ee02e5c9748644cd703885a47d9240dc68a445ba5e779"
+          },
+          {
+            "path": "evidence/starkcore-proof.json",
+            "sha256": "cb9699bc9502ec2496c8d5b9814758fdc8040ece04fd9aeda23f3324923dc22e"
+          },
+          {
+            "path": "scripts/starkcore_hri_checker.sh",
+            "sha256": "6c459e950dd14d9da28dc871095d9b3aeecac819f5940ff753cef5a58683e284"
+          }
+        ]
+      },
+      "hash": "a63ff7b1b301cde7a22c87552f867b09042fdfaa798ac4d1830e7dae509464dd",
+      "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000"
+    }
+  ]
+}

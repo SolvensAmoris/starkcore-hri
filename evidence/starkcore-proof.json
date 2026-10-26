@@ -1,13 +1,16 @@
 {
-  "version": "StarkCore HRI v1.0",
+  "version": "StarkCore HRI v1.0 (Redemption)",
   "formula": "S(d) = Hash(Canonical(d))",
   "principle": "REP != STATE",
   "evidence": {
-    "root_commit": "cfb9c7c",
-    "rekor_id": "2255034057",
+    "root_commit": "f64fcf0 (flattened)",
+    "original_commit_lost": "cfb9c7c",
+    "rekor_id": "2255034057 (unverified)",
     "case": "CA-002 #3882262",
-    "bundle": "ledger.bundle"
+    "bundle": "ledger.bundle",
+    "status": "REDEEMED_RECONSTRUCTED"
   },
   "artifacts": {
+    "ledger_hash": "a63ff7b1b301cde7a22c87552f867b09042fdfaa798ac4d1830e7dae509464dd"
   }
 }
