@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+title: "Beyond the Sandbox: Structural Trajectory Memory (MTE) for Verifiable AI Boundaries - CA002 Falacia de identidad mutable"
+message: "If you use this work, please cite it using these metadata."
+type: preprint
+authors:
+    - family-names: "Burciaga Miker"
+    given-names: "Luis Alberto"
+    affiliation: "StarkCore Labs"
+identifiers:
+    - type: doi
+    value: 10.5281/zenodo.23654825
+    description: "Zenodo - Public DOI"
+    - type: doi
+    value: 10.2139/ssrn.7671478
+    description: "SSRN - Academic DOI"
+repository-code: https://github.com/starkcore-hri/starkcore-hri
+url: https://doi.org/10.5281/zenodo.23654825
+abstract: "MTE implementing A0-Opricio. CA-002: f64fcf0 redeemed, cfb9c7c lost, Rekor 2255034057, Ledger a63ff7b1b301cde7a22c87552f867b09042fdfaa798ac4d1830e7dae509464dd. CVE-2025-30066."
+keywords:
+    - supply-chain-integrity
+    - CA-002
+    - MTE
+    - A0-Opricio
+license: CC-BY-4.0
+date-released: 2026-10-26
