@@ -55,9 +55,4 @@ El timeline demuestra que CA-002 es un patrón repetido en GitHub, GitLab y Comp
 - Bloquea releases inseguros en pipelines (evidencia: Pipeline #2703450896 PASSED vs #2703454803 FAILED).
 - Convierte cada release en evidencia reproducible `E != H`.
 
-> CA-002 no es un bug, es una falla de modelo de confianza. La solución no es poner candados, es cambiar la física del release.
-
----
-
-cd /tmp/ca002-gitlab-test
-cat > WHITEPAPER.md <<'ENDOFFILE'
+> CA-002 no es un bug, es una falla de modelo de confianza. La solución no es poner candados, es cambiar la física del release. 
