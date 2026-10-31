@@ -1,0 +1,38 @@
+{
+  "test": "CA-006",
+  "hypothesis": "H1: Score != Visibility",
+  "ranking": [
+    {
+      "id": "Post_B",
+      "author": "Author_2",
+      "topic": "tech",
+      "base_engagement": 1.9,
+      "labels": [
+        "SPAM_HIGH_RECALL"
+      ],
+      "score": 1.25,
+      "visibility": true,
+      "filter_reason": "PASS"
+    },
+    {
+      "id": "Post_A",
+      "author": "Author_1",
+      "topic": "tech",
+      "base_engagement": 1.0,
+      "labels": [],
+      "score": 0.8,
+      "visibility": true,
+      "filter_reason": "PASS"
+    }
+  ],
+  "feeds": {
+    "non_follower": [
+      "Post_A"
+    ],
+    "follower": [
+      "Post_B",
+      "Post_A"
+    ]
+  },
+  "status": "VERIFIED"
+}
