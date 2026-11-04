@@ -1,1 +1,17 @@
-StarkCore/
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+target/
+.lake/
+*.olean
+*.ilean
+*.trace
+*.hash
+evidence_c4_002_v2.jsonl
+evidence_c4_002_v3.jsonl
+*.log
+*.tar.gz
+HI_CRISTI_NICOL.png
+[STRIPPED 197 bytes]
+*.npy
