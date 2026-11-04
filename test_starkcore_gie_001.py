@@ -1,10 +1,5 @@
 import pytest
-from starkcore_gie_001 import (
-    Verdict,
-    Health,
-    propagate,
-    enforce
-)
+from starkcore_gie_001 import propagate, enforce, Verdict, Health
 
 def test_three_level_rejection_propagation():
     nodes = {
@@ -12,17 +7,11 @@ def test_three_level_rejection_propagation():
         "service-api": {"verdict": Verdict.ACCEPT, "health": Health.DEGRADED},
         "application": {"verdict": Verdict.ACCEPT, "health": Health.HEALTHY}
     }
-    edges = [
-        ("crypto-lib", "service-api"),
-        ("service-api", "application")
-    ]
+    edges = [("crypto-lib", "service-api"), ("service-api", "application")]
     result = propagate(nodes, edges)
-
     assert result["crypto-lib"]["verdict"] == "REJECT"
     assert result["service-api"]["verdict"] == "REJECT"
     assert result["application"]["verdict"] == "REJECT"
-
-    # Degradation remains independently observable.
     assert result["service-api"]["degraded"] is True
     assert result["application"]["degraded"] is True
 
