@@ -1,0 +1,12 @@
+{
+  "version": "v0.4-LOCKED",
+  "principle": "REP!=STATE!=AGENCY",
+  "policy": "FAIL_CLOSED",
+  "graph_edges": [
+    ["auth-service", "payment-api"],
+    ["crypto-lib", "auth-service"],
+    ["frontend", "payment-api"]
+  ],
+  "reject_rule": "if cur_v==REJECT then neighbors=REJECT",
+  "impact": 0
+}
